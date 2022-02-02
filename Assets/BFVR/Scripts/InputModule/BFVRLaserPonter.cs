@@ -33,10 +33,12 @@ namespace BFVR.InputModule
                 if(laserPointerBehaviour == LaserPointerBehaviour.Off || laserPointerBehaviour == LaserPointerBehaviour.OnWhenHitTarget)
                 {
                     lineRenderer.enabled = false;
+                    cursor.gameObject.SetActive(false);
                 }
                 else
                 {
                     lineRenderer.enabled = true;
+                    cursor.gameObject.SetActive(true);
                 }
             }
             get { return _laserBeamBehaviour; }
@@ -60,7 +62,7 @@ namespace BFVR.InputModule
 
         private void Start()
         {
-            if (cursor) cursor.gameObject.SetActive(false);
+            if (!cursor) cursor.gameObject.SetActive(false);
 
             defaultLaserPointerBehaviour = laserPointerBehaviour;
         }
@@ -69,6 +71,12 @@ namespace BFVR.InputModule
         {
             BFVRInputManager.uiOnPointStartEvent += BFVRInputManager_uiOnPointStartEvent;
             BFVRInputManager.uiOnPointCanceledEvent += BFVRInputManager_uiOnPointCanceledEvent;
+        }
+
+        private void OnDisable()
+        {
+            BFVRInputManager.uiOnPointStartEvent -= BFVRInputManager_uiOnPointStartEvent;
+            BFVRInputManager.uiOnPointCanceledEvent -= BFVRInputManager_uiOnPointCanceledEvent;
         }
 
         private void BFVRInputManager_uiOnPointCanceledEvent()
@@ -94,23 +102,21 @@ namespace BFVR.InputModule
             {
                 return;
             }
+
+            Vector3 cursorPos = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? gameObject.transform.position + (gameObject.transform.forward * maxLength) : hitInfo.point;
+            Vector3 cursorNormal = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? gameObject.transform.forward : hitInfo.normal;
             float cursorDist = Mathf.Abs((hitInfo.point - gameObject.transform.position).magnitude);
             float cursorScale = cursorDist / maxLength;
 
             cursor.SetCursorScale(cursorScale);
-            cursor.SetCursorPosition(hitInfo.point);
-            cursor.SetCursorFacingNormal(hitInfo.normal);
+            cursor.SetCursorPosition(cursorPos);
+            cursor.SetCursorFacingNormal(cursorNormal);
         }
 
         void UpdateLaserPointer(RaycastHit hitInfo)
         {
             Vector3 start = gameObject.transform.position;
-            Vector3 end = hitInfo.point;
-
-            if(Mathf.Abs(end.magnitude) <= 0)
-            {
-                end = start + (gameObject.transform.forward * maxLength);
-            }
+            Vector3 end = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? start + (gameObject.transform.forward * maxLength) : hitInfo.point;
 
             if(laserPointerBehaviour == LaserPointerBehaviour.Off)
             {
