@@ -16,35 +16,15 @@ namespace BFVR.InputModule
         {
             On,                 // Laser always on
             Off,                // Laser always off
-            OnWhenHitTarget     // Laser only activates when hitting a valid target
+            OnPlayerPoint     // Laser only activates when player points
         }
 
         public BFVRCursor cursor;
         public float maxLength = 10.0f;
 
-        [SerializeField] private LaserPointerBehaviour _laserBeamBehaviour = LaserPointerBehaviour.OnWhenHitTarget;
         private LineRenderer lineRenderer;
 
-        public LaserPointerBehaviour laserPointerBehaviour
-        {
-            set
-            {
-                _laserBeamBehaviour = value;
-                if(laserPointerBehaviour == LaserPointerBehaviour.Off || laserPointerBehaviour == LaserPointerBehaviour.OnWhenHitTarget)
-                {
-                    lineRenderer.enabled = false;
-                    cursor.gameObject.SetActive(false);
-                }
-                else
-                {
-                    lineRenderer.enabled = true;
-                    cursor.gameObject.SetActive(true);
-                }
-            }
-            get { return _laserBeamBehaviour; }
-        }
-
-        LaserPointerBehaviour defaultLaserPointerBehaviour;
+        public LaserPointerBehaviour laserPointerBehaviour;
 
         [SerializeField] private LayerMask LaserBlockingLayers;
 
@@ -54,6 +34,7 @@ namespace BFVR.InputModule
         public float cursorFarScale = .05f;
 
         bool _hitTarget;
+        bool _pointing;
 
         private void Awake()
         {
@@ -63,14 +44,13 @@ namespace BFVR.InputModule
         private void Start()
         {
             if (!cursor) cursor.gameObject.SetActive(false);
-
-            defaultLaserPointerBehaviour = laserPointerBehaviour;
         }
 
         private void OnEnable()
         {
             BFVRInputManager.uiOnPointStartEvent += BFVRInputManager_uiOnPointStartEvent;
             BFVRInputManager.uiOnPointCanceledEvent += BFVRInputManager_uiOnPointCanceledEvent;
+
         }
 
         private void OnDisable()
@@ -81,16 +61,37 @@ namespace BFVR.InputModule
 
         private void BFVRInputManager_uiOnPointCanceledEvent()
         {
-            laserPointerBehaviour = LaserPointerBehaviour.Off;
+            _pointing = false;
         }
 
         private void BFVRInputManager_uiOnPointStartEvent()
         {
-            laserPointerBehaviour = defaultLaserPointerBehaviour;
+            _pointing = true;
         }
 
         private void LateUpdate()
         {
+            switch(laserPointerBehaviour)
+            {
+                case LaserPointerBehaviour.Off:
+                    LaserPointerOff();
+                    return;
+                case LaserPointerBehaviour.On:
+                    LaserPointerOn();
+                    break;
+                case LaserPointerBehaviour.OnPlayerPoint:
+                    if (!_pointing)
+                    {
+                        LaserPointerOff();
+                        return;
+                    }
+                    else
+                    {
+                        LaserPointerOn();
+                        break;
+                    }
+            }
+
             RaycastHit hit = CastBeam();
             UpdateLaserPointer(hit);
             UpdateCursor(hit);
@@ -118,41 +119,8 @@ namespace BFVR.InputModule
             Vector3 start = gameObject.transform.position;
             Vector3 end = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? start + (gameObject.transform.forward * maxLength) : hitInfo.point;
 
-            if(laserPointerBehaviour == LaserPointerBehaviour.Off)
-            {
-                return;
-            }
-
-            else if(laserPointerBehaviour == LaserPointerBehaviour.On)
-            {
-                if(!lineRenderer.enabled)
-                {
-                    lineRenderer.enabled = true;
-                }
-
-                lineRenderer.SetPosition(0, start);
-                lineRenderer.SetPosition(1, end);
-            }
-
-            else if(laserPointerBehaviour == LaserPointerBehaviour.OnWhenHitTarget)
-            {
-                if(_hitTarget)
-                {
-                    if(!lineRenderer.enabled)
-                    {
-                        lineRenderer.enabled = true;
-                        lineRenderer.SetPosition(0, start);
-                        lineRenderer.SetPosition(1, end);
-                    }
-                }
-                else
-                {
-                    if(lineRenderer.enabled)
-                    {
-                        lineRenderer.enabled = false;
-                    }
-                }
-            }
+            lineRenderer.SetPosition(0, start);
+            lineRenderer.SetPosition(1, end);
         }
 
         RaycastHit CastBeam()
@@ -160,6 +128,28 @@ namespace BFVR.InputModule
             RaycastHit hit;
             bool bHit = Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, maxLength, LaserBlockingLayers);
             return hit;
+        }
+
+        void LaserPointerOn()
+        {
+            if (lineRenderer.enabled && cursor.gameObject.activeSelf)
+            {
+                return;
+            }
+
+            lineRenderer.enabled = true;
+            cursor.gameObject.SetActive(true);
+        }
+
+        void LaserPointerOff()
+        {
+            if(!lineRenderer.enabled && !cursor.gameObject.activeSelf)
+            {
+                return;
+            }
+
+            lineRenderer.enabled = false;
+            cursor.gameObject.SetActive(false);
         }
     }
 }
