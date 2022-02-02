@@ -1,0 +1,52 @@
+{
+    "name": "StandardAppInterface",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "845a0ace-ce7b-4322-8306-4afda4b926a5",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "30632b0e-116b-426a-ab05-a328059705d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Point",
+                    "type": "Button",
+                    "id": "0d7d31ab-1d03-430e-b6e6-d20907654d43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "11945608-806c-4e39-bed9-0231b2003eb3",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fb69310-ff30-495c-846a-50e58e200b7a",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
