@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121f3c65d7cd0947bcba3b68c35e3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseGraphicsRaycasting: 0
+  canvas: {fileID: 0}
 --- !u!212 &3385683922050943610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -560,12 +562,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 4790643115632850847}
   maxLength: 10
-  _laserBeamBehaviour: 0
+  laserPointerBehaviour: 0
   LaserBlockingLayers:
     serializedVersion: 2
     m_Bits: 0
-  cursorCloseScale: 0.15
-  cursorFarScale: 0.35
+  cursorCloseScale: 0.05
+  cursorFarScale: 0.2
 --- !u!1 &8846493985523987018
 GameObject:
   m_ObjectHideFlags: 0

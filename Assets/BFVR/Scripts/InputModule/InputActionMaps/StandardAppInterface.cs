@@ -21,7 +21,7 @@ namespace BFVR.InputModule
             ""id"": ""845a0ace-ce7b-4322-8306-4afda4b926a5"",
             ""actions"": [
                 {
-                    ""name"": ""Select"",
+                    ""name"": ""Click"",
                     ""type"": ""Button"",
                     ""id"": ""30632b0e-116b-426a-ab05-a328059705d5"",
                     ""expectedControlType"": ""Button"",
@@ -45,7 +45,7 @@ namespace BFVR.InputModule
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Select"",
+                    ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -67,7 +67,7 @@ namespace BFVR.InputModule
 }");
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-            m_UI_Select = m_UI.FindAction("Select", throwIfNotFound: true);
+            m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
             m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
         }
 
@@ -118,13 +118,13 @@ namespace BFVR.InputModule
         // UI
         private readonly InputActionMap m_UI;
         private IUIActions m_UIActionsCallbackInterface;
-        private readonly InputAction m_UI_Select;
+        private readonly InputAction m_UI_Click;
         private readonly InputAction m_UI_Point;
         public struct UIActions
         {
             private @StandardAppInterface m_Wrapper;
             public UIActions(@StandardAppInterface wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Select => m_Wrapper.m_UI_Select;
+            public InputAction @Click => m_Wrapper.m_UI_Click;
             public InputAction @Point => m_Wrapper.m_UI_Point;
             public InputActionMap Get() { return m_Wrapper.m_UI; }
             public void Enable() { Get().Enable(); }
@@ -135,9 +135,9 @@ namespace BFVR.InputModule
             {
                 if (m_Wrapper.m_UIActionsCallbackInterface != null)
                 {
-                    @Select.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
-                    @Select.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
-                    @Select.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
+                    @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                    @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                    @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
                     @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
                     @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
                     @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
@@ -145,9 +145,9 @@ namespace BFVR.InputModule
                 m_Wrapper.m_UIActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @Select.started += instance.OnSelect;
-                    @Select.performed += instance.OnSelect;
-                    @Select.canceled += instance.OnSelect;
+                    @Click.started += instance.OnClick;
+                    @Click.performed += instance.OnClick;
+                    @Click.canceled += instance.OnClick;
                     @Point.started += instance.OnPoint;
                     @Point.performed += instance.OnPoint;
                     @Point.canceled += instance.OnPoint;
@@ -157,7 +157,7 @@ namespace BFVR.InputModule
         public UIActions @UI => new UIActions(this);
         public interface IUIActions
         {
-            void OnSelect(InputAction.CallbackContext context);
+            void OnClick(InputAction.CallbackContext context);
             void OnPoint(InputAction.CallbackContext context);
         }
     }

@@ -12,20 +12,23 @@ namespace BFVR.InputModule
     /// 
     public class BFVRInputManager : MonoBehaviour , IUIActions
     {
-        #region Event Delegates
+        #region UI/Actions
         // UI/Point
         public delegate void UI_OnPointStartedDelegate();
         public delegate void UI_OnPointCanceledDelegate();
-        #endregion
-
-        #region Events
-        // UI/Point
         public static event UI_OnPointStartedDelegate uiOnPointStartEvent;
         public static event UI_OnPointCanceledDelegate uiOnPointCanceledEvent;
+
+        // UI/Click
+        public delegate void UI_OnClickPerformedDelegate();
+        public static event UI_OnClickPerformedDelegate uiOnClickPerformedEvent;
+
         #endregion
 
         // Default Input Actions Asset
         public StandardAppInterface StandardAppActions;
+
+        public static BFVRCursor Cursor;
 
         // Singleton
         private static BFVRInputManager _instance;
@@ -48,6 +51,8 @@ namespace BFVR.InputModule
             StandardAppActions = new StandardAppInterface();
 
             StandardAppActions.UI.SetCallbacks(this);
+
+            Cursor = FindObjectOfType<BFVRCursor>();
         }
 
         private void Start()
@@ -56,11 +61,6 @@ namespace BFVR.InputModule
         }
 
         #region UI Action Map Interface Implementation
-
-        public void OnSelect(InputAction.CallbackContext context)
-        {
-            
-        }
 
         public void OnPoint(InputAction.CallbackContext context)
         {
@@ -71,6 +71,14 @@ namespace BFVR.InputModule
             else if(context.canceled)
             {
                 uiOnPointCanceledEvent.Invoke();
+            }
+        }
+
+        public void OnClick(InputAction.CallbackContext context)
+        {
+            if(context.performed)
+            {
+                uiOnClickPerformedEvent.Invoke();
             }
         }
 
