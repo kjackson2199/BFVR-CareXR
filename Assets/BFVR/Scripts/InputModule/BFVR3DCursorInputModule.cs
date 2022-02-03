@@ -9,9 +9,9 @@ using UnityEngine.UI;
 /// </summary>
 namespace BFVR.InputModule
 {
-    public class BFVR3DCursorInput : BaseInputModule
+    public class BFVR3DCursorInputModule : BaseInputModule
     {
-        static BFVR3DCursorInput _instance;
+        static BFVR3DCursorInputModule _instance;
         static GameObject targetObject;
 
         static bool inputClicked;

@@ -11,12 +11,21 @@ namespace BFVR.InputModule
 
     public class BFVRCursor : MonoBehaviour
     {
+        public enum CursorState
+        {
+            Hidden,
+            Normal,
+            Hovering
+        }
+
+        private CursorState cursorState = CursorState.Normal;
+
         public LayerMask cursorBlockingMask;
 
         [Space] public Color CursorNormalColor;
         public Sprite NormalCursorSprite;
 
-        [Space] public Color CursorHoverOverTargerColor;
+        [Space] public Color CursorHoverOverTargetColor;
         public Sprite CursorHoverSprite;
 
         [Space] public Color CursorClickColor;
@@ -29,18 +38,48 @@ namespace BFVR.InputModule
             RaycastHit hit = Raycast();
             if(hit.collider)
             {
-                BFVR3DCursorInput.SetTargetObject(hit.collider.gameObject);
+                BFVR3DCursorInputModule.SetTargetObject(hit.collider.gameObject);
+                SetCursorState(CursorState.Hovering);
             }
             else
             {
-                BFVR3DCursorInput.SetTargetObject(null);
+                BFVR3DCursorInputModule.SetTargetObject(null);
+                SetCursorState(CursorState.Normal);
             }
+        }
+
+        private void OnEnable()
+        {
+            SetCursorState(CursorState.Normal);
         }
 
         private void OnDisable()
         {
             SetCursorPosition(new Vector3(0, 0, 0));
-            BFVR3DCursorInput.SetTargetObject(null);
+            SetCursorState(CursorState.Hidden);
+            ResetCursor();
+            BFVR3DCursorInputModule.SetTargetObject(null);
+        }
+
+        void SetCursorState(CursorState newState)
+        {
+            cursorState = newState;
+
+            switch(cursorState)
+            {
+                case CursorState.Hovering:
+                    StartCoroutine(FadeCursorColor(CursorNormalColor, CursorHoverOverTargetColor, FadeDuration));
+                    SetCursorSprite(CursorHoverSprite);
+                    break;
+                case CursorState.Normal:
+                    StartCoroutine(FadeCursorColor(CursorHoverOverTargetColor, CursorNormalColor, FadeDuration));
+                    SetCursorSprite(NormalCursorSprite);
+                    break;
+                default:
+                    SetCursorColor(CursorNormalColor);
+                    SetCursorSprite(NormalCursorSprite);
+                    break;
+            }
         }
 
         public void SetCursorScale(float scale)
@@ -56,6 +95,12 @@ namespace BFVR.InputModule
             gameObject.transform.position = pos;
         }
 
+        public void ResetCursor()
+        {
+            SetCursorPosition(new Vector3(0, 0, 0));
+            SetCursorFacingNormal(Vector3.up);
+        }
+
         RaycastHit Raycast()
         {
             Ray r = new Ray();
@@ -69,14 +114,26 @@ namespace BFVR.InputModule
             return hitInfo;
         }
 
+        void SetCursorSprite(Sprite sprite)
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = sprite;
+        }
+
+        void SetCursorColor(Color color)
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.color = color;
+        }
+
         IEnumerator FadeCursorColor(Color a, Color b, float duration)
         {
             float timeElapsed = 0;
-            Color newColor = Color.black;
+            SpriteRenderer cursorSprite = GetComponent<SpriteRenderer>();
 
-            while(timeElapsed < duration)
+            while(timeElapsed <= duration)
             {
-                newColor = Color.Lerp(a, b, timeElapsed);
+                cursorSprite.color = Color.Lerp(b, a, timeElapsed / duration);
                 timeElapsed += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
