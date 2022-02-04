@@ -17,6 +17,90 @@ namespace BFVR.InputModule
     ""name"": ""StandardAppInterface"",
     ""maps"": [
         {
+            ""name"": ""Movement"",
+            ""id"": ""e90230c2-0396-431f-bd38-f88e93c80b61"",
+            ""actions"": [
+                {
+                    ""name"": ""MoveForward"",
+                    ""type"": ""Value"",
+                    ""id"": ""46016f8f-ed91-4e1a-a2e6-f3bfb2cc262e"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MoveRight"",
+                    ""type"": ""Value"",
+                    ""id"": ""ced3b6b4-1948-4328-9883-3c1c93eb0eb0"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Turn"",
+                    ""type"": ""Value"",
+                    ""id"": ""35d8a405-a1da-4aed-bdab-78c7c60d4346"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""TurnSnap"",
+                    ""type"": ""Value"",
+                    ""id"": ""10f36088-cd5e-4fcd-8568-48475a8ec001"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6c4c562e-009e-488b-9c81-1d82428ed673"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/thumbstick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4192daea-a6e4-4542-b187-b01ead1733ba"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/thumbstick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f392ef2-abec-46d3-b80a-17d7a7bd3b9c"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""614195d9-18b6-4f44-a048-1af79367d032"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurnSnap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""UI"",
             ""id"": ""845a0ace-ce7b-4322-8306-4afda4b926a5"",
             ""actions"": [
@@ -65,6 +149,12 @@ namespace BFVR.InputModule
     ],
     ""controlSchemes"": []
 }");
+            // Movement
+            m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+            m_Movement_MoveForward = m_Movement.FindAction("MoveForward", throwIfNotFound: true);
+            m_Movement_MoveRight = m_Movement.FindAction("MoveRight", throwIfNotFound: true);
+            m_Movement_Turn = m_Movement.FindAction("Turn", throwIfNotFound: true);
+            m_Movement_TurnSnap = m_Movement.FindAction("TurnSnap", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
@@ -115,6 +205,63 @@ namespace BFVR.InputModule
             asset.Disable();
         }
 
+        // Movement
+        private readonly InputActionMap m_Movement;
+        private IMovementActions m_MovementActionsCallbackInterface;
+        private readonly InputAction m_Movement_MoveForward;
+        private readonly InputAction m_Movement_MoveRight;
+        private readonly InputAction m_Movement_Turn;
+        private readonly InputAction m_Movement_TurnSnap;
+        public struct MovementActions
+        {
+            private @StandardAppInterface m_Wrapper;
+            public MovementActions(@StandardAppInterface wrapper) { m_Wrapper = wrapper; }
+            public InputAction @MoveForward => m_Wrapper.m_Movement_MoveForward;
+            public InputAction @MoveRight => m_Wrapper.m_Movement_MoveRight;
+            public InputAction @Turn => m_Wrapper.m_Movement_Turn;
+            public InputAction @TurnSnap => m_Wrapper.m_Movement_TurnSnap;
+            public InputActionMap Get() { return m_Wrapper.m_Movement; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+            public void SetCallbacks(IMovementActions instance)
+            {
+                if (m_Wrapper.m_MovementActionsCallbackInterface != null)
+                {
+                    @MoveForward.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveForward;
+                    @MoveForward.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveForward;
+                    @MoveForward.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveForward;
+                    @MoveRight.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveRight;
+                    @MoveRight.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveRight;
+                    @MoveRight.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMoveRight;
+                    @Turn.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurn;
+                    @Turn.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurn;
+                    @Turn.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurn;
+                    @TurnSnap.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurnSnap;
+                    @TurnSnap.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurnSnap;
+                    @TurnSnap.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnTurnSnap;
+                }
+                m_Wrapper.m_MovementActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @MoveForward.started += instance.OnMoveForward;
+                    @MoveForward.performed += instance.OnMoveForward;
+                    @MoveForward.canceled += instance.OnMoveForward;
+                    @MoveRight.started += instance.OnMoveRight;
+                    @MoveRight.performed += instance.OnMoveRight;
+                    @MoveRight.canceled += instance.OnMoveRight;
+                    @Turn.started += instance.OnTurn;
+                    @Turn.performed += instance.OnTurn;
+                    @Turn.canceled += instance.OnTurn;
+                    @TurnSnap.started += instance.OnTurnSnap;
+                    @TurnSnap.performed += instance.OnTurnSnap;
+                    @TurnSnap.canceled += instance.OnTurnSnap;
+                }
+            }
+        }
+        public MovementActions @Movement => new MovementActions(this);
+
         // UI
         private readonly InputActionMap m_UI;
         private IUIActions m_UIActionsCallbackInterface;
@@ -155,6 +302,13 @@ namespace BFVR.InputModule
             }
         }
         public UIActions @UI => new UIActions(this);
+        public interface IMovementActions
+        {
+            void OnMoveForward(InputAction.CallbackContext context);
+            void OnMoveRight(InputAction.CallbackContext context);
+            void OnTurn(InputAction.CallbackContext context);
+            void OnTurnSnap(InputAction.CallbackContext context);
+        }
         public interface IUIActions
         {
             void OnClick(InputAction.CallbackContext context);

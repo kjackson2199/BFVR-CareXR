@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 1135914352800092730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.05}
   m_Children: []
   m_Father: {fileID: 7293010558851999966}
   m_RootOrder: 3
@@ -89,8 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d121f3c65d7cd0947bcba3b68c35e3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseGraphicsRaycasting: 0
-  canvas: {fileID: 0}
+  cursorBlockingMask:
+    serializedVersion: 2
+    m_Bits: 32
+  CursorNormalColor: {r: 1, g: 1, b: 1, a: 1}
+  NormalCursorSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  CursorHoverOverTargetColor: {r: 0, g: 0.5773692, b: 1, a: 1}
+  CursorHoverSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  CursorClickColor: {r: 1, g: 1, b: 1, a: 1}
+  CursorClickSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  FadeDuration: 0.1
 --- !u!212 &3385683922050943610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -130,7 +138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,9 +161,10 @@ GameObject:
   - component: {fileID: 7068196019381641040}
   - component: {fileID: 7822681757114458597}
   - component: {fileID: 4847480274840406663}
+  - component: {fileID: 14210726752561998}
   m_Layer: 0
   m_Name: HMD
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +214,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -225,6 +234,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &14210726752561998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678637787413737471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950f4605e8c26c34e8a5abf28e28cb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2822057045125421727
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +336,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7293010558851999966}
-  - component: {fileID: 4230456334859596870}
+  - component: {fileID: 3938098621815327147}
+  - component: {fileID: 124445964855930344}
+  - component: {fileID: 5792924972246013949}
   m_Layer: 0
   m_Name: XRHeadsetRig
   m_TagString: Untagged
@@ -341,7 +364,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4230456334859596870
+--- !u!136 &3938098621815327147
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573772330416154421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 1.6
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!54 &124445964855930344
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573772330416154421}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &5792924972246013949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,28 +403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7573772330416154421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950f4605e8c26c34e8a5abf28e28cb49, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f85ec202e9d2404caf771b64d2dbc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 7068196019381641040}
-  leftHandObject: {fileID: 6189437647561196954}
-  rightHandObject: {fileID: 8844156346004438004}
-  cheatWASD:
-    m_Name: Cheat WASD
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4ac42317-07a6-4dd8-81f3-86e3cfe984a9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-  cheatUpDown:
-    m_Name: Cheat Up Down
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 902b9164-fbae-4b96-b6a8-e7270c2cb998
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
+  MovementSpeed: 1
+  UseTurnSnapping: 1
+  TurnSnapAmount: 15
+  TurnRate: 45
 --- !u!1 &7850172131105742532
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,12 +600,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 4790643115632850847}
   maxLength: 10
-  laserPointerBehaviour: 0
+  laserPointerBehaviour: 2
   LaserBlockingLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   cursorCloseScale: 0.05
-  cursorFarScale: 0.2
+  cursorFarScale: 0.15
 --- !u!1 &8846493985523987018
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ namespace BFVR.InputModule
     /// Standard BFVR input manager. Manages input actions from selected action maps. (Does not destroy on load.)
     /// </summary>
     /// 
-    public class BFVRInputManager : MonoBehaviour , IUIActions
+    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions
     {
         #region UI/Actions
         // UI/Point
@@ -23,6 +23,15 @@ namespace BFVR.InputModule
         public delegate void UI_OnClickPerformedDelegate();
         public static event UI_OnClickPerformedDelegate uiOnClickPerformedEvent;
 
+        #endregion
+
+        #region Movement/Actions
+        public static float moveForwardValue = 0;
+        public static float moveRightValue = 0;
+        public static float turnValue = 0;
+
+        public delegate void Movement_OnTurnSnapPerformedDelegate(float value);
+        public static event Movement_OnTurnSnapPerformedDelegate movementOnTurnSnapPerformedEvent;
         #endregion
 
         // Default Input Actions Asset
@@ -51,13 +60,21 @@ namespace BFVR.InputModule
             StandardAppActions = new StandardAppInterface();
 
             StandardAppActions.UI.SetCallbacks(this);
+            StandardAppActions.Movement.SetCallbacks(this);
 
             Cursor = FindObjectOfType<BFVRCursor>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
             StandardAppActions.UI.Enable();
+            StandardAppActions.Movement.Enable();
+        }
+
+        private void OnDisable()
+        {
+            StandardAppActions.UI.Disable();
+            StandardAppActions.Movement.Disable();
         }
 
         #region UI Action Map Interface Implementation
@@ -81,7 +98,31 @@ namespace BFVR.InputModule
                 uiOnClickPerformedEvent.Invoke();
             }
         }
+        #endregion
 
+        #region Movement Action Map Interface Implementation
+        public void OnMoveForward(InputAction.CallbackContext context)
+        {
+            moveForwardValue = context.ReadValue<float>();
+        }
+
+        public void OnMoveRight(InputAction.CallbackContext context)
+        {
+            moveRightValue = context.ReadValue<float>();
+        }
+
+        public void OnTurn(InputAction.CallbackContext context)
+        {
+            turnValue = context.ReadValue<float>();
+        }
+
+        public void OnTurnSnap(InputAction.CallbackContext context)
+        {
+            if(context.started)
+            {
+                movementOnTurnSnapPerformedEvent.Invoke(context.ReadValue<float>());
+            }
+        }
         #endregion
     }
 }
