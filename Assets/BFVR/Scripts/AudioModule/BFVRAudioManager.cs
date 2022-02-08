@@ -187,6 +187,19 @@ namespace BFVR.AudioModule
             music.Stop();
         }
 
+        public int GetMusicTrackIndex()
+        {
+            return musicTrackIndex;
+        }
+
+        /// <summary>
+        /// Returns music track List<> count.
+        /// </summary>
+        public int GetMusicTrackCount()
+        {
+            return musicTrackList.Count;
+        }
+
         public void PlayNextTrack()
         {
             if (!music) return;
