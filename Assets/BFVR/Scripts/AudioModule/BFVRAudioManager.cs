@@ -13,32 +13,47 @@ namespace BFVR.AudioModule
         private static BFVRAudioManager _instance;
         public static BFVRAudioManager Instance { get { return _instance; } }
 
+        const float levelMin = 0.0001f;
+        const float levelMax = 1.0f;
+
+        const float levelDbMin = -80;
+        const float levelDbMax = 20;
+
         [SerializeField] AudioMixer mainMix;
 
         [Space]
         [SerializeField] AudioSource sfx;
         [SerializeField] string sfxParameterName;
+        [Range(0.0001f, 1)] public float defaultSfxLevel = .8f;
 
         [Space]
         [SerializeField] AudioSource music;
         [SerializeField] string musicParameterName;
+        [SerializeField] bool playMusicBehindVideo = true;
+        [SerializeField] [Range(.0001f, .5f)] float musicLevelBehindVideo = .25f;
+        [Range(0.0001f, 1)] public float defaultMusicLevel = .8f;
 
         [Space]
         [SerializeField] AudioSource video;
         [SerializeField] string videoParameterName;
+        [Range(0.0001f, 1)] public float defaultVideoLevel = .8f;
 
         [Space]
         [SerializeField] AudioSource voice;
         [SerializeField] string voiceOverVolume;
+        [Range(0.0001f, 1)] public float defaultVoiceLevel = .8f;
 
         [Space]
         [SerializeField] List<AudioClip> musicTrackList;
 
         int musicTrackIndex = -1;
+        bool musicSmoothTransitionActive;
+
+        Coroutine musicSmoothTranstionCoroutine;
 
         private void Awake()
         {
-            if (!_instance && _instance != this)
+            if (_instance != null && _instance != this)
             {
                 Destroy(gameObject);
                 return;
@@ -47,13 +62,9 @@ namespace BFVR.AudioModule
             {
                 _instance = this;
             }
-
             DontDestroyOnLoad(gameObject);
-        }
 
-        private void Start()
-        {
-            
+
         }
 
         #region Levels
@@ -62,36 +73,139 @@ namespace BFVR.AudioModule
         /// Sets sound fx audio level on audio mixer.
         /// </summary>
         /// <param name="sfxLvl"></param>
-        void SetSFXLevel(float sfxLvl)
+        public void SetSFXLevel(float sfxLvl)
         {
-            mainMix.SetFloat(sfxParameterName, sfxLvl);
+            sfxLvl = Mathf.Clamp(sfxLvl, levelMin, levelMax);
+            mainMix.SetFloat(sfxParameterName, Mathf.Log10(sfxLvl) * 20);
+        }
+
+        /// <summary>
+        /// Gets sound fx audio level from audio mixer
+        /// </summary>
+        /// <returns>Returns 0.0001 - 1</returns>
+        public float GetSFXLevel()
+        {
+            float value;
+            mainMix.GetFloat(sfxParameterName, out value);
+            return BFVRMathExtentions.Remap(value, levelDbMin, levelDbMax, levelMin, levelMax);
+        }
+
+        public void SetSFXLevelToDefault()
+        {
+            SetSFXLevel(defaultSfxLevel);
         }
 
         /// <summary>
         /// Sets music audio level on audio mixer.
         /// </summary>
-        /// <param name="musicLvl"></param>
-        void SetMusicLevel(float musicLvl)
+        /// <param name="musicLvl"> Target Music Level (0.001 - 1) </param>
+        /// <param name="smooth"> Use smooth transition. Defaults to true. </param>
+        /// <param name="time"> Transtion timing. Defaults to 2. </param>
+        public void SetMusicLevel(float musicLvl, bool smooth = true, float time = 2)
         {
-            mainMix.SetFloat(musicParameterName, musicLvl);
+            musicLvl = Mathf.Clamp(musicLvl, levelMin, levelMax);
+            if(smooth && !musicSmoothTransitionActive)
+            {
+                musicSmoothTranstionCoroutine = StartCoroutine(SetMusicLevelSmooth(musicLvl, time));
+            }
+            else if(smooth && musicSmoothTransitionActive)
+            {
+                StopCoroutine(musicSmoothTranstionCoroutine);
+                musicSmoothTranstionCoroutine = StartCoroutine(SetMusicLevelSmooth(musicLvl, time));
+            }
+            else
+            {
+                mainMix.SetFloat(musicParameterName, Mathf.Log10(musicLvl) * 20);
+            }
+        }
+
+        public void SetMusicLevelToDefault()
+        {
+            SetMusicLevel(defaultMusicLevel);
+        }
+
+        IEnumerator SetMusicLevelSmooth(float musicLvl, float time)
+        {
+            musicSmoothTransitionActive = true;
+
+            float timeElapsed = 0;
+            float currentMusicLvl = GetMusicLevel();
+            float targetMusicLvl = Mathf.Log10(musicLvl) * 20;
+
+            while (timeElapsed < time)
+            {
+                mainMix.SetFloat(musicParameterName, Mathf.Lerp(currentMusicLvl, targetMusicLvl, timeElapsed / time));
+                timeElapsed += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            musicSmoothTransitionActive = false;
+        }
+
+        /// <summary>
+        /// Gets music audio level from audio mixer
+        /// </summary>
+        /// <returns>Returns 0.0001 - 1</returns>
+        public float GetMusicLevel()
+        {
+            float value;
+            mainMix.GetFloat(musicParameterName, out value);
+
+            return value;
         }
 
         /// <summary>
         /// Sets video audio level on audio mixer.
         /// </summary>
         /// <param name="videoLvl"></param>
-        void SetVideoLevel(float videoLvl)
+        public void SetVideoLevel(float videoLvl)
         {
-            mainMix.SetFloat(videoParameterName, videoLvl);
+            videoLvl = Mathf.Clamp(videoLvl, levelMin, levelMax);
+            mainMix.SetFloat(videoParameterName, Mathf.Log10(videoLvl) * 20);
+        }
+
+        /// <summary>
+        /// Gets video audio level from audio mixer
+        /// </summary>
+        /// <returns>Returns 0.0001 - 1</returns>
+        public float GetVideoLevel()
+        {
+            float value;
+            mainMix.GetFloat(videoParameterName, out value);
+
+            return BFVRMathExtentions.Remap(value, levelDbMin, levelDbMax, levelMin, levelMax);
+        }
+
+        public void SetVideoLevelToDefault()
+        {
+            SetVideoLevel(defaultVideoLevel);
         }
 
         /// <summary>
         /// Sets voice audio level on audio mixer.
         /// </summary>
         /// <param name="voiceLvl"></param>
-        void SetVoiceLevel(float voiceLvl)
+        public void SetVoiceLevel(float voiceLvl)
         {
-            mainMix.SetFloat(voiceOverVolume, voiceLvl);
+            voiceLvl = Mathf.Clamp(voiceLvl, levelMin, levelMax);
+            mainMix.SetFloat(voiceOverVolume, Mathf.Log10(voiceLvl) * 20);
+        }
+
+        /// <summary>
+        /// Gets voice audio level from audio mixer
+        /// </summary>
+        /// <returns>Returns 0.0001 - 1</returns>
+        public float GetVoiceLevel()
+        {
+            float value;
+            mainMix.GetFloat(voiceOverVolume, out value);
+
+            return BFVRMathExtentions.Remap(value, levelDbMin, levelDbMax, levelMin, levelMax);
+        }
+
+        public void SetVoiceLevelToDefault()
+        {
+            SetVoiceLevel(defaultVoiceLevel);
         }
         #endregion
 
