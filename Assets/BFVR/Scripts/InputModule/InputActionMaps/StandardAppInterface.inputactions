@@ -130,6 +130,52 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Interaction",
+            "id": "45eeddc1-bae8-4f20-839d-4e864935454f",
+            "actions": [
+                {
+                    "name": "GrabLeft",
+                    "type": "Button",
+                    "id": "4fcbd0cf-b420-435a-a26d-e023517a2782",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GrabRight",
+                    "type": "Button",
+                    "id": "c800b0ec-8bc4-4d91-b306-18228e2c4c58",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0a0ef169-03a9-403f-8d6e-36ea8b663e02",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a981efe4-6ffe-4f44-b71b-dc0896d7464b",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

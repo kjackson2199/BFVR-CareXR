@@ -145,6 +145,52 @@ namespace BFVR.InputModule
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Interaction"",
+            ""id"": ""45eeddc1-bae8-4f20-839d-4e864935454f"",
+            ""actions"": [
+                {
+                    ""name"": ""GrabLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""4fcbd0cf-b420-435a-a26d-e023517a2782"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GrabRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""c800b0ec-8bc4-4d91-b306-18228e2c4c58"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0a0ef169-03a9-403f-8d6e-36ea8b663e02"",
+                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GrabLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a981efe4-6ffe-4f44-b71b-dc0896d7464b"",
+                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GrabRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -159,6 +205,10 @@ namespace BFVR.InputModule
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
             m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+            // Interaction
+            m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
+            m_Interaction_GrabLeft = m_Interaction.FindAction("GrabLeft", throwIfNotFound: true);
+            m_Interaction_GrabRight = m_Interaction.FindAction("GrabRight", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -302,6 +352,47 @@ namespace BFVR.InputModule
             }
         }
         public UIActions @UI => new UIActions(this);
+
+        // Interaction
+        private readonly InputActionMap m_Interaction;
+        private IInteractionActions m_InteractionActionsCallbackInterface;
+        private readonly InputAction m_Interaction_GrabLeft;
+        private readonly InputAction m_Interaction_GrabRight;
+        public struct InteractionActions
+        {
+            private @StandardAppInterface m_Wrapper;
+            public InteractionActions(@StandardAppInterface wrapper) { m_Wrapper = wrapper; }
+            public InputAction @GrabLeft => m_Wrapper.m_Interaction_GrabLeft;
+            public InputAction @GrabRight => m_Wrapper.m_Interaction_GrabRight;
+            public InputActionMap Get() { return m_Wrapper.m_Interaction; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(InteractionActions set) { return set.Get(); }
+            public void SetCallbacks(IInteractionActions instance)
+            {
+                if (m_Wrapper.m_InteractionActionsCallbackInterface != null)
+                {
+                    @GrabLeft.started -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabLeft;
+                    @GrabLeft.performed -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabLeft;
+                    @GrabLeft.canceled -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabLeft;
+                    @GrabRight.started -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabRight;
+                    @GrabRight.performed -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabRight;
+                    @GrabRight.canceled -= m_Wrapper.m_InteractionActionsCallbackInterface.OnGrabRight;
+                }
+                m_Wrapper.m_InteractionActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @GrabLeft.started += instance.OnGrabLeft;
+                    @GrabLeft.performed += instance.OnGrabLeft;
+                    @GrabLeft.canceled += instance.OnGrabLeft;
+                    @GrabRight.started += instance.OnGrabRight;
+                    @GrabRight.performed += instance.OnGrabRight;
+                    @GrabRight.canceled += instance.OnGrabRight;
+                }
+            }
+        }
+        public InteractionActions @Interaction => new InteractionActions(this);
         public interface IMovementActions
         {
             void OnMoveForward(InputAction.CallbackContext context);
@@ -313,6 +404,11 @@ namespace BFVR.InputModule
         {
             void OnClick(InputAction.CallbackContext context);
             void OnPoint(InputAction.CallbackContext context);
+        }
+        public interface IInteractionActions
+        {
+            void OnGrabLeft(InputAction.CallbackContext context);
+            void OnGrabRight(InputAction.CallbackContext context);
         }
     }
 }

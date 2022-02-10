@@ -10,7 +10,7 @@ namespace BFVR.InputModule
     /// Standard BFVR input manager. Manages input actions from selected action maps. (Does not destroy on load.)
     /// </summary>
     /// 
-    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions
+    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions , IInteractionActions
     {
         #region UI/Actions
         // UI/Point
@@ -32,6 +32,21 @@ namespace BFVR.InputModule
 
         public delegate void Movement_OnTurnSnapPerformedDelegate(float value);
         public static event Movement_OnTurnSnapPerformedDelegate movementOnTurnSnapPerformedEvent;
+        #endregion
+
+        #region Interaction Actions
+
+        // Interaction/GrabLeft
+        public delegate void Interaction_OnGrabLeftStartedDelegate();
+        public delegate void Interaction_OnGrabLeftCanceledDelegate();
+        public static event Interaction_OnGrabLeftStartedDelegate interactionOnGrabLeftStartedEvent;
+        public static event Interaction_OnGrabLeftCanceledDelegate interactionOnGrabLeftCanceledEvent;
+
+        // Interaction/GrabRight
+        public delegate void Interaction_OnGrabRightStartedDelegate();
+        public delegate void Interaction_OnGrabRightCanceledDelegate();
+        public static event Interaction_OnGrabRightStartedDelegate interactionOnGrabRightStartedEvent;
+        public static event Interaction_OnGrabRightCanceledDelegate interactionOnGrabRightCanceledEvent;
         #endregion
 
         // Default Input Actions Asset
@@ -121,6 +136,32 @@ namespace BFVR.InputModule
             if(context.started)
             {
                 movementOnTurnSnapPerformedEvent.Invoke(context.ReadValue<float>());
+            }
+        }
+        #endregion
+
+        #region Interaction Action Map Interface
+        public void OnGrabLeft(InputAction.CallbackContext context)
+        {
+            if(context.started)
+            {
+                interactionOnGrabLeftStartedEvent.Invoke();
+            }
+            else if(context.canceled)
+            {
+                interactionOnGrabLeftCanceledEvent.Invoke();
+            }
+        }
+
+        public void OnGrabRight(InputAction.CallbackContext context)
+        {
+            if(context.started)
+            {
+                interactionOnGrabRightStartedEvent.Invoke();
+            }
+            else if(context.canceled)
+            {
+                interactionOnGrabRightCanceledEvent.Invoke();
             }
         }
         #endregion
