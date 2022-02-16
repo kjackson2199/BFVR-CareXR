@@ -76,6 +76,7 @@ namespace BFVR.InputModule
 
             StandardAppActions.UI.SetCallbacks(this);
             StandardAppActions.Movement.SetCallbacks(this);
+            StandardAppActions.Interaction.SetCallbacks(this);
 
             Cursor = FindObjectOfType<BFVRCursor>();
         }
@@ -84,12 +85,14 @@ namespace BFVR.InputModule
         {
             StandardAppActions.UI.Enable();
             StandardAppActions.Movement.Enable();
+            StandardAppActions.Interaction.Enable();
         }
 
         private void OnDisable()
         {
             StandardAppActions.UI.Disable();
             StandardAppActions.Movement.Disable();
+            StandardAppActions.Interaction.Disable();
         }
 
         #region UI Action Map Interface Implementation

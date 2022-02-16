@@ -20,7 +20,7 @@ namespace BFVR.Interactable
 
     public class BFVRInteractableTrigger : MonoBehaviour
     {
-        public delegate void OnTriggerDelegate(GameObject triggerObject, int triggerId);
+        public delegate void OnTriggerDelegate(GameObject triggerObject, int triggerId, GameObject grabbedItem = null);
 
         public enum TriggerMode
         {
@@ -139,7 +139,7 @@ namespace BFVR.Interactable
 
         void FireTriggerEvent()
         {
-            onTriggerEvent.Invoke(gameObject, (byte)TriggerId);
+            onTriggerEvent.Invoke(gameObject, (byte)TriggerId, grabbedItem);
             onTriggerUEvent.Invoke();
         }
 

@@ -34,12 +34,12 @@ namespace BFVR.Interactable
             BFVRInteractableTrigger.onTriggerEvent -= BFVRInteractableTrigger_onTriggerEvent;
         }
 
-        private void BFVRInteractableTrigger_onTriggerEvent(GameObject triggerObject, int triggerId)
+        private void BFVRInteractableTrigger_onTriggerEvent(GameObject triggerObject, int triggerId, GameObject grabbedObject)
         {
-            InteractableTriggerHandle(triggerObject, triggerId);
+            InteractableTriggerHandle(triggerObject, triggerId, grabbedObject);
         }
 
-        protected virtual void InteractableTriggerHandle(GameObject triggerObject, int triggerId)
+        protected virtual void InteractableTriggerHandle(GameObject triggerObject, int triggerId, GameObject grabbedObject)
         {
             if (!triggerObjects.Contains(triggerObject)) return;
 
