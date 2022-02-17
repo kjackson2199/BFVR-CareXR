@@ -78,7 +78,6 @@ namespace BFVR.InputModule
 
         public void RemoveItemFromHand()
         {
-            Debug.Log("Removed");
             itemInHand = null;
         }
 

@@ -19,7 +19,7 @@ namespace BFVR.Interactable
         public static event OnReleaseDelegate onReleased;
 
         public bool EnableGrabbable;
-        public bool UseHandedness;  // Not implemented
+        [HideInInspector] public bool UseHandedness;  // Not implemented
         [Tooltip("Allow user to grab item from other hand.")]
         public bool AllowGrabSwap;
         [Tooltip("If user releases grabbable return to original position. False if easing is used.")]
@@ -59,16 +59,20 @@ namespace BFVR.Interactable
         {
             if (_itemGrabbed && AllowGrabSwap)
             {
+                // Item hand swap
+                Debug.Log("Swap");
                 _currentHand.RemoveItemFromHand();
                 goto DO_GRAB;
             }
             else if(_itemGrabbed && !AllowGrabSwap)
             {
                 // No swap
+                Debug.Log("No Swap");
                 return false;
             }
             else if(!_itemGrabbed)
             {
+                Debug.Log("Grab");
                 goto DO_GRAB;
             }
             else
@@ -83,6 +87,7 @@ namespace BFVR.Interactable
             }
 
             _currentHand = parentHand;
+            _itemGrabbed = true;
             gameObject.transform.position = parentHand.palmTransform.position;
             gameObject.transform.rotation = parentHand.palmTransform.rotation;
 
