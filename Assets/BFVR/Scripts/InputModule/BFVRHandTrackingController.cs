@@ -11,21 +11,29 @@ namespace BFVR.InputModule
     /// </summary>
     public class BFVRHandTrackingController : MonoBehaviour
     {
-        [Tooltip("Set true for right hand controls. Defaults to left hand.")]
-        public bool RightHand = false;
-
         Transform HandRoot;
         Vector3 HandPos;
         Quaternion HandRotation;
 
+        bool _rightHand;
+
         private void Start()
         {
+            HandCheck();
             InitializeXRSubsystem();
         }
 
         private void Update()
         {
             UpdateHandTracking();
+        }
+
+        void HandCheck()
+        {
+            if (gameObject.CompareTag("Right Hand"))
+            {
+                _rightHand = true;
+            }
         }
 
         void InitializeXRSubsystem()
@@ -48,13 +56,13 @@ namespace BFVR.InputModule
 
             foreach(XRNodeState nodeState in nodeStates)
             {
-                if(RightHand && nodeState.nodeType == XRNode.RightHand)
+                if(_rightHand && nodeState.nodeType == XRNode.RightHand)
                 {
                     nodeState.TryGetPosition(out HandPos);
                     nodeState.TryGetRotation(out HandRotation);
                     break;
                 }
-                else if(!RightHand && nodeState.nodeType == XRNode.LeftHand)
+                else if(!_rightHand && nodeState.nodeType == XRNode.LeftHand)
                 {
                     nodeState.TryGetPosition(out HandPos);
                     nodeState.TryGetRotation(out HandRotation);

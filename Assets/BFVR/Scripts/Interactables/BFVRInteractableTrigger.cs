@@ -90,7 +90,7 @@ namespace BFVR.Interactable
             BFVRCollider collider = other.gameObject.GetComponent<BFVRCollider>();
             if(collider && collider.ColliderTag != "")
             {
-                if (AllowedTriggerTags.Contains(collider.ColliderTag)) ;
+                if (AllowedTriggerTags.Contains(collider.ColliderTag))
                 {
                     touchTriggerTripped = true;
                 }

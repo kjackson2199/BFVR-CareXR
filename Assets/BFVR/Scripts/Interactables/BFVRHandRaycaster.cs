@@ -35,12 +35,6 @@ namespace BFVR.Interactable
             handRays = rays.ToArray();
         }
 
-        public void TestCastRays()
-        {
-            RaycastHit hit;
-            RaycastClosestHit(out hit);
-        }
-
         /// <summary>
         /// Cast rays and returns average hit vector.
         /// </summary>
@@ -55,6 +49,8 @@ namespace BFVR.Interactable
                 {
                     hits.Add(hit);
                 }
+
+                Debug.DrawRay(gameObject.transform.position, gameObject.transform.rotation * ray, Color.red, 2);
             }
             if (hits.Count > 0)
             {

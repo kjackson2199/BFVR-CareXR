@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2540422098766200685}
   m_Layer: 0
   m_Name: Left Hand
-  m_TagString: Untagged
+  m_TagString: Left Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f387f7d4b50a40e40bbea355913e3869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightHand: 0
 --- !u!114 &2540422098766200685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,37 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bec06304ec45d84f95d3ad21eead080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  palmTransform: {fileID: 0}
-  GrabTest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReleaseTest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  handRaycaster: {fileID: 7723012817440670269}
+  palmTransform: {fileID: 6344083397505609323}
 --- !u!1 &862460650419851326
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,8 +70,8 @@ GameObject:
   - component: {fileID: 6344083397505609323}
   - component: {fileID: 7723012817440670269}
   m_Layer: 0
-  m_Name: Palm
-  m_TagString: Untagged
+  m_Name: LeftPalm
+  m_TagString: Left Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d77209d4d2c1134cb7d136383569368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRayDistance: 0.25
+  grabSpreadOffset: -2
   GrabbableLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -349,7 +321,7 @@ GameObject:
   - component: {fileID: 9065273864696706937}
   m_Layer: 0
   m_Name: TempHand
-  m_TagString: Untagged
+  m_TagString: Left Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +486,7 @@ GameObject:
   - component: {fileID: 1361898901360752028}
   m_Layer: 0
   m_Name: Right Hand
-  m_TagString: Untagged
+  m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f387f7d4b50a40e40bbea355913e3869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightHand: 1
 --- !u!114 &1361898901360752028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,37 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bec06304ec45d84f95d3ad21eead080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  palmTransform: {fileID: 0}
-  GrabTest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReleaseTest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  handRaycaster: {fileID: 6049866455797919903}
+  palmTransform: {fileID: 8207262518932314528}
 --- !u!1 &8172113955233289022
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,8 +544,8 @@ GameObject:
   - component: {fileID: 8207262518932314528}
   - component: {fileID: 6049866455797919903}
   m_Layer: 0
-  m_Name: Palm
-  m_TagString: Untagged
+  m_Name: RightPalm
+  m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,6 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d77209d4d2c1134cb7d136383569368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRayDistance: 0.25
+  grabSpreadOffset: -2
   GrabbableLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -800,7 +744,7 @@ GameObject:
   - component: {fileID: 4634577371256612187}
   m_Layer: 0
   m_Name: TempHand
-  m_TagString: Untagged
+  m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

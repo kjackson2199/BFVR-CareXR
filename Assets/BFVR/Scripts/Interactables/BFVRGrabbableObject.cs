@@ -41,6 +41,8 @@ namespace BFVR.Interactable
         Vector3 originalPosition;
         Quaternion originalRotation;
 
+        Coroutine releaseEasingCoroutine;
+
         public void Start()
         {
             SetNewOriginalTransform();
@@ -53,18 +55,33 @@ namespace BFVR.Interactable
         }
 
 
-        public void Grab(BFVRHand parentHand)
+        public bool Grab(BFVRHand parentHand)
         {
-            if (_itemGrabbed && AllowGrabSwap && _currentHand != parentHand)
+            if (_itemGrabbed && AllowGrabSwap)
             {
+                _currentHand.RemoveItemFromHand();
                 goto DO_GRAB;
             }
             else if(_itemGrabbed && !AllowGrabSwap)
             {
-                return;
+                // No swap
+                return false;
+            }
+            else if(!_itemGrabbed)
+            {
+                goto DO_GRAB;
+            }
+            else
+            {
+                return false;
             }
 
         DO_GRAB:
+            if (releaseEasingCoroutine != null)
+            {
+                StopCoroutine(releaseEasingCoroutine);
+            }
+
             _currentHand = parentHand;
             gameObject.transform.position = parentHand.palmTransform.position;
             gameObject.transform.rotation = parentHand.palmTransform.rotation;
@@ -73,10 +90,13 @@ namespace BFVR.Interactable
 
             onGrabbed.Invoke(_currentHand.gameObject);
             OnGrab.Invoke();
+            return true;
         }
 
-        public void Release(Vector3 newPos = new Vector3(), Quaternion newRot = new Quaternion(), bool snapToNewTransform = false)
+        public void Release(BFVRHand hand, Vector3 newPos = new Vector3(), Quaternion newRot = new Quaternion(), bool snapToNewTransform = false)
         {
+            if (_currentHand != hand) return;
+
             gameObject.transform.parent = null;
 
             if(snapToNewTransform)
@@ -88,7 +108,7 @@ namespace BFVR.Interactable
                 }
                 else
                 {
-                    StartCoroutine(ReleaseEasing(newPos, newRot));
+                    releaseEasingCoroutine = StartCoroutine(ReleaseEasing(newPos, newRot));
                 }
             }
             else
@@ -100,9 +120,15 @@ namespace BFVR.Interactable
                 }
                 else
                 {
-                    StartCoroutine(ReleaseEasing(originalPosition, originalRotation));
+                    releaseEasingCoroutine = StartCoroutine(ReleaseEasing(originalPosition, originalRotation));
                 }
             }
+
+            _currentHand = null;
+            _itemGrabbed = false;
+
+            onReleased.Invoke(_currentHand.gameObject);
+            OnRelease.Invoke();
         }
 
         IEnumerator ReleaseEasing(Vector3 Pos, Quaternion Rot)
