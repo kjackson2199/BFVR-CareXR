@@ -7,6 +7,11 @@ namespace BFVR.ChapterManagement
 {
     public class BFVRAnimationStep : MonoBehaviour
     {
+        public delegate void OnStepBeginDelegate();
+        public static event OnStepBeginDelegate onStepBeginEvent;
+        public delegate void OnStepCompleteDelegate();
+        public static event OnStepCompleteDelegate onStepCompleteEvent;
+
         public enum StepActionType { Transform, ObjectAnimation , ResetTransform };
         public enum StepTriggerType { Manual, UserInitiated, Autostart, Timed };
 
@@ -45,7 +50,8 @@ namespace BFVR.ChapterManagement
 
         void StartStepActions()
         {
-            if (OnStepBegin != null) OnStepBegin.Invoke();
+            OnStepBegin.Invoke();
+            onStepBeginEvent.Invoke();
 
             foreach(StepAction action in StepActions)
             {
@@ -89,7 +95,8 @@ namespace BFVR.ChapterManagement
                 AdvanceStepActions(_deltaStep);
                 if (_deltaStep >= 1.0f)
                 {
-                    if (!_isComplete && OnStepComplete != null) OnStepComplete.Invoke();
+                    OnStepComplete.Invoke();
+                    onStepCompleteEvent.Invoke();
                     _isComplete = true;
                 }
             }
