@@ -47,6 +47,11 @@ namespace BFVR.ChapterManagement
             BFVRAnimationStep.onStepCompleteEvent += BFVRAnimationStep_onStepCompleteEvent;
         }
 
+        public void Reset()
+        {
+            _stepIndex = -1;
+        }
+
         public void NextStep()
         {
             foreach(BFVRAnimationStep s in Steps)
@@ -61,6 +66,7 @@ namespace BFVR.ChapterManagement
                 return;
             }
 
+            Debug.Log("Next Step");
             Steps[_stepIndex].gameObject.SetActive(true);
         }
 
