@@ -17,6 +17,7 @@ namespace BFVR.ChapterManagement
             public StepActionType Action;
             public Transform StartTransform;
             public Transform EndTransform;
+            public string AnimationStateName;
         }
 
         public string stepName = "Step 1";
@@ -34,6 +35,7 @@ namespace BFVR.ChapterManagement
         private void Start()
         {
             PlayStep();
+            StartCoroutine(PauseTest());
         }
 
         private void Update()
@@ -103,12 +105,19 @@ namespace BFVR.ChapterManagement
 
         void PauseStep()
         {
+            _isPlaying = false;
+            PauseStepActions();
+        }
 
+        void ResumeStep()
+        {
+            _isPlaying = true;
         }
 
         void StopStep()
         {
-
+            _isPlaying = false;
+            PauseStepActions();
         }
 
         private void Reset()
@@ -122,5 +131,13 @@ namespace BFVR.ChapterManagement
         { return _isComplete; }
         public bool IsStepPlaying()
         { return _isPlaying; }
+
+        IEnumerator PauseTest()
+        {
+            yield return new WaitForSeconds(5);
+            PauseStep();
+            yield return new WaitForSeconds(5);
+            ResumeStep();
+        }
     }
 }
