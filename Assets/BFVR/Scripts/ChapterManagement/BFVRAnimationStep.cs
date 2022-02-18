@@ -8,12 +8,13 @@ namespace BFVR.ChapterManagement
     public class BFVRAnimationStep : MonoBehaviour
     {
         public delegate void OnStepBeginDelegate();
-        public static event OnStepBeginDelegate onStepBeginEvent;
         public delegate void OnStepCompleteDelegate();
+
+        public static event OnStepBeginDelegate onStepBeginEvent;
         public static event OnStepCompleteDelegate onStepCompleteEvent;
 
         public enum StepActionType { Transform, ObjectAnimation , ResetTransform };
-        public enum StepTriggerType { Manual, UserInitiated, Autostart, Timed };
+        public enum StepTriggerType { Manual, Autostart };
 
         [System.Serializable]
         public struct StepAction
@@ -39,8 +40,20 @@ namespace BFVR.ChapterManagement
 
         private void Start()
         {
-            PlayStep();
-            StartCoroutine(PauseTest());
+            if (gameObject.activeSelf) gameObject.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            if(StepTrigger == StepTriggerType.Autostart)
+            {
+                PlayStep();
+            }
+        }
+
+        private void OnDisable()
+        {
+            Reset();
         }
 
         private void Update()
@@ -129,6 +142,21 @@ namespace BFVR.ChapterManagement
 
         private void Reset()
         {
+            foreach (StepAction action in StepActions)
+            {
+                switch (action.Action)
+                {
+                    case StepActionType.Transform:
+                        action.target.transform.rotation = action.StartTransform.rotation;
+                        action.target.transform.position = action.StartTransform.position;
+                        break;
+                    case StepActionType.ObjectAnimation:
+                        //Handle Animation
+                        break;
+
+                }
+            }
+
             _isPlaying = false;
             _isComplete = false;
             _deltaStep = 0.0f;
@@ -138,13 +166,5 @@ namespace BFVR.ChapterManagement
         { return _isComplete; }
         public bool IsStepPlaying()
         { return _isPlaying; }
-
-        IEnumerator PauseTest()
-        {
-            yield return new WaitForSeconds(5);
-            PauseStep();
-            yield return new WaitForSeconds(5);
-            ResumeStep();
-        }
     }
 }
