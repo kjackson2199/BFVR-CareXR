@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace BFVR.Interactable
 {
-    public enum TriggerIdMask
+    public enum InteractableTriggerIdMask
     {
         _1 = 0x01,
         _2 = 0x02,
@@ -32,7 +32,7 @@ namespace BFVR.Interactable
 
         [Header("Trigger Settings")]
         public TriggerMode triggerMode;
-        public TriggerIdMask TriggerId = TriggerIdMask._1;
+        public InteractableTriggerIdMask TriggerId = InteractableTriggerIdMask._1;
 
         public List<string> AllowedTriggerTags = new List<string>();
         public string TriggerTag = "";

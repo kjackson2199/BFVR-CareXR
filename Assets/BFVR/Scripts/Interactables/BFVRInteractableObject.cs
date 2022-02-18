@@ -10,8 +10,8 @@ namespace BFVR.Interactable
     /// 
     public class BFVRInteractableObject : MonoBehaviour
     {
-        public delegate void OnInteractableTriggered(int triggerId);
-        public static OnInteractableTriggered onInteractableTriggered;
+        public delegate void OnInteractableTriggered(GameObject owningObject, int triggerId);
+        public static event OnInteractableTriggered onInteractableTriggered;
 
         List<GameObject> triggerObjects;
 
@@ -43,7 +43,7 @@ namespace BFVR.Interactable
         {
             if (!triggerObjects.Contains(triggerObject)) return;
 
-            onInteractableTriggered.Invoke(triggerId);
+            onInteractableTriggered.Invoke(gameObject, triggerId);
         }
     }
 }
