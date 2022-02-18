@@ -42,9 +42,25 @@ namespace BFVR.ChapterManagement
             }
         }
 
+        public void Start()
+        {
+            if(autoStart)
+            {
+                PlaySteps();
+            }
+        }
+
         private void OnEnable()
         {
             BFVRInteractiveStep.onStepCompleteEvent += BFVRInteractiveStep_onStepCompleteEvent;
+        }
+
+        public void PlaySteps()
+        {
+            if (onStartedEvent != null) onStartedEvent.Invoke();
+            if (OnStarted != null) OnStarted.Invoke();
+
+            NextStep();
         }
 
         public void NextStep()
@@ -63,6 +79,9 @@ namespace BFVR.ChapterManagement
 
             Debug.Log("BFVRInteractiveStepManager: Next Step");
             Steps[_stepIndex].gameObject.SetActive(true);
+
+            if (OnNextStep != null) OnNextStep.Invoke();
+            if (onNextStepEvent != null) onNextStepEvent.Invoke();
         }
 
         public void PreviousStep()
@@ -79,6 +98,9 @@ namespace BFVR.ChapterManagement
             }
 
             Steps[_stepIndex].gameObject.SetActive(true);
+
+            if (OnPreviousStep != null) OnPreviousStep.Invoke();
+            if (onPreviousStepEvent != null) onPreviousStepEvent.Invoke();
         }
 
         void StepsComplete()

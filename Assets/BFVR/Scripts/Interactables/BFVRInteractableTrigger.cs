@@ -163,6 +163,7 @@ namespace BFVR.Interactable
 
         void ShowHighlight()
         {
+            if (HighlightRenderer == null) return;
             if (!UseHighlight)
             {
                 HideHighlight();
@@ -174,6 +175,7 @@ namespace BFVR.Interactable
 
         void HideHighlight()
         {
+            if (HighlightRenderer == null) return;
             HighlightRenderer.enabled = false;
         }
 
