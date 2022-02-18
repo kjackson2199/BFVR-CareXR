@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace BFVR.ChapterManagement
 {
-    public class BFVRAnimationStepManager : MonoBehaviour
+    public class BFVRInteractiveStepManager : MonoBehaviour
     {
         public delegate void OnStartedDelegate();
         public delegate void OnNextStepDelegate();
@@ -17,11 +17,11 @@ namespace BFVR.ChapterManagement
         public static event OnPreviousStepDelegate onPreviousStepEvent;
         public static event OnCompletedDelgeate onCompletedEvent;
 
-        public static BFVRAnimationStepManager Instance { get { return _instance; } }
-        private static BFVRAnimationStepManager _instance;
+        public static BFVRInteractiveStepManager Instance { get { return _instance; } }
+        private static BFVRInteractiveStepManager _instance;
 
         public bool autoStart = true;
-        public List<BFVRAnimationStep> Steps = new List<BFVRAnimationStep>();
+        public List<BFVRInteractiveStep> Steps = new List<BFVRInteractiveStep>();
 
         public UnityEvent OnStarted;
         public UnityEvent OnNextStep;
@@ -44,41 +44,36 @@ namespace BFVR.ChapterManagement
 
         private void OnEnable()
         {
-            BFVRAnimationStep.onStepCompleteEvent += BFVRAnimationStep_onStepCompleteEvent;
-        }
-
-        public void Reset()
-        {
-            _stepIndex = -1;
+            BFVRInteractiveStep.onStepCompleteEvent += BFVRInteractiveStep_onStepCompleteEvent;
         }
 
         public void NextStep()
         {
-            foreach(BFVRAnimationStep s in Steps)
+            foreach (BFVRInteractiveStep s in Steps)
             {
                 s.gameObject.SetActive(false);
             }
 
             _stepIndex++;
-            if(_stepIndex >= Steps.Count)
+            if (_stepIndex >= Steps.Count)
             {
                 StepsComplete();
                 return;
             }
 
-            Debug.Log("BFVRAnimationStepManager: Next Step");
+            Debug.Log("BFVRInteractiveStepManager: Next Step");
             Steps[_stepIndex].gameObject.SetActive(true);
         }
 
         public void PreviousStep()
         {
-            foreach(BFVRAnimationStep s in Steps)
+            foreach (BFVRInteractiveStep s in Steps)
             {
                 s.gameObject.SetActive(false);
             }
 
             _stepIndex--;
-            if(_stepIndex < 0) 
+            if (_stepIndex < 0)
             {
                 return;
             }
@@ -88,7 +83,7 @@ namespace BFVR.ChapterManagement
 
         void StepsComplete()
         {
-            Debug.Log("BFVRAnimationStepManager: Steps Completed");
+            Debug.Log("BFVRInteractiveStepManager: Steps Completed");
             _stepIndex = -1;
 
             if (onCompletedEvent != null)
@@ -98,8 +93,8 @@ namespace BFVR.ChapterManagement
                 OnCompleted.Invoke();
         }
 
-        #region Animation Step Callback
-        private void BFVRAnimationStep_onStepCompleteEvent()
+        #region Interactive Step Callback
+        private void BFVRInteractiveStep_onStepCompleteEvent()
         {
             NextStep();
         }
