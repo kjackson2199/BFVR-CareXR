@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 namespace BFVR.Interactable
 {
+    [SerializeField]
     public enum InteractableTriggerIdMask
     {
         _1 = 0x01,
@@ -35,7 +36,7 @@ namespace BFVR.Interactable
         public InteractableTriggerIdMask TriggerId = InteractableTriggerIdMask._1;
 
         public List<string> AllowedTriggerTags = new List<string>();
-        public string TriggerTag = "";
+        [HideInInspector] public string TriggerTag = ""; //Un-used
         [Range(.001f, .1f)] public float TriggerActivationRange = .001f;
 
         [Header("Highlight Settings")]
@@ -93,6 +94,7 @@ namespace BFVR.Interactable
                 if (AllowedTriggerTags.Contains(collider.ColliderTag))
                 {
                     touchTriggerTripped = true;
+                    
                 }
             }
         }
@@ -139,8 +141,9 @@ namespace BFVR.Interactable
 
         void FireTriggerEvent()
         {
-            onTriggerEvent.Invoke(gameObject, (byte)TriggerId, grabbedItem);
-            onTriggerUEvent.Invoke();
+            if(onTriggerEvent != null) onTriggerEvent.Invoke(gameObject, (byte)TriggerId, grabbedItem);
+            if(onTriggerUEvent != null) onTriggerUEvent.Invoke();
+            triggerTripped = true;
         }
 
         void InitializeTrigger()

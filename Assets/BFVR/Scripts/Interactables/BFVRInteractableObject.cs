@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace BFVR.Interactable
 {
@@ -11,9 +12,11 @@ namespace BFVR.Interactable
     public class BFVRInteractableObject : MonoBehaviour
     {
         public delegate void OnInteractableTriggered(GameObject owningObject, int triggerId);
-        public static event OnInteractableTriggered onInteractableTriggered;
+        public static event OnInteractableTriggered onInteractableTriggeredEvent;
 
-        List<GameObject> triggerObjects;
+        public UnityEvent OnInteractableTriggeredUEvent;
+
+        List<GameObject> triggerObjects = new List<GameObject>();
 
         private void Start()
         {
@@ -34,6 +37,40 @@ namespace BFVR.Interactable
             BFVRInteractableTrigger.onTriggerEvent -= BFVRInteractableTrigger_onTriggerEvent;
         }
 
+        public void ResetTriggers()
+        {
+            foreach(GameObject g in triggerObjects)
+            {
+                g.GetComponent<BFVRInteractableTrigger>().ResetTrigger();
+            }
+        }
+
+        public void EnableTrigger(int TriggerId)
+        {
+            foreach(GameObject g in triggerObjects)
+            {
+                InteractableTriggerIdMask id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
+                if((int)id == TriggerId)
+                {
+                    g.gameObject.SetActive(true);
+                    break;
+                }
+            }
+        }
+
+        public void DisableTrigger(int TriggerId)
+        {
+            foreach (GameObject g in triggerObjects)
+            {
+                InteractableTriggerIdMask id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
+                if ((int)id == TriggerId)
+                {
+                    g.gameObject.SetActive(false);
+                    break;
+                }
+            }
+        }
+
         private void BFVRInteractableTrigger_onTriggerEvent(GameObject triggerObject, int triggerId, GameObject grabbedObject)
         {
             InteractableTriggerHandle(triggerObject, triggerId, grabbedObject);
@@ -43,7 +80,10 @@ namespace BFVR.Interactable
         {
             if (!triggerObjects.Contains(triggerObject)) return;
 
-            onInteractableTriggered.Invoke(gameObject, triggerId);
+            if(onInteractableTriggeredEvent != null) onInteractableTriggeredEvent.Invoke(gameObject, triggerId);
+            if(OnInteractableTriggeredUEvent != null) OnInteractableTriggeredUEvent.Invoke();
+
+            Debug.Log("Trigger Id: " + triggerId);
         }
     }
 }

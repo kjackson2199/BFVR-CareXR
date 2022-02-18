@@ -27,13 +27,13 @@ namespace BFVR.ChapterManagement
 
         private void OnEnable()
         {
-            BFVRInteractableObject.onInteractableTriggered += BFVRInteractableObject_onInteractableTriggered;
+            BFVRInteractableObject.onInteractableTriggeredEvent += BFVRInteractableObject_onInteractableTriggered;
             BeginInteractiveStep();
         }
 
         private void OnDisable()
         {
-            BFVRInteractableObject.onInteractableTriggered -= BFVRInteractableObject_onInteractableTriggered;
+            BFVRInteractableObject.onInteractableTriggeredEvent -= BFVRInteractableObject_onInteractableTriggered;
         }
 
         public void BeginInteractiveStep() 
@@ -50,7 +50,7 @@ namespace BFVR.ChapterManagement
 
         private void BFVRInteractableObject_onInteractableTriggered(GameObject owningObject, int triggerId)
         {
-            if(owningObject != InteractableTarget && triggerId == (int)TargetTrigger)
+            if(owningObject != InteractableTarget && triggerId != (int)TargetTrigger)
             {
                 return;
             }
