@@ -63,8 +63,8 @@ namespace BFVR.ChapterManagement
 
         void StartStepActions()
         {
-            OnStepBegin.Invoke();
-            onStepBeginEvent.Invoke();
+            if(OnStepBegin != null) OnStepBegin.Invoke();
+            if(onStepBeginEvent != null) onStepBeginEvent.Invoke();
 
             foreach(StepAction action in StepActions)
             {
@@ -142,21 +142,6 @@ namespace BFVR.ChapterManagement
 
         private void Reset()
         {
-            foreach (StepAction action in StepActions)
-            {
-                switch (action.Action)
-                {
-                    case StepActionType.Transform:
-                        action.target.transform.rotation = action.StartTransform.rotation;
-                        action.target.transform.position = action.StartTransform.position;
-                        break;
-                    case StepActionType.ObjectAnimation:
-                        //Handle Animation
-                        break;
-
-                }
-            }
-
             _isPlaying = false;
             _isComplete = false;
             _deltaStep = 0.0f;

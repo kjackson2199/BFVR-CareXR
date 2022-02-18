@@ -23,9 +23,6 @@ namespace BFVR.ChapterManagement
         public bool autoStart = true;
         public List<BFVRAnimationStep> Steps = new List<BFVRAnimationStep>();
 
-        public enum StepManagerState { InActive, Active, Complete };
-        public StepManagerState State = StepManagerState.InActive;
-
         public UnityEvent OnStarted;
         public UnityEvent OnNextStep;
         public UnityEvent OnPreviousStep;
@@ -50,62 +47,55 @@ namespace BFVR.ChapterManagement
             BFVRAnimationStep.onStepCompleteEvent += BFVRAnimationStep_onStepCompleteEvent;
         }
 
-        void NextStep()
+        public void NextStep()
         {
-            if(State == StepManagerState.Complete)
+            foreach(BFVRAnimationStep s in Steps)
             {
-                Debug.Log("BFVRAnimationStepManager: Steps completed.");
-                return;
+                s.gameObject.SetActive(false);
             }
 
-            else if(State == StepManagerState.InActive)
-            {
-                State = StepManagerState.Active;
-            }
-
+            _stepIndex++;
             if(_stepIndex >= Steps.Count)
             {
                 StepsComplete();
-            }
-            else
-            {
-                _stepIndex++;
-                Steps[_stepIndex].gameObject.SetActive(true);
-            }
-        }
-
-        void PreviousStep()
-        {
-            if(State == StepManagerState.Complete)
-            {
-                Debug.Log("BFVRAnimationStepManager: Steps completed.");
                 return;
             }
-            
-            else if(State == StepManagerState.InActive)
+
+            Steps[_stepIndex].gameObject.SetActive(true);
+        }
+
+        public void PreviousStep()
+        {
+            foreach(BFVRAnimationStep s in Steps)
             {
-                State = StepManagerState.Active;
+                s.gameObject.SetActive(false);
             }
 
-            if(_stepIndex > 0)
+            _stepIndex--;
+            if(_stepIndex < 0) 
             {
-                Steps[_stepIndex].gameObject.SetActive(false);
-                _stepIndex--;
-                Steps[_stepIndex].gameObject.SetActive(true);
+                return;
             }
+
+            Steps[_stepIndex].gameObject.SetActive(true);
         }
 
         void StepsComplete()
         {
-            State = StepManagerState.Complete;
-            onCompletedEvent.Invoke();
-            OnCompleted.Invoke();
+            Debug.Log("Steps Completed");
+            _stepIndex = -1;
+
+            if (onCompletedEvent != null)
+                onCompletedEvent.Invoke();
+
+            if (OnCompleted != null)
+                OnCompleted.Invoke();
         }
 
         #region Animation Step Callback
         private void BFVRAnimationStep_onStepCompleteEvent()
         {
-            Steps[_stepIndex].gameObject.SetActive(false);
+            NextStep();
         }
         #endregion
     }
