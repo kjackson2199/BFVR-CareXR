@@ -209,16 +209,16 @@ namespace BFVR.AudioModule
         }
         #endregion
 
-        public void PlaySFX(AudioClip clip)
+        public static void PlaySFX(AudioClip clip)
         {
-            if (!sfx) return;
-            if(sfx.isPlaying)
+            if (!_instance.sfx) return;
+            if(_instance.sfx.isPlaying)
             {
-                sfx.Stop();
+                _instance.sfx.Stop();
             }
 
-            sfx.clip = clip;
-            sfx.Play();
+            _instance.sfx.clip = clip;
+            _instance.sfx.Play();
         }
 
         public void StopSFX()

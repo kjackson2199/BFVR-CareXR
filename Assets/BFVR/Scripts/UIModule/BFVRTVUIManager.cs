@@ -9,37 +9,62 @@ namespace BFVR.UIModule
         #region TV Interface Prompt
         public GameObject TVScreenMesh;
         public GameObject MediaControlPanel;
-        public GameObject SectionBeginPrompt;
+        public GameObject WatchSectionBeginPrompt;
         public GameObject DirectionsPromt;
-        public GameObject SectionCompletePromt;
+        public GameObject WatchSectionCompletePrompt;
+        public GameObject InteractiveSectionBeginPrompt;
+        public GameObject InteractiveSectionCompletePrompt;
         #endregion
 
         private void Start()
         {
+            HidePrompts();
+        }
+
+        public void HidePrompts()
+        {
             MediaControlPanel.SetActive(false);
-            SectionBeginPrompt.SetActive(false);
+            WatchSectionBeginPrompt.SetActive(false);
             DirectionsPromt.SetActive(false);
-            SectionCompletePromt.SetActive(false);
+            WatchSectionCompletePrompt.SetActive(false);
+            InteractiveSectionBeginPrompt.SetActive(false);
+            InteractiveSectionCompletePrompt.SetActive(false);
         }
 
-        public void DisplayMediaControlPanel(bool display = true)
+        public void DisplayMediaControlPanel()
         {
-            if (MediaControlPanel) MediaControlPanel.SetActive(display);
+            HidePrompts();
+            if (MediaControlPanel) MediaControlPanel.SetActive(true);
         }
 
-        public void DisplaySectionBeginPrompt(bool display = true)
+        public void DisplaySectionBeginPrompt()
         {
-            if (SectionBeginPrompt) SectionBeginPrompt.SetActive(display);
+            HidePrompts();
+            if (WatchSectionBeginPrompt) WatchSectionBeginPrompt.SetActive(true);
         }
 
-        public void DisplayDirectionsPrompt(bool display = true)
+        public void DisplayDirectionsPrompt()
         {
-            if (DirectionsPromt) DirectionsPromt.SetActive(display);
+            HidePrompts();
+            if (DirectionsPromt) DirectionsPromt.SetActive(true);
         }
 
-        public void DisplaySectionCompletePrompt(bool display = true)
+        public void DisplaySectionCompletePrompt()
         {
-            if (SectionCompletePromt) SectionCompletePromt.SetActive(display);
+            HidePrompts();
+            if (WatchSectionCompletePrompt) WatchSectionCompletePrompt.SetActive(true);
+        }
+
+        public void DisplayInteractiveSectionBeginPrompt()
+        {
+            HidePrompts();
+            if (InteractiveSectionBeginPrompt) InteractiveSectionBeginPrompt.SetActive(true);
+        }
+
+        public void DisplayInteractiveSectionCompletePrompt()
+        {
+            HidePrompts();
+            if (InteractiveSectionCompletePrompt) InteractiveSectionCompletePrompt.SetActive(true);
         }
     }
 }

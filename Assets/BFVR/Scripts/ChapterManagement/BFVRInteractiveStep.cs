@@ -1,4 +1,5 @@
-﻿using BFVR.Interactable;
+﻿using BFVR.AudioModule;
+using BFVR.Interactable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,9 @@ namespace BFVR.ChapterManagement
         public string InteractiveStepName = "Step 1";
         public BFVRInteractableObject InteractableTarget;
         public InteractableTriggerIdMask TargetTrigger;
+
+        [Space]
+        public AudioClip stepCompleteSFX;
 
         [Header("Step Events")]
         public UnityEvent OnStepBeginEvent;
@@ -46,6 +50,8 @@ namespace BFVR.ChapterManagement
         {
             if(OnStepCompleteEvent != null) OnStepCompleteEvent.Invoke();
             if(onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
+
+            BFVRAudioManager.PlaySFX(stepCompleteSFX);
         }
 
         private void BFVRInteractableObject_onInteractableTriggered(GameObject owningObject, int triggerId)

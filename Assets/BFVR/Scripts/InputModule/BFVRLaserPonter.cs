@@ -106,6 +106,7 @@ namespace BFVR.InputModule
 
             Vector3 cursorPos = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? gameObject.transform.position + (gameObject.transform.forward * maxLength) : hitInfo.point;
             Vector3 cursorNormal = Mathf.Abs(hitInfo.point.magnitude) <= 0 ? gameObject.transform.forward : hitInfo.normal;
+            cursorPos += .025f * cursorNormal;
             float cursorDist = Mathf.Abs((hitInfo.point - gameObject.transform.position).magnitude);
             float cursorScale = cursorDist / maxLength;
 
