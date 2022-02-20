@@ -40,7 +40,7 @@ namespace BFVR.ChapterManagement
 
         private void Start()
         {
-            if (gameObject.activeSelf) gameObject.SetActive(false);
+            //if (gameObject.activeSelf) gameObject.SetActive(false);
         }
 
         private void OnEnable()
@@ -75,7 +75,8 @@ namespace BFVR.ChapterManagement
                         action.target.transform.position = action.EndTransform.position;
                         break;
                     case StepActionType.ObjectAnimation:
-                        //Handle Animation
+                        BFVROrderedObjectAnimation anim = action.target.GetComponent<BFVROrderedObjectAnimation>();
+                        if (anim != null && action.AnimationStateName != null) anim.PlayStep(action.AnimationStateName);
                         break;
                         
                 }
@@ -108,8 +109,9 @@ namespace BFVR.ChapterManagement
                 AdvanceStepActions(_deltaStep);
                 if (_deltaStep >= 1.0f)
                 {
-                    OnStepComplete.Invoke();
-                    onStepCompleteEvent.Invoke();
+                    if(!_isComplete && OnStepComplete != null) OnStepComplete.Invoke();
+                    if(!_isComplete && onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
+                    Debug.Log("Animation Step Complete");
                     _isComplete = true;
                 }
             }

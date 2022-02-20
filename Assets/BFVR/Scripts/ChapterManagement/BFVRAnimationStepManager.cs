@@ -20,7 +20,7 @@ namespace BFVR.ChapterManagement
         public static BFVRAnimationStepManager Instance { get { return _instance; } }
         private static BFVRAnimationStepManager _instance;
 
-        public bool autoStart = true;
+        //public bool autoStart = true;
         public List<BFVRAnimationStep> Steps = new List<BFVRAnimationStep>();
 
         public UnityEvent OnStarted;
@@ -54,17 +54,18 @@ namespace BFVR.ChapterManagement
 
         public void NextStep()
         {
-            foreach(BFVRAnimationStep s in Steps)
+            foreach (BFVRAnimationStep s in Steps)
             {
                 s.gameObject.SetActive(false);
             }
 
-            _stepIndex++;
-            if(_stepIndex >= Steps.Count)
+            if(_stepIndex + 1 >= Steps.Count)
             {
                 StepsComplete();
                 return;
             }
+
+            _stepIndex++;
 
             Debug.Log("BFVRAnimationStepManager: Next Step");
             Steps[_stepIndex].gameObject.SetActive(true);

@@ -39,11 +39,6 @@ namespace BFVR.Interactable
         [HideInInspector] public string TriggerTag = ""; //Un-used
         [Range(.001f, .1f)] public float TriggerActivationRange = .001f;
 
-        [Header("Highlight Settings")]
-        public Renderer HighlightRenderer;
-        public bool UseHighlight = true;
-        public bool StartHighlightActive;
-
         [Tooltip("Automatically reset trigger state once fired.")]
         [Space] public bool AutoReset;
         [Range(.1f,1)] public float TriggerAutoResetDelay = .1f;
@@ -127,7 +122,6 @@ namespace BFVR.Interactable
         public void ResetTrigger()
         {
             triggerTripped = false;
-            HideHighlight();
             touchTriggerTripped = false;
             locationTriggerTripped = false;
             grabbedItem = null;
@@ -150,35 +144,7 @@ namespace BFVR.Interactable
         {
             BFVRGrabbableObject.onGrabbed += BFVRGrabbable_onGrabbed;
             BFVRGrabbableObject.onReleased += BFVRGrabbable_onReleased;
-
-            if (StartHighlightActive) ShowHighlight();
-            else HideHighlight();
         }
-
-        public void SetShowHightlight(bool show)
-        {
-            if (show) ShowHighlight();
-            else HideHighlight();
-        }
-
-        void ShowHighlight()
-        {
-            if (HighlightRenderer == null) return;
-            if (!UseHighlight)
-            {
-                HideHighlight();
-                return;
-            }
-
-            HighlightRenderer.enabled = true;
-        }
-
-        void HideHighlight()
-        {
-            if (HighlightRenderer == null) return;
-            HighlightRenderer.enabled = false;
-        }
-
         public void SetTriggerMode(TriggerMode newMode)
         {
             triggerMode = newMode;
