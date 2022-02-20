@@ -20,7 +20,7 @@ namespace BFVR.ChapterManagement
         [Header("Step Settings")]
         public string InteractiveStepName = "Step 1";
         public BFVRInteractableObject InteractableTarget;
-        public InteractableTriggerIdMask TargetTrigger;
+        public InteractableTriggerId TargetTrigger;
 
         [Space]
         public AudioClip stepCompleteSFX;

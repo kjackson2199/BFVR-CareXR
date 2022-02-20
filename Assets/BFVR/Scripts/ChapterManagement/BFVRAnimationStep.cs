@@ -21,6 +21,7 @@ namespace BFVR.ChapterManagement
         {
             public GameObject target;
             public StepActionType Action;
+            public bool UseCurrentTransformAsStart;
             public Transform StartTransform;
             public Transform EndTransform;
             public string AnimationStateName;
@@ -91,7 +92,15 @@ namespace BFVR.ChapterManagement
                 switch(action.Action)
                 {
                     case StepActionType.Transform:
-                        action.target.transform.position = Vector3.Slerp(action.StartTransform.position, action.EndTransform.position, delta);
+                        if(action.UseCurrentTransformAsStart)
+                        {
+                            action.target.transform.position = Vector3.Slerp(action.target.transform.position, action.target.transform.position, delta);
+                        }
+                        else
+                        {
+                            action.target.transform.position = Vector3.Slerp(action.StartTransform.position, action.EndTransform.position, delta);
+                        }
+
                         if (!action.StartTransform.rotation.Equals(action.EndTransform.rotation))
                             action.target.transform.rotation = Quaternion.Slerp(action.StartTransform.rotation, action.EndTransform.rotation, delta);
                         break;

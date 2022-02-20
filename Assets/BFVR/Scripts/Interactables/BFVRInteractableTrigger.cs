@@ -7,16 +7,16 @@ using UnityEngine.Events;
 namespace BFVR.Interactable
 {
     [SerializeField]
-    public enum InteractableTriggerIdMask
+    public enum InteractableTriggerId
     {
-        _1 = 0x01,
-        _2 = 0x02,
-        _3 = 0x04,
-        _4 = 0x08,
-        _5 = 0x10,
-        _6 = 0x20,
-        _7 = 0x40,
-        _8 = 0x80
+        _1 = 1,
+        _2 = 2,
+        _3 = 3,
+        _4 = 4,
+        _5 = 5,
+        _6 = 6,
+        _7 = 7,
+        _8 = 8
     }
 
     public class BFVRInteractableTrigger : MonoBehaviour
@@ -33,7 +33,7 @@ namespace BFVR.Interactable
 
         [Header("Trigger Settings")]
         public TriggerMode triggerMode;
-        public InteractableTriggerIdMask TriggerId = InteractableTriggerIdMask._1;
+        public InteractableTriggerId TriggerId = InteractableTriggerId._1;
 
         public List<string> AllowedTriggerTags = new List<string>();
         [HideInInspector] public string TriggerTag = ""; //Un-used

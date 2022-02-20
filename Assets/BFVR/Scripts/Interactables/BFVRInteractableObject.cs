@@ -49,7 +49,7 @@ namespace BFVR.Interactable
         {
             foreach(GameObject g in triggerObjects)
             {
-                InteractableTriggerIdMask id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
+                InteractableTriggerId id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
                 if((int)id == TriggerId)
                 {
                     g.gameObject.SetActive(true);
@@ -62,7 +62,7 @@ namespace BFVR.Interactable
         {
             foreach (GameObject g in triggerObjects)
             {
-                InteractableTriggerIdMask id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
+                InteractableTriggerId id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
                 if ((int)id == TriggerId)
                 {
                     g.gameObject.SetActive(false);

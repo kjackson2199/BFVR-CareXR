@@ -54,9 +54,14 @@ namespace BFVR.Interactable
             originalRotation = gameObject.transform.rotation;
         }
 
+        public void SetEnableGrabbable(bool enable)
+        {
+            EnableGrabbable = enable;
+        }
 
         public bool Grab(BFVRHand parentHand)
         {
+            if (!EnableGrabbable) return false;
             if (_itemGrabbed && AllowGrabSwap)
             {
                 // Item hand swap
@@ -98,35 +103,43 @@ namespace BFVR.Interactable
             return true;
         }
 
-        public void Release(BFVRHand hand, Vector3 newPos = new Vector3(), Quaternion newRot = new Quaternion(), bool snapToNewTransform = false)
+        public void ForceReleaseNewTransform(Transform newTransform)
         {
-            if (_currentHand != hand) return;
+            if (_currentHand == null) return;
 
             gameObject.transform.parent = null;
 
-            if(snapToNewTransform)
+            if (SnapToPositionOnRelease)
             {
-                if(SnapToPositionOnRelease)
-                {
-                    gameObject.transform.position = newPos;
-                    gameObject.transform.rotation = newRot;
-                }
-                else
-                {
-                    releaseEasingCoroutine = StartCoroutine(ReleaseEasing(newPos, newRot));
-                }
+                gameObject.transform.position = newTransform.position;
+                gameObject.transform.rotation = newTransform.rotation;
             }
             else
             {
-                if(SnapToPositionOnRelease)
-                {
-                    gameObject.transform.position = originalPosition;
-                    gameObject.transform.rotation = originalRotation;
-                }
-                else
-                {
-                    releaseEasingCoroutine = StartCoroutine(ReleaseEasing(originalPosition, originalRotation));
-                }
+                releaseEasingCoroutine = StartCoroutine(ReleaseEasing(newTransform.position, newTransform.rotation));
+            }
+
+            _currentHand = null;
+            _itemGrabbed = false;
+
+            onReleased.Invoke(_currentHand.gameObject);
+            OnRelease.Invoke();
+        }
+
+        public void Release(BFVRHand hand)
+        {
+            if (_currentHand != hand || _currentHand == null) return;
+
+            gameObject.transform.parent = null;
+
+            if (SnapToPositionOnRelease)
+            {
+                gameObject.transform.position = originalPosition;
+                gameObject.transform.rotation = originalRotation;
+            }
+            else
+            {
+                releaseEasingCoroutine = StartCoroutine(ReleaseEasing(originalPosition, originalRotation));
             }
 
             _currentHand = null;
