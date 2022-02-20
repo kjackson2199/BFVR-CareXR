@@ -44,6 +44,11 @@ namespace BFVR.ChapterManagement
 
         public void Start()
         {
+            foreach (BFVRInteractiveStep s in Steps)
+            {
+                s.gameObject.SetActive(false);
+            }
+
             if(autoStart)
             {
                 PlaySteps();
