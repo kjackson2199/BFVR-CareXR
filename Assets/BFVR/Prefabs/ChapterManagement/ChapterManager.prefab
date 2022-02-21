@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChapterSections: []
-  AnimationStepManager: {fileID: 0}
-  InteractiveStepManager: {fileID: 0}
+  AnimationStepManager: {fileID: 5630290682719779230}
+  InteractiveStepManager: {fileID: 7309742426687829799}
   OnChapterBegin:
     m_PersistentCalls:
       m_Calls: []
@@ -207,6 +207,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6656066735921793733, guid: 6c2ab6edc8d554d46a0c54078d7491da, type: 3}
   m_PrefabInstance: {fileID: 1332457347269636900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5630290682719779230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6656066735921793722, guid: 6c2ab6edc8d554d46a0c54078d7491da, type: 3}
+  m_PrefabInstance: {fileID: 1332457347269636900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbf8c9427a5fdb49b3b2d7845782283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1858313172834110423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,6 +744,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2689077977205658085, guid: 0c39867225d3d2e4a8d0a36c13ddd1d8, type: 3}
   m_PrefabInstance: {fileID: 8042219861363330908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7309742426687829799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 786678960023107707, guid: 0c39867225d3d2e4a8d0a36c13ddd1d8, type: 3}
+  m_PrefabInstance: {fileID: 8042219861363330908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77db7eb70aedab646a4a9ee61c0b4004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9214991374627759655
 PrefabInstance:
   m_ObjectHideFlags: 0
