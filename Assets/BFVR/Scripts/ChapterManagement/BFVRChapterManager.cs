@@ -44,7 +44,7 @@ namespace BFVR.ChapterManagement
 
         public void NextSection()
         {
-            if(_sectionIndex + 1 >= ChapterSections.Count)
+            if(_sectionIndex + 1 > ChapterSections.Count)
             {
                 EndChapter();
             }
@@ -82,6 +82,8 @@ namespace BFVR.ChapterManagement
 
             if (OnChapterComplete != null) OnChapterComplete.Invoke();
             if (onEndChapterEvent != null) onEndChapterEvent.Invoke();
+
+            BFVRApp.LoadSceneByName("ChapterSelection");
         }
 
         public void PlayAnimationSteps()

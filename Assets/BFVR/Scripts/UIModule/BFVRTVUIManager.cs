@@ -8,6 +8,11 @@ namespace BFVR.UIModule
     {
         #region TV Interface Prompt
         public GameObject TVScreenMesh;
+
+        [Space]
+        public GameObject ChapterSelect;
+
+        [Space]
         public GameObject MediaControlPanel;
         public GameObject WatchSectionBeginPrompt;
         public GameObject DirectionsPromt;
@@ -29,6 +34,12 @@ namespace BFVR.UIModule
             WatchSectionCompletePrompt.SetActive(false);
             InteractiveSectionBeginPrompt.SetActive(false);
             InteractiveSectionCompletePrompt.SetActive(false);
+        }
+
+        public void DisplayChapterSelectMenu()
+        {
+            HidePrompts();
+            if (ChapterSelect) ChapterSelect.SetActive(true);
         }
 
         public void DisplayMediaControlPanel()

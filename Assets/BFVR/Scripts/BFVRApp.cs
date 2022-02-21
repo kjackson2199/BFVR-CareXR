@@ -18,11 +18,11 @@ namespace BFVR
         private static BFVRApp _instance;
         public static BFVRApp Instance { get { return _instance; } }
 
+        public static GameObject Player;
+
         [Header("Scene Management")]
         public string MainMenuSceneName;
         public string LoadingSceneName;
-
-        public List<string> Scenes;
 
         [HideInInspector] [Space] [Range(0, 1.5f)] public float AsyncLoadDelayTime = 1;
 
@@ -54,6 +54,14 @@ namespace BFVR
             }
         }
 
+        private void Update()
+        {
+            if(Player == null)
+            {
+                Player = GameObject.FindGameObjectWithTag("Player");
+            }
+        }
+
         #region Scene Management
         public static void LoadMainMenuScene()
         {
@@ -77,13 +85,7 @@ namespace BFVR
             }
             else
             {
-                foreach(string s in _instance.Scenes)
-                {
-                    if(s == sceneName)
-                    {
-                        SceneManager.LoadScene(sceneName);
-                    }
-                }
+                SceneManager.LoadScene(sceneName);
             }
 
         }
