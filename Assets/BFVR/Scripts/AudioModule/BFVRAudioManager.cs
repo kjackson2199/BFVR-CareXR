@@ -63,8 +63,6 @@ namespace BFVR.AudioModule
                 _instance = this;
             }
             DontDestroyOnLoad(gameObject);
-
-
         }
 
         #region Levels

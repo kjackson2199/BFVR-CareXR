@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 1711588224794165749}
   - component: {fileID: 5313671461952528834}
   - component: {fileID: 6822259720527587871}
+  - component: {fileID: 835069677728315378}
   m_Layer: 0
   m_Name: LargeSyringeLocation
   m_TagString: Untagged
@@ -556,6 +557,29 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &835069677728315378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407762920815344753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 3
+  AllowedTriggerTags:
+  - 
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7811175807666933831
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5339225813052160480}
+  - component: {fileID: 8117414968547437990}
   m_Layer: 0
   m_Name: FeedingBottleLocation
   m_TagString: Untagged
@@ -586,6 +611,29 @@ Transform:
   m_Father: {fileID: 5967081274985470409}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -169.493, y: 0, z: 0}
+--- !u!114 &8117414968547437990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811175807666933831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 5
+  AllowedTriggerTags:
+  - 
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8354320238096810488
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +680,7 @@ GameObject:
   - component: {fileID: 3403025687625505212}
   - component: {fileID: 20227089818704233}
   - component: {fileID: 732480991728172906}
+  - component: {fileID: 3266485636803464820}
   m_Layer: 0
   m_Name: SmallSyringeLocation
   m_TagString: Untagged
@@ -732,6 +781,29 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &3266485636803464820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862709858412664719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 4
+  AllowedTriggerTags:
+  - 
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9124972713055437363
 GameObject:
   m_ObjectHideFlags: 0

@@ -86,7 +86,7 @@ namespace BFVR.InputModule
             if (!itemInHand) return;
 
             BFVRGrabbableObject g = itemInHand.GetComponent<BFVRGrabbableObject>();
-            g.Release(this);
+            g.ForceRelease();
             itemInHand = null;
         }
 

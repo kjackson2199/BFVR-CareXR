@@ -406,6 +406,38 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1671136375}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BFVR.BFVRApp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Flushing
+      objectReference: {fileID: 0}
+    - target: {fileID: 239117688473842773, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 239117688473842775, guid: 23bcd2ec1b2df1343a4e90f512382e04, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -977,11 +1009,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2522917279663199710, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
       propertyPath: Scenes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2522917279663199710, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
       propertyPath: Scenes.Array.data[0]
       value: Clamping
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522917279663199710, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
+      propertyPath: Scenes.Array.data[1]
+      value: Flushing
       objectReference: {fileID: 0}
     - target: {fileID: 2522917279663199710, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
       propertyPath: gameObjectWhitelist.Array.size

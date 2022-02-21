@@ -21,7 +21,6 @@ namespace BFVR.ChapterManagement
         {
             public GameObject target;
             public StepActionType Action;
-            public bool UseCurrentTransformAsStart;
             public Transform StartTransform;
             public Transform EndTransform;
             public string AnimationStateName;
@@ -92,15 +91,7 @@ namespace BFVR.ChapterManagement
                 switch(action.Action)
                 {
                     case StepActionType.Transform:
-                        if(action.UseCurrentTransformAsStart)
-                        {
-                            action.target.transform.position = Vector3.Slerp(action.target.transform.position, action.target.transform.position, delta);
-                        }
-                        else
-                        {
-                            action.target.transform.position = Vector3.Slerp(action.StartTransform.position, action.EndTransform.position, delta);
-                        }
-
+                        action.target.transform.position = Vector3.Slerp(action.StartTransform.position, action.EndTransform.position, delta);
                         if (!action.StartTransform.rotation.Equals(action.EndTransform.rotation))
                             action.target.transform.rotation = Quaternion.Slerp(action.StartTransform.rotation, action.EndTransform.rotation, delta);
                         break;
@@ -118,8 +109,8 @@ namespace BFVR.ChapterManagement
                 AdvanceStepActions(_deltaStep);
                 if (_deltaStep >= 1.0f)
                 {
-                    if(!_isComplete && OnStepComplete != null) OnStepComplete.Invoke();
-                    if(!_isComplete && onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
+                    if(OnStepComplete != null) OnStepComplete.Invoke();
+                    if(onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
                     Debug.Log("Animation Step Complete");
                     _isComplete = true;
                 }

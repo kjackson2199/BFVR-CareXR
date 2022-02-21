@@ -98,8 +98,8 @@ namespace BFVR.Interactable
 
             gameObject.transform.parent = _currentHand.transform;
 
-            onGrabbed.Invoke(_currentHand.gameObject);
-            OnGrab.Invoke();
+            if (onGrabbed != null) onGrabbed.Invoke(gameObject);
+            if (OnGrab != null) OnGrab.Invoke();
             return true;
         }
 
@@ -122,14 +122,15 @@ namespace BFVR.Interactable
             _currentHand = null;
             _itemGrabbed = false;
 
-            onReleased.Invoke(_currentHand.gameObject);
-            OnRelease.Invoke();
+            if (onReleased != null) onReleased.Invoke(_currentHand.gameObject);
+            if (OnRelease != null) OnRelease.Invoke();
         }
 
         public void Release(BFVRHand hand)
         {
             if (_currentHand != hand || _currentHand == null) return;
 
+            _currentHand.RemoveItemFromHand();
             gameObject.transform.parent = null;
 
             if (SnapToPositionOnRelease)
@@ -145,8 +146,32 @@ namespace BFVR.Interactable
             _currentHand = null;
             _itemGrabbed = false;
 
-            onReleased.Invoke(_currentHand.gameObject);
-            OnRelease.Invoke();
+            if (onReleased != null)  onReleased.Invoke(_currentHand.gameObject);
+            if (OnRelease != null)  OnRelease.Invoke();
+        }
+
+        public void ForceRelease()
+        {
+            if (_currentHand == null) return;
+
+            _currentHand.RemoveItemFromHand();
+            gameObject.transform.parent = null;
+
+            if (SnapToPositionOnRelease)
+            {
+                gameObject.transform.position = originalPosition;
+                gameObject.transform.rotation = originalRotation;
+            }
+            else
+            {
+                releaseEasingCoroutine = StartCoroutine(ReleaseEasing(originalPosition, originalRotation));
+            }
+
+            _currentHand = null;
+            _itemGrabbed = false;
+
+            if(onReleased != null) onReleased.Invoke(_currentHand.gameObject);
+            if(OnRelease != null) OnRelease.Invoke();
         }
 
         IEnumerator ReleaseEasing(Vector3 Pos, Quaternion Rot)

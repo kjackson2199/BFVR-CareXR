@@ -73,7 +73,7 @@ namespace BFVR.Interactable
                 StartCoroutine(AutoResetTriggerCoroutine());
             }
 
-            if (triggerMode == TriggerMode.Location && grabbedItem)
+            if (triggerMode == TriggerMode.Location && grabbedItem != null)
             {
                 LocationCheck();
             }
@@ -89,9 +89,13 @@ namespace BFVR.Interactable
                 if (AllowedTriggerTags.Contains(collider.ColliderTag))
                 {
                     touchTriggerTripped = true;
-                    
                 }
             }
+        }
+
+        public void SetTriggerMode(int mode)
+        {
+            triggerMode = (TriggerMode)mode;
         }
 
         private void LocationCheck()
@@ -152,6 +156,7 @@ namespace BFVR.Interactable
 
         private void BFVRGrabbable_onGrabbed(GameObject @object)
         {
+            Debug.Log("Grabbed " + @object.name);
             grabbedItem = @object;
         }
 

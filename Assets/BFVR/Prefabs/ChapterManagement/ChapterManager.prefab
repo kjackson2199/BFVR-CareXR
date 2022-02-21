@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1789838479705096319}
   - component: {fileID: 6025113164885161857}
+  - component: {fileID: 4370211809629926377}
   m_Layer: 0
   m_Name: ChapterManager
   m_TagString: Untagged
@@ -45,6 +46,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2e3c45c59cffb439e85f6a1df754e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChapterSections: []
+  AnimationStepManager: {fileID: 0}
+  InteractiveStepManager: {fileID: 0}
+  OnChapterBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNextSection:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPreviousSection:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChapterComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4370211809629926377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189664449436801966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376f4f7a1cc18034fb59c88f0835ae13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Directions: []
+  ShowNextOnAwake: 0
 --- !u!1001 &1332457347269636900
 PrefabInstance:
   m_ObjectHideFlags: 0

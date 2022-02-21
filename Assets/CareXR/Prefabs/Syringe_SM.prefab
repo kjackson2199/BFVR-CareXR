@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 4506073011634419548}
   - component: {fileID: 4926186167215119687}
   - component: {fileID: 6254850872829276628}
+  - component: {fileID: 5053106684910797256}
   m_Layer: 6
   m_Name: Syringe_SM
   m_TagString: Untagged
@@ -418,6 +419,19 @@ MonoBehaviour:
   OnInteractableTriggeredUEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5053106684910797256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834779332401523403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c9268ca57cdb41b01256eb3076546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: []
 --- !u!1 &8105708234776928250
 GameObject:
   m_ObjectHideFlags: 0

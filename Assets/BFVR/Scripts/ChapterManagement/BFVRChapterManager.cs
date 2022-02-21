@@ -70,6 +70,12 @@ namespace BFVR.ChapterManagement
             if (onPreviousSectionEvent != null) onPreviousSectionEvent.Invoke();
         }
 
+        public void ResetCurrentSection()
+        {
+            if (_sectionIndex < 0 || _sectionIndex >= ChapterSections.Count) return;
+            ChapterSections[_sectionIndex].ResetSection();
+        }
+
         public void EndChapter()
         {
             _sectionIndex = -1;

@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 3442492506735004199}
   - component: {fileID: 7898622268499404380}
   - component: {fileID: 8206135980019001237}
+  - component: {fileID: 2724072368465412451}
   m_Layer: 6
   m_Name: Syringe_LG
   m_TagString: Untagged
@@ -568,7 +569,20 @@ MonoBehaviour:
   - Name: Idle
     StateName: Idle
   AllowClipLoop: 0
-  StartAtState: Idle
+  StartAtState: 
+--- !u!114 &2724072368465412451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311050728087513905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c9268ca57cdb41b01256eb3076546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: []
 --- !u!1001 &4410042897637993754
 PrefabInstance:
   m_ObjectHideFlags: 0

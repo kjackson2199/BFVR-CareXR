@@ -59,6 +59,12 @@ namespace BFVR.ChapterManagement
                 s.gameObject.SetActive(false);
             }
 
+            if(_stepIndex == -1)
+            {
+                if (OnStarted != null) OnStarted.Invoke();
+                if (onStartedEvent != null) onStartedEvent.Invoke();
+            }
+
             if(_stepIndex + 1 >= Steps.Count)
             {
                 StepsComplete();

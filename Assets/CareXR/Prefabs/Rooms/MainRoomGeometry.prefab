@@ -1595,6 +1595,7 @@ GameObject:
   - component: {fileID: 8793645959359476230}
   - component: {fileID: 7654608494098431175}
   - component: {fileID: 7554243673040435533}
+  - component: {fileID: 644088385891623113}
   m_Layer: 0
   m_Name: Syringe_SM_A_OriginalLocation
   m_TagString: Untagged
@@ -1695,6 +1696,28 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &644088385891623113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387472019050953273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 1
+  AllowedTriggerTags: []
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3532277612416901743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +1974,7 @@ GameObject:
   - component: {fileID: 6960230382632397760}
   - component: {fileID: 8116712559801296129}
   - component: {fileID: 8235089580342501515}
+  - component: {fileID: 6157312997930887475}
   m_Layer: 0
   m_Name: Syringe_SM_B_OriginalLocation
   m_TagString: Untagged
@@ -2051,6 +2075,28 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &6157312997930887475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863047335946724351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 2
+  AllowedTriggerTags: []
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4194885912443014575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,6 +3324,7 @@ GameObject:
   - component: {fileID: 2328418186476012172}
   - component: {fileID: 9187252012353288346}
   - component: {fileID: 8018653190837036373}
+  - component: {fileID: 1231233624857021059}
   m_Layer: 0
   m_Name: Syringe_LG_OriginalLocation
   m_TagString: Untagged
@@ -3378,6 +3425,28 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1231233624857021059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934659407086945118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba5c2cb41805e4ba1ccee80e523ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerMode: 1
+  TriggerId: 3
+  AllowedTriggerTags: []
+  TriggerTag: 
+  TriggerActivationRange: 0.001
+  AutoReset: 0
+  TriggerAutoResetDelay: 0.1
+  onTriggerUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7002156306088869555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,6 +3641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8249002954935184902}
+  - component: {fileID: 8328760972398011194}
   m_Layer: 0
   m_Name: LocationHighlights
   m_TagString: Untagged
@@ -3596,6 +3666,21 @@ Transform:
   m_Father: {fileID: 9010578527157731384}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8328760972398011194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600966077247724002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91ac85efe0f8c0439c2f4e222f21ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteractableTriggeredUEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7629282866175486215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,6 +5305,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5372395426368625320, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
   m_PrefabInstance: {fileID: 439782266978490710}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3053130047643628007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3189830834888272049, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
+  m_PrefabInstance: {fileID: 439782266978490710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3824882503710392659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5509,6 +5599,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2724072368465412451, guid: 131bf4f1501411c4ba369cc1f827c7dc, type: 3}
+      propertyPath: Targets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724072368465412451, guid: 131bf4f1501411c4ba369cc1f827c7dc, type: 3}
+      propertyPath: Targets.Array.data[0]
+      value: 
+      objectReference: {fileID: 7231701469374589858}
+    - target: {fileID: 2724072368465412451, guid: 131bf4f1501411c4ba369cc1f827c7dc, type: 3}
+      propertyPath: Targets.Array.data[1]
+      value: 
+      objectReference: {fileID: 3053130047643628007}
     - target: {fileID: 8311050728087513905, guid: 131bf4f1501411c4ba369cc1f827c7dc, type: 3}
       propertyPath: m_Name
       value: Syringe_LG

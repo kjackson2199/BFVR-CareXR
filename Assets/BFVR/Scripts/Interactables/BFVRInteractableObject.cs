@@ -45,6 +45,19 @@ namespace BFVR.Interactable
             }
         }
 
+        public void SetTriggerMode(int TriggerId, int mode)
+        {
+            foreach (GameObject g in triggerObjects)
+            {
+                InteractableTriggerId id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
+                if ((int)id == TriggerId)
+                {
+                    g.GetComponent<BFVRInteractableTrigger>().SetTriggerMode(mode);
+                    break;
+                }
+            }
+        }
+
         public void EnableTrigger(int TriggerId)
         {
             foreach(GameObject g in triggerObjects)
