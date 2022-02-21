@@ -62,6 +62,7 @@ namespace BFVR.Interactable
         public bool Grab(BFVRHand parentHand)
         {
             if (!EnableGrabbable) return false;
+
             if (_itemGrabbed && AllowGrabSwap)
             {
                 // Item hand swap
@@ -146,7 +147,7 @@ namespace BFVR.Interactable
             _currentHand = null;
             _itemGrabbed = false;
 
-            if (onReleased != null)  onReleased.Invoke(_currentHand.gameObject);
+            if (onReleased != null)  onReleased.Invoke(gameObject);
             if (OnRelease != null)  OnRelease.Invoke();
         }
 

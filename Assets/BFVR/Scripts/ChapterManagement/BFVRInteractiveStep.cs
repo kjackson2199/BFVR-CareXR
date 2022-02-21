@@ -21,12 +21,14 @@ namespace BFVR.ChapterManagement
         public string InteractiveStepName = "Step 1";
         public BFVRInteractableObject InteractableTarget;
         public InteractableTriggerId TargetTrigger;
+        public float StepBeginDelay = 1;
 
         [Space]
         public AudioClip stepCompleteSFX;
 
         [Header("Step Events")]
         public UnityEvent OnStepBeginEvent;
+        public UnityEvent OnStepBeginDelayedEvent;
         public UnityEvent OnStepCompleteEvent;
 
         private void OnEnable()
@@ -62,6 +64,12 @@ namespace BFVR.ChapterManagement
             }
 
             CompleteStep();
+        }
+
+        IEnumerator BeginDelay()
+        {
+            yield return new WaitForSeconds(StepBeginDelay);
+            OnStepBeginDelayedEvent.Invoke();
         }
     }
 }

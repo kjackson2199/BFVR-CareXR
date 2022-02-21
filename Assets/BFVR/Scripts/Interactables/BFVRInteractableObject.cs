@@ -25,6 +25,8 @@ namespace BFVR.Interactable
             {
                 triggerObjects.Add(t.gameObject);
             }
+
+            //DisableAllTriggers();
         }
 
         private void OnEnable()
@@ -65,7 +67,8 @@ namespace BFVR.Interactable
                 InteractableTriggerId id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
                 if((int)id == TriggerId)
                 {
-                    g.gameObject.SetActive(true);
+                    BFVRInteractableTrigger t = g.GetComponent<BFVRInteractableTrigger>();
+                    t.SetEnableTrigger(true);
                     break;
                 }
             }
@@ -78,9 +81,28 @@ namespace BFVR.Interactable
                 InteractableTriggerId id = g.GetComponent<BFVRInteractableTrigger>().TriggerId;
                 if ((int)id == TriggerId)
                 {
-                    g.gameObject.SetActive(false);
+                    BFVRInteractableTrigger t = g.GetComponent<BFVRInteractableTrigger>();
+                    t.SetEnableTrigger(false);
                     break;
                 }
+            }
+        }
+
+        public void EnableAllTriggers()
+        {
+            foreach (GameObject g in triggerObjects)
+            {
+                BFVRInteractableTrigger t = g.GetComponent<BFVRInteractableTrigger>();
+                t.SetEnableTrigger(true);
+            }
+        }
+
+        public void DisableAllTriggers()
+        {
+            foreach (GameObject g in triggerObjects)
+            {
+                BFVRInteractableTrigger t = g.GetComponent<BFVRInteractableTrigger>();
+                t.SetEnableTrigger(false);
             }
         }
 
@@ -96,7 +118,7 @@ namespace BFVR.Interactable
             if(onInteractableTriggeredEvent != null) onInteractableTriggeredEvent.Invoke(gameObject, triggerId);
             if(OnInteractableTriggeredUEvent != null) OnInteractableTriggeredUEvent.Invoke();
 
-            Debug.Log("Trigger Id: " + triggerId);
+            Debug.Log("Trigger Id: " + triggerId + "Trigger Object: " + triggerObject.name);
         }
     }
 }

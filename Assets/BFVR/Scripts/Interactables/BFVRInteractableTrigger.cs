@@ -35,6 +35,8 @@ namespace BFVR.Interactable
         public TriggerMode triggerMode;
         public InteractableTriggerId TriggerId = InteractableTriggerId._1;
 
+        public bool StartDisabled = false;
+
         public List<string> AllowedTriggerTags = new List<string>();
         [HideInInspector] public string TriggerTag = ""; //Un-used
         [Range(.001f, .1f)] public float TriggerActivationRange = .001f;
@@ -52,7 +54,15 @@ namespace BFVR.Interactable
         bool touchTriggerTripped;
         bool locationTriggerTripped;
 
-        GameObject grabbedItem;
+        //GameObject grabbedItem;
+        BFVRGrabbableObject target;
+
+        Collider _collider;
+
+        private void Start()
+        {
+            InitializeTrigger();
+        }
 
         private void OnEnable()
         {
@@ -61,24 +71,26 @@ namespace BFVR.Interactable
 
         private void OnDisable()
         {
-            BFVRGrabbableObject.onGrabbed -= BFVRGrabbable_onGrabbed;
-            BFVRGrabbableObject.onReleased -= BFVRGrabbable_onReleased;
+            //BFVRGrabbableObject.onGrabbed -= BFVRGrabbable_onGrabbed;
+            //BFVRGrabbableObject.onReleased -= BFVRGrabbable_onReleased;
         }
 
         private void Update()
         {
             if (triggerTripped && !AutoReset) return;
-            else if(triggerTripped && AutoReset)
+            else if (triggerTripped && AutoReset)
             {
                 StartCoroutine(AutoResetTriggerCoroutine());
             }
-
-            if (triggerMode == TriggerMode.Location && grabbedItem != null)
+            else
             {
-                LocationCheck();
-            }
+                if (triggerMode == TriggerMode.Location && target != null)
+                {
+                    LocationCheck();
+                }
 
-            CheckTriggerTripped();
+                CheckTriggerTripped();
+            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -100,8 +112,8 @@ namespace BFVR.Interactable
 
         private void LocationCheck()
         {
-            Vector3 grabbedItemPos = grabbedItem.transform.position;
-            float diff = Mathf.Abs((grabbedItemPos - gameObject.transform.position).magnitude);
+            Vector3 targetObjectPos = target.gameObject.transform.position;
+            float diff = Mathf.Abs((targetObjectPos - gameObject.transform.position).magnitude);
 
             if(diff <= TriggerActivationRange)
             {
@@ -128,7 +140,7 @@ namespace BFVR.Interactable
             triggerTripped = false;
             touchTriggerTripped = false;
             locationTriggerTripped = false;
-            grabbedItem = null;
+            target = null;
         }
 
         IEnumerator AutoResetTriggerCoroutine()
@@ -139,30 +151,52 @@ namespace BFVR.Interactable
 
         void FireTriggerEvent()
         {
-            if(onTriggerEvent != null) onTriggerEvent.Invoke(gameObject, (byte)TriggerId, grabbedItem);
+            if (triggerTripped) return;
+
+            if(onTriggerEvent != null) onTriggerEvent.Invoke(gameObject, (byte)TriggerId);
             if(onTriggerUEvent != null) onTriggerUEvent.Invoke();
             triggerTripped = true;
         }
 
         void InitializeTrigger()
         {
-            BFVRGrabbableObject.onGrabbed += BFVRGrabbable_onGrabbed;
-            BFVRGrabbableObject.onReleased += BFVRGrabbable_onReleased;
+            //BFVRGrabbableObject.onGrabbed += BFVRGrabbable_onGrabbed;
+            //BFVRGrabbableObject.onReleased += BFVRGrabbable_onReleased;
+            if(_collider == null)
+            {
+                _collider = GetComponent<Collider>();
+            }
+
+            if(StartDisabled)
+            {
+                SetEnableTrigger(false);
+            }
         }
+
+        public void SetEnableTrigger(bool enable)
+        {
+            _collider.enabled = enable;
+        }
+
         public void SetTriggerMode(TriggerMode newMode)
         {
             triggerMode = newMode;
         }
 
+        public void SetLocationTriggerTarget(BFVRGrabbableObject @object)
+        {
+            target = @object;
+        }
+
         private void BFVRGrabbable_onGrabbed(GameObject @object)
         {
             Debug.Log("Grabbed " + @object.name);
-            grabbedItem = @object;
+            //grabbedItem = @object;
         }
 
         private void BFVRGrabbable_onReleased(GameObject @object)
         {
-            grabbedItem = null;
+            //grabbedItem = null;
         }
     }
 }

@@ -20,7 +20,6 @@ namespace BFVR.ChapterManagement
         public static BFVRInteractiveStepManager Instance { get { return _instance; } }
         private static BFVRInteractiveStepManager _instance;
 
-        public bool autoStart = true;
         public List<BFVRInteractiveStep> Steps = new List<BFVRInteractiveStep>();
 
         public UnityEvent OnStarted;
@@ -47,11 +46,6 @@ namespace BFVR.ChapterManagement
             foreach (BFVRInteractiveStep s in Steps)
             {
                 s.gameObject.SetActive(false);
-            }
-
-            if(autoStart)
-            {
-                PlaySteps();
             }
         }
 
