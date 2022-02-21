@@ -25,12 +25,17 @@ namespace BFVR.UIModule
         [Header("VideoPlayer")]
         public GameObject TVScreenMesh;
         public VideoPlayer vidPlayer;
+        //bool vidIsPlaying = false;
         #endregion
 
         private void Start()
         {
             HidePrompts();
         }
+        //void Update()
+        //{
+        //    if (vidIsPlaying && (vidPlayer.frame == vidPlayer.frameCount)) OnVideoEnded();
+        //}
 
         public void HidePrompts()
         {
@@ -90,14 +95,17 @@ namespace BFVR.UIModule
         public void PlayVideo(VideoClip v)
         {
             vidPlayer.clip = v;
+            //vidIsPlaying = true;
             vidPlayer.Play();
         }
         public void PauseVideo()
         {
+            //vidIsPlaying = false;
             vidPlayer.Pause();//unsure if play after pause resumes playback because there is no available unpause method. Should be fine. If video restarts, disable setting clip again above.
         }
         public void StopVideo()
         {
+            //vidIsPlaying = false;
             vidPlayer.Stop();
             vidPlayer.clip = null;//video player sometimes won't load a new video clip before playing again if the last one stopped before it was finished. This prevents that by unloading the previous videoclip.
         }
@@ -109,5 +117,9 @@ namespace BFVR.UIModule
         {
             vidPlayer.time+=5;
         }
+        //void OnVideoEnded()
+        //{
+        //    //add whatever you want to trigger when the video ends here.
+        //}
     }
 }
