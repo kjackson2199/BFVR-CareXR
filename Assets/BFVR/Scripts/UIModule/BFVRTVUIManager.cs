@@ -101,5 +101,13 @@ namespace BFVR.UIModule
             vidPlayer.Stop();
             vidPlayer.clip = null;//video player sometimes won't load a new video clip before playing again if the last one stopped before it was finished. This prevents that by unloading the previous videoclip.
         }
+        public void RewindVdeo()
+        {
+            vidPlayer.time-=5;
+        }
+        public void FastForwardVideo()
+        {
+            vidPlayer.time+=5;
+        }
     }
 }
