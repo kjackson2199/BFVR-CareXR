@@ -187,16 +187,5 @@ namespace BFVR.Interactable
         {
             target = @object;
         }
-
-        private void BFVRGrabbable_onGrabbed(GameObject @object)
-        {
-            Debug.Log("Grabbed " + @object.name);
-            //grabbedItem = @object;
-        }
-
-        private void BFVRGrabbable_onReleased(GameObject @object)
-        {
-            //grabbedItem = null;
-        }
     }
 }
