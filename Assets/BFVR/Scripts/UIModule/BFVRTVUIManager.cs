@@ -15,6 +15,8 @@ namespace BFVR.UIModule
 
         [Space]
         public GameObject MediaControlPanel;
+
+        [Header("Prompts")]
         public GameObject WatchSectionBeginPrompt;
         public GameObject DirectionsPromt;
         public GameObject WatchSectionCompletePrompt;
@@ -39,7 +41,6 @@ namespace BFVR.UIModule
 
         public void HidePrompts()
         {
-            MediaControlPanel.SetActive(false);
             WatchSectionBeginPrompt.SetActive(false);
             DirectionsPromt.SetActive(false);
             WatchSectionCompletePrompt.SetActive(false);

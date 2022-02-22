@@ -387,6 +387,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6978e59df0ef5df4d899b593eff2a4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &41912923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1648251178599521368, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+  m_PrefabInstance: {fileID: 41912921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126507446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1196,54 @@ PrefabInstance:
     - target: {fileID: 1789838479705096319, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: TMPTarget
+      value: 
+      objectReference: {fileID: 41912923}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[0]
+      value: 1. Close the clamp.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[1]
+      value: 2. Open the port.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[2]
+      value: 3. Attach WATER FLUSH syringe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[3]
+      value: 4. Open the clamp.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[4]
+      value: 5. Push the water through.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[5]
+      value: 6. Close the clamp.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[6]
+      value: 7. Remove the WATER FLUSH syringe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[7]
+      value: 8. Attach pump connection.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[8]
+      value: 9. Open the clamp.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[9]
+      value: 10. Begin feeding via pump.
       objectReference: {fileID: 0}
     - target: {fileID: 4750683348809920755, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionBegin.m_PersistentCalls.m_Calls.Array.size
