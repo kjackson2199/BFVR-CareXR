@@ -52,6 +52,11 @@ namespace BFVR.ChapterManagement
             _stepIndex = -1;
         }
 
+        public void PlaySteps()
+        {
+            NextStep();
+        }
+
         public void NextStep()
         {
             foreach (BFVRAnimationStep s in Steps)

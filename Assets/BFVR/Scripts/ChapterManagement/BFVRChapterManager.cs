@@ -88,7 +88,7 @@ namespace BFVR.ChapterManagement
 
         public void PlayAnimationSteps()
         {
-            if(AnimationStepManager) AnimationStepManager.NextStep();
+            if(AnimationStepManager) AnimationStepManager.PlaySteps();
         }
 
         public void PlayInteractiveSteps()

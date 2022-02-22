@@ -46,6 +46,7 @@ namespace BFVR.ChapterManagement
         {
             if (OnStepBeginEvent != null) OnStepBeginEvent.Invoke();
             if (onStepBeginEvent != null) onStepBeginEvent.Invoke();
+            if (OnStepBeginDelayedEvent != null) StartCoroutine(BeginDelay());
         }
 
         public void CompleteStep()
