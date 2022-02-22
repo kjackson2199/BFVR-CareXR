@@ -506,7 +506,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MedicationSyringe
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &5339495792312829792
@@ -955,7 +955,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MedicationPump
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &6965003288210171931
@@ -1168,7 +1168,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239117688120348294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4527449290197531832}
+        m_TargetAssemblyTypeName: ChapterSelectionMenuController, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6645141809308317998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1388,7 +1400,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FeedingPump
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &2411007171217730892
@@ -1761,7 +1773,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Complications
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &7300824556993437889
@@ -2243,7 +2255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239117688621926155}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4527449290197531832}
+        m_TargetAssemblyTypeName: ChapterSelectionMenuController, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1982231212777431662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2535,7 +2559,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Care
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &2465403298053642461
@@ -2983,7 +3007,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FeedingSyringe
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &963276361564182921
