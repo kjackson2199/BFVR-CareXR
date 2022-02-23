@@ -20,8 +20,11 @@ namespace BFVR.InputModule
         public static event UI_OnPointCanceledDelegate uiOnPointCanceledEvent;
 
         // UI/Click
-        public delegate void UI_OnClickPerformedDelegate();
-        public static event UI_OnClickPerformedDelegate uiOnClickPerformedEvent;
+        public delegate void UI_OnClickStartedDelegate();
+        public static event UI_OnClickStartedDelegate uiOnClickStartedEvent;
+        public delegate void UI_OnClickCanceledDelegate();
+        public static event UI_OnClickCanceledDelegate uiOnClickCanceledEvent;
+
 
         #endregion
 
@@ -111,9 +114,13 @@ namespace BFVR.InputModule
 
         public void OnClick(InputAction.CallbackContext context)
         {
-            if(context.performed)
+            if(context.started)
             {
-                uiOnClickPerformedEvent.Invoke();
+                uiOnClickStartedEvent.Invoke();
+            }
+            else if(context.canceled)
+            {
+                uiOnPointCanceledEvent.Invoke();
             }
         }
         #endregion

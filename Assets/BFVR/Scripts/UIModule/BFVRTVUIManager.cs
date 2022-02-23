@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -29,6 +30,8 @@ namespace BFVR.UIModule
         public VideoPlayer vidPlayer;
         bool vidStarted = false;
         bool vidPaused = false;
+
+        public UnityEvent OnVideoEnd;
         #endregion
 
         private void Start()
@@ -126,6 +129,7 @@ namespace BFVR.UIModule
         {
             Debug.Log("OnVideoEnded");
             //add whatever you want to trigger when the video ends here.
+            
         }
     }
 }

@@ -23,20 +23,15 @@ namespace BFVR.InputModule
 
         protected override void OnEnable()
         {
-            BFVRInputManager.uiOnClickPerformedEvent += BFVRInputManager_uiOnClickPerformedEvent;
+            BFVRInputManager.uiOnClickStartedEvent += BFVRInputManager_uiOnClickStartedEvent;
         }
 
         protected override void OnDisable()
         {
-            BFVRInputManager.uiOnClickPerformedEvent -= BFVRInputManager_uiOnClickPerformedEvent;
+            BFVRInputManager.uiOnClickStartedEvent -= BFVRInputManager_uiOnClickStartedEvent;
         }
 
-        private void BFVRInputManager_uiOnClickPerformedEvent()
-        {
-            inputClicked = true;
-        }
-
-        private void Update()
+        private void BFVRInputManager_uiOnClickStartedEvent()
         {
             Process();
         }
@@ -46,12 +41,9 @@ namespace BFVR.InputModule
             if (targetObject == null)
                 return;
 
-            if(inputClicked)
-            {
-                inputClicked = false;
-                Button b = targetObject.GetComponent<Button>();
-                if (b) b.onClick.Invoke();
-            }
+            inputClicked = false;
+            Button b = targetObject.GetComponent<Button>();
+            if (b) b.onClick.Invoke();
         }
 
         public override bool IsPointerOverGameObject(int pointerId)
