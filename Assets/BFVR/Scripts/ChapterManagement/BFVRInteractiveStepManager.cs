@@ -54,6 +54,11 @@ namespace BFVR.ChapterManagement
             BFVRInteractiveStep.onStepCompleteEvent += BFVRInteractiveStep_onStepCompleteEvent;
         }
 
+        private void OnDisable()
+        {
+            BFVRInteractiveStep.onStepCompleteEvent -= BFVRInteractiveStep_onStepCompleteEvent;
+        }
+
         public void PlaySteps()
         {
             if (onStartedEvent != null) onStartedEvent.Invoke();

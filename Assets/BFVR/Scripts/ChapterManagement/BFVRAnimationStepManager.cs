@@ -47,6 +47,11 @@ namespace BFVR.ChapterManagement
             BFVRAnimationStep.onStepCompleteEvent += BFVRAnimationStep_onStepCompleteEvent;
         }
 
+        private void OnDisable()
+        {
+            BFVRAnimationStep.onStepCompleteEvent -= BFVRAnimationStep_onStepCompleteEvent;
+        }
+
         public void Reset()
         {
             _stepIndex = -1;

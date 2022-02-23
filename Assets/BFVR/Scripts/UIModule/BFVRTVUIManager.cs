@@ -29,6 +29,8 @@ namespace BFVR.UIModule
         public GameObject TVScreenMesh;
         public VideoPlayer vidPlayer;
         bool vidStarted = false;
+        bool vidReady = false;
+        bool vidStarting = false;
         bool vidPaused = false;
 
         public UnityEvent OnVideoEnd;
@@ -63,6 +65,11 @@ namespace BFVR.UIModule
         {
             HidePrompts();
             if (MediaControlPanel) MediaControlPanel.SetActive(true);
+        }
+
+        public void HideMediaPanel()
+        {
+            if (MediaControlPanel) MediaControlPanel.SetActive(false);
         }
 
         public void DisplaySectionBeginPrompt()
@@ -100,10 +107,14 @@ namespace BFVR.UIModule
         ////Video Player functionality////
         public void PlayVideo(VideoClip v)
         {
-            vidPlayer.clip = v;
-            vidStarted = true;
-            vidPaused = false;
-            vidPlayer.Play();
+            StartCoroutine(PlayVideoCoroutine(v));
+            //vidPlayer.clip = v;
+            //vidStarted = true;
+            //vidPaused = false;
+
+            //vidPlayer.Play();
+
+            DisplayMediaControlPanel();
         }
         public void PauseVideo()
         {
@@ -116,6 +127,8 @@ namespace BFVR.UIModule
             vidStarted = false;
             vidPlayer.Stop();
             vidPlayer.clip = null;//video player sometimes won't load a new video clip before playing again if the last one stopped before it was finished. This prevents that by unloading the previous videoclip.
+
+            HideMediaPanel();
         }
         public void RewindVdeo()
         {
@@ -125,11 +138,28 @@ namespace BFVR.UIModule
         {
             vidPlayer.time+=5;
         }
+
+        public void ResetVideoPlayer()
+        {
+            vidPaused = false;
+            vidStarted = false;
+            vidPlayer.clip = null;
+        }
+
+        IEnumerator PlayVideoCoroutine(VideoClip v)
+        {
+            vidPlayer.clip = v;
+            vidPlayer.Play();
+            while (!vidPlayer.isPrepared) yield return new WaitForEndOfFrame();
+            vidStarted = true;
+            vidPaused = false;
+        }
+
         void OnVideoEnded()
         {
             Debug.Log("OnVideoEnded");
-            //add whatever you want to trigger when the video ends here.
-            
+            ResetVideoPlayer();
+            OnVideoEnd.Invoke();
         }
     }
 }
