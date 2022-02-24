@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,8 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnCompleted;
 
         int _stepIndex = -1;
+
+        bool delayActive;
 
         private void Awake()
         {
@@ -69,6 +72,8 @@ namespace BFVR.ChapterManagement
 
         public void NextStep()
         {
+            StartCoroutine(StepDelayCoroutine());
+
             foreach (BFVRInteractiveStep s in Steps)
             {
                 s.gameObject.SetActive(false);
@@ -122,7 +127,15 @@ namespace BFVR.ChapterManagement
         #region Interactive Step Callback
         private void BFVRInteractiveStep_onStepCompleteEvent()
         {
+            if (delayActive) return;
             NextStep();
+        }
+
+        IEnumerator StepDelayCoroutine()
+        {
+            delayActive = true;
+            yield return new WaitForSeconds(.5f);
+            delayActive = false;
         }
         #endregion
     }
