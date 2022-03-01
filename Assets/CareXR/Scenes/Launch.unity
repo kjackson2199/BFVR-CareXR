@@ -483,6 +483,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WelcomeMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5462917896094194529, guid: e6ee13f46698f7d40adc92b86fc4ff7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462917896094194529, guid: e6ee13f46698f7d40adc92b86fc4ff7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadChapterByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462917896094194529, guid: e6ee13f46698f7d40adc92b86fc4ff7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ChapterSelection
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ee13f46698f7d40adc92b86fc4ff7b, type: 3}
 --- !u!1001 &7443748304616979914
