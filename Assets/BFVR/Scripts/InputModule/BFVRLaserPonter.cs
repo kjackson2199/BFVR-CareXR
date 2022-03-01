@@ -41,7 +41,7 @@ namespace BFVR.InputModule
         private void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();
-            mediaPanelAnim = GameObject.Find("MediaPanel").GetComponent<Animator>();
+            //mediaPanelAnim = GameObject.Find("MediaPanel").GetComponent<Animator>();
         }
 
         private void Start()
@@ -64,13 +64,15 @@ namespace BFVR.InputModule
 
         private void BFVRInputManager_uiOnPointCanceledEvent()
         {
-            mediaPanelAnim.SetTrigger("down");
+            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("down");
+
             _pointing = false;
         }
 
         private void BFVRInputManager_uiOnPointStartEvent()
         {
-            mediaPanelAnim.SetTrigger("up");
+            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("up");
+
             _pointing = true;
         }
 
