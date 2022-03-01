@@ -26,6 +26,7 @@ namespace BFVR.UIModule
 
         [Space]
         [Header("VideoPlayer")]
+        public Animator mediaPanelAnim;
         public GameObject TVScreenMesh;
         public VideoPlayer vidPlayer;
         bool vidStarted = false;
@@ -64,12 +65,14 @@ namespace BFVR.UIModule
         public void DisplayMediaControlPanel()
         {
             HidePrompts();
-            if (MediaControlPanel) MediaControlPanel.SetActive(true);
+            mediaPanelAnim.SetTrigger("up");
+            //if (MediaControlPanel) MediaControlPanel.SetActive(true);
         }
 
         public void HideMediaPanel()
         {
-            if (MediaControlPanel) MediaControlPanel.SetActive(false);
+            mediaPanelAnim.SetTrigger("down");
+            //if (MediaControlPanel) MediaControlPanel.SetActive(false);
         }
 
         public void DisplaySectionBeginPrompt()

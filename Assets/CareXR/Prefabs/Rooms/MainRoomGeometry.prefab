@@ -6720,6 +6720,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8040976140848225345, guid: 0dc4b6b930cf30f42b31204a2d8ecdd6, type: 3}
+      propertyPath: mediaPanelAnim
+      value: 
+      objectReference: {fileID: 1723978670521969123}
     - target: {fileID: 8785762547320604391, guid: 0dc4b6b930cf30f42b31204a2d8ecdd6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6786,6 +6790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc4b6b930cf30f42b31204a2d8ecdd6, type: 3}
+--- !u!95 &1723978670521969123 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6373275969492619465, guid: 0dc4b6b930cf30f42b31204a2d8ecdd6, type: 3}
+  m_PrefabInstance: {fileID: 5737200880007772458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3565590483710423287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9143754660391766493, guid: 0dc4b6b930cf30f42b31204a2d8ecdd6, type: 3}
