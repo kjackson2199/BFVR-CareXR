@@ -11,6 +11,7 @@ namespace BFVR.InputModule
         public BFVRHandRaycaster handRaycaster;
         [HideInInspector] public Transform palmTransform;
         GameObject itemInHand;
+        public Animator anim;
 
         bool _rightHand;
 
@@ -94,21 +95,25 @@ namespace BFVR.InputModule
         private void BFVRInputManager_interactionOnGrabRightStartedEvent()
         {
             GrabCheck();
+            if (_rightHand) anim.SetTrigger("Grip");
         }
 
         private void BFVRInputManager_interactionOnGrabRightCanceledEvent()
         {
             ReleaseItemInHand();
+            if (_rightHand) anim.SetTrigger("Idle");
         }
 
         private void BFVRInputManager_interactionOnGrabLeftStartedEvent()
         {
             GrabCheck();
+            if (!_rightHand) anim.SetTrigger("Grip");
         }
 
         private void BFVRInputManager_interactionOnGrabLeftCanceledEvent()
         {
             ReleaseItemInHand();
+            if (!_rightHand) anim.SetTrigger("Idle");
         }
         #endregion
     }
