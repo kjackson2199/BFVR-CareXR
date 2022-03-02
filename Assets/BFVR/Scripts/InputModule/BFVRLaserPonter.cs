@@ -12,6 +12,8 @@ namespace BFVR.InputModule
     [RequireComponent(typeof(LineRenderer))]
     public class BFVRLaserPonter : MonoBehaviour
     {
+        Animator mediaPanelAnim;
+
         public enum LaserPointerBehaviour
         {
             On,                 // Laser always on
@@ -39,6 +41,7 @@ namespace BFVR.InputModule
         private void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();
+            //mediaPanelAnim = GameObject.Find("MediaPanel").GetComponent<Animator>();
         }
 
         private void Start()
@@ -61,11 +64,15 @@ namespace BFVR.InputModule
 
         private void BFVRInputManager_uiOnPointCanceledEvent()
         {
+            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("down");
+
             _pointing = false;
         }
 
         private void BFVRInputManager_uiOnPointStartEvent()
         {
+            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("up");
+
             _pointing = true;
         }
 

@@ -43,9 +43,12 @@ namespace BFVR.Interactable
 
         Coroutine releaseEasingCoroutine;
 
+        Collider collider;
+
         public void Start()
         {
             SetNewOriginalTransform();
+            collider = GetComponent<Collider>();
         }
 
         public void SetNewOriginalTransform()
@@ -57,6 +60,7 @@ namespace BFVR.Interactable
         public void SetEnableGrabbable(bool enable)
         {
             EnableGrabbable = enable;
+            collider.enabled = enable;
         }
 
         public bool Grab(BFVRHand parentHand)
