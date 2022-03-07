@@ -17,6 +17,10 @@ namespace BFVR.ChapterManagement
         public static event OnPreviousSectionDelegate onPreviousSectionEvent;
         public static event OnEndChapterDelegate onEndChapterEvent;
 
+        public string ChapterTitle = "";
+
+        [Space]
+
         public List<BFVRChapterSectionManager> ChapterSections;
 
         public BFVRAnimationStepManager AnimationStepManager;
