@@ -6,11 +6,11 @@ namespace BFVR.Interactable
 {
     public class BFVRHighlight : MonoBehaviour
     {
-        MeshRenderer hightlightRenderer;
+        Renderer hightlightRenderer;
 
         void Start()
         {
-            hightlightRenderer = gameObject.GetComponent<MeshRenderer>();
+            hightlightRenderer = gameObject.GetComponent<Renderer>();
         }
 
         public void ShowHightlight()
