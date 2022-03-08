@@ -7,16 +7,15 @@ namespace BFVR.UIModule
 {
     public class BFVRPopupTag : MonoBehaviour
     {
-        public Text text;
+        public Text TagText;
         public GameObject TagPivot;
 
-        string tagText = "";
         Camera mainCamera;
 
         private void Start()
         {
-            gameObject.SetActive(false);
             AnimationTextDirections.onShowNextEvent += AnimationTextDirections_onShowNextEvent;
+            gameObject.SetActive(false);
         }
 
         private void Update()
@@ -33,11 +32,6 @@ namespace BFVR.UIModule
             TagPivot.transform.LookAt(mainCamera.gameObject.transform);
         }
 
-        private void OnEnable()
-        {            
-            text.text = tagText;
-        }
-
         private void OnDestroy()
         {
             AnimationTextDirections.onShowNextEvent -= AnimationTextDirections_onShowNextEvent;
@@ -51,7 +45,7 @@ namespace BFVR.UIModule
 
         public void SetTagText(string text)
         {
-            tagText = text;
+            TagText.text = text;
         }
     }
 }

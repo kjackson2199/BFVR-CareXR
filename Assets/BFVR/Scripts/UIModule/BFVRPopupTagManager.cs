@@ -13,7 +13,7 @@ namespace BFVR.UIModule
 
         const int initialTagPoolSize = 2;
 
-        List<GameObject> popupTagPool = new List<GameObject>();
+        GameObject popupTagObject;
         BFVRChapterManager chMan;
 
         private void Start()
@@ -21,37 +21,22 @@ namespace BFVR.UIModule
             chMan = FindObjectOfType<BFVRChapterManager>();
             if(PopupTagPrefab)
             {
-                for (int i = 0; i < initialTagPoolSize; i++)
-                {
-                    GameObject g = Instantiate(PopupTagPrefab);
-                    g.transform.position = Vector3.zero;
-                    g.transform.parent = this.gameObject.transform; // Set manager as parent
-                    popupTagPool.Add(g);
-                }
+                popupTagObject = Instantiate(PopupTagPrefab);
             }
         }
 
         public void DisplayTag(int locationIndex)
         {
-            foreach(GameObject g in popupTagPool)
-            {
-                BFVRPopupTag t = g.GetComponent<BFVRPopupTag>();
-                if(!t.gameObject.activeSelf)
-                {
-                    t.transform.position = tagLocations[locationIndex].position;
-                    t.transform.localScale = tagLocations[locationIndex].localScale;
-                    t.gameObject.SetActive(true);
-                    break;
-                }
-            }
+            HideTags();
+
+            popupTagObject.transform.position = tagLocations[locationIndex].position;
+            popupTagObject.transform.localScale = tagLocations[locationIndex].localScale;
+            popupTagObject.gameObject.SetActive(true);
         }
 
-        public void HideTags(GameObject tagObject = null)
+        public void HideTags()
         {
-            foreach(GameObject g in popupTagPool)
-            {
-                g.SetActive(false);
-            }
+            popupTagObject.SetActive(false);
         }
     }
 }
