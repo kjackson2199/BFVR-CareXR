@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &205789841 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2098085181420835921, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
+  m_PrefabInstance: {fileID: 830811867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &471196963 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8296325232226429673, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
+  m_PrefabInstance: {fileID: 830811867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &732803410
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +185,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &767111693
+--- !u!1001 &830811867
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -192,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7293010558851999966, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7293010558851999966, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7293010558851999966, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
       propertyPath: m_LocalRotation.w
@@ -230,7 +240,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: XRHeadsetRig
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8823111117812294254, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
+    - {fileID: 942216754510925152, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38358ea914ae88c4abd1660d48365714, type: 3}
 --- !u!1 &1192119005
 GameObject:
@@ -529,3 +541,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 732803412}
+--- !u!1 &1998661508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998661510}
+  - component: {fileID: 1998661509}
+  m_Layer: 0
+  m_Name: HandsAnimFix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1998661509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998661508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d297c3c04bc86047970962d3dc736a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 471196963}
+  leftHand: {fileID: 205789841}
+--- !u!4 &1998661510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998661508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9045074, y: -3.6940029, z: -6.4231005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
