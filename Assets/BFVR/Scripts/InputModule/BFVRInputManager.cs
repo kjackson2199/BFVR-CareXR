@@ -65,14 +65,14 @@ namespace BFVR.InputModule
 
         // This is that new shit that'll get you going
 
-        public static event HandPoses_OnGripLeftStartedDelegate onGripLeftStartedEvent;
-        public static event HandPoses_OnGripLeftCanceledDelegate onGripLeftCanceledEvent;
-        public static event HandPoses_OnGripRightStartedDelegate onGripRightStartedEvent;
-        public static event HandPoses_OnGripRightCanceledDelegate onGripRightCanceledEvent;
-        public static event HandPoses_OnPointLeftStartedDelegate onPointLeftStartedEvent;
-        public static event HandPoses_OnPointLeftCanceledDelegate onPointLeftCanceledEvent;
-        public static event HandPoses_OnPointRightStartedDelegate onPointRightStartedEvent;
-        public static event HandPoses_OnPointRightCanceledDelegate onPointRightCanceledEvent;
+        public static event HandPoses_OnGripLeftStartedDelegate handposesOnGripLeftStartedEvent;
+        public static event HandPoses_OnGripLeftCanceledDelegate handposesOnGripLeftCanceledEvent;
+        public static event HandPoses_OnGripRightStartedDelegate handposesOnGripRightStartedEvent;
+        public static event HandPoses_OnGripRightCanceledDelegate handposesOnGripRightCanceledEvent;
+        public static event HandPoses_OnPointLeftStartedDelegate handposesOnPointLeftStartedEvent;
+        public static event HandPoses_OnPointLeftCanceledDelegate handposesOnPointLeftCanceledEvent;
+        public static event HandPoses_OnPointRightStartedDelegate handposesOnPointRightStartedEvent;
+        public static event HandPoses_OnPointRightCanceledDelegate handposesOnPointRightCanceledEvent;
 
         #endregion
 
@@ -209,12 +209,12 @@ namespace BFVR.InputModule
         {
             if (context.started)
             {
-                onGripLeftStartedEvent.Invoke();
+                handposesOnGripLeftStartedEvent.Invoke();
             }
 
             else if (context.canceled)
             {
-                onGripLeftCanceledEvent.Invoke();
+                handposesOnGripLeftCanceledEvent.Invoke();
             }
         }
 
@@ -222,12 +222,12 @@ namespace BFVR.InputModule
         {
             if (context.started)
             {
-                onGripRightStartedEvent.Invoke();
+                handposesOnGripRightStartedEvent.Invoke();
             }
 
             else if (context.canceled)
             {
-                onGripRightCanceledEvent.Invoke();
+                handposesOnGripRightCanceledEvent.Invoke();
             }
         }
 
@@ -235,12 +235,12 @@ namespace BFVR.InputModule
         {
             if (context.started)
             {
-                onPointLeftStartedEvent.Invoke();
+                handposesOnPointLeftStartedEvent.Invoke();
             }
 
             else if (context.canceled)
             {
-                onPointLeftCanceledEvent.Invoke();
+                handposesOnPointLeftCanceledEvent.Invoke();
             }
         }
 
@@ -248,12 +248,12 @@ namespace BFVR.InputModule
         {
             if (context.started)
             {
-                onPointRightStartedEvent.Invoke();
+                handposesOnPointRightStartedEvent.Invoke();
             }
 
             else if (context.canceled)
             {
-                onPointRightCanceledEvent.Invoke();
+                handposesOnPointRightCanceledEvent.Invoke();
             }
         }
 
