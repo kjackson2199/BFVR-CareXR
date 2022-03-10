@@ -6,42 +6,32 @@ public class HandsAnimFix : MonoBehaviour
 {
     public Animator rightHand;
     public Animator leftHand;//hands are set up seperately because array setTrigger also doesn't trigger animations properly.
-    public int state = 0;
+    //public int state = 0;
+    bool gripRight = false;
+    bool triggerRight = false;
+    bool gripLeft = false;
+    bool triggerLeft = false;
+
+    void OnEnable()
+    {
+        BFVRInputManager.
+    }
+    void OnDisable()
+    {
+        BFVRInputManager.
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown("g"))
-        {
-            if (state == 0)
-            {
-                rightHand.SetTrigger("Grip");
-                leftHand.SetTrigger("Grip");
-                state++;
-            }
-            else if (state == 1)
-            {
-                rightHand.SetTrigger("Trigger");
-                leftHand.SetTrigger("Trigger");
-                state++;
-            }
-            else if (state == 2)
-            {
-                rightHand.SetTrigger("Both");
-                leftHand.SetTrigger("Both");
-                state++;
-            }
-            else if (state == 3)
-            {
-                rightHand.SetTrigger("Idle");
-                leftHand.SetTrigger("Idle");
-                state = 0;
-            }
-        }
-    }
+        //need check for if pose changed this frame
+        if (!gripRight && !triggerRight) rightHand.SetTrigger("Idle");
+        else if(gripRight && !triggerRight) rightHand.SetTrigger("Grip");
+        else if(!gripRight && triggerRight) rightHand.SetTrigger("Trigger");
+        else if(gripRight && triggerRight) rightHand.SetTrigger("Both");
 
-    public void AnimateHand(bool rightHand, string triggerName)//bool: true for right hand, false for left hand. String: enter the trigger you want to call on the animator.
-    {
-        if (rightHand) rightHand.SetTrigger(triggerName);
-        else leftHand.SetTrigger(triggerName);
+        if (!gripLeft && !triggerLeft) leftHand.SetTrigger("Idle");
+        else if(gripLeft && !triggerLeft) leftHand.SetTrigger("Grip");
+        else if(!gripLeft && triggerLeft) leftHand.SetTrigger("Trigger");
+        else if(gripLeft && triggerLeft) leftHand.SetTrigger("Both");
     }
 }

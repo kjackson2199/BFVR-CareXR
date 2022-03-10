@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 3938098621815327147}
   - component: {fileID: 124445964855930344}
   - component: {fileID: 5792924972246013949}
+  - component: {fileID: 5723134686114921179}
   m_Layer: 0
   m_Name: XRHeadsetRig
   m_TagString: Player
@@ -424,6 +425,20 @@ MonoBehaviour:
   UseTurnSnapping: 1
   TurnSnapAmount: 15
   TurnRate: 45
+--- !u!114 &5723134686114921179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573772330416154421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d297c3c04bc86047970962d3dc736a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 8296325232226429673}
+  leftHand: {fileID: 2098085181420835921}
 --- !u!1 &7850172131105742532
 GameObject:
   m_ObjectHideFlags: 0
