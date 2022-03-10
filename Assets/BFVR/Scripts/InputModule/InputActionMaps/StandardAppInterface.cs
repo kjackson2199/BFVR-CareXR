@@ -191,6 +191,90 @@ namespace BFVR.InputModule
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""HandPoses"",
+            ""id"": ""0475c457-2a61-4b73-9671-505782f0219b"",
+            ""actions"": [
+                {
+                    ""name"": ""GripLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""55d79845-3487-42d6-a717-f58ae66b7e80"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GripRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""c3f1e37f-7758-4aed-b1d4-76a937e5fb7f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""PointLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""58039366-730f-4b63-a134-50735e7a6ce6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""PointRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""50d5c708-ed30-4c7e-9b63-4906e4c5f556"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ce95b0a2-3549-45ff-adf4-07129541e001"",
+                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GripLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36cb0cca-3faa-495e-aae2-68433693855a"",
+                    ""path"": ""<XRController>{RightHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GripRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""593b3a92-d9fd-4bc5-8ca4-c3ba41411999"",
+                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PointLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6486aeb8-11c4-4c7d-bf0c-570685280f63"",
+                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PointRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -209,6 +293,12 @@ namespace BFVR.InputModule
             m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
             m_Interaction_GrabLeft = m_Interaction.FindAction("GrabLeft", throwIfNotFound: true);
             m_Interaction_GrabRight = m_Interaction.FindAction("GrabRight", throwIfNotFound: true);
+            // HandPoses
+            m_HandPoses = asset.FindActionMap("HandPoses", throwIfNotFound: true);
+            m_HandPoses_GripLeft = m_HandPoses.FindAction("GripLeft", throwIfNotFound: true);
+            m_HandPoses_GripRight = m_HandPoses.FindAction("GripRight", throwIfNotFound: true);
+            m_HandPoses_PointLeft = m_HandPoses.FindAction("PointLeft", throwIfNotFound: true);
+            m_HandPoses_PointRight = m_HandPoses.FindAction("PointRight", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -393,6 +483,63 @@ namespace BFVR.InputModule
             }
         }
         public InteractionActions @Interaction => new InteractionActions(this);
+
+        // HandPoses
+        private readonly InputActionMap m_HandPoses;
+        private IHandPosesActions m_HandPosesActionsCallbackInterface;
+        private readonly InputAction m_HandPoses_GripLeft;
+        private readonly InputAction m_HandPoses_GripRight;
+        private readonly InputAction m_HandPoses_PointLeft;
+        private readonly InputAction m_HandPoses_PointRight;
+        public struct HandPosesActions
+        {
+            private @StandardAppInterface m_Wrapper;
+            public HandPosesActions(@StandardAppInterface wrapper) { m_Wrapper = wrapper; }
+            public InputAction @GripLeft => m_Wrapper.m_HandPoses_GripLeft;
+            public InputAction @GripRight => m_Wrapper.m_HandPoses_GripRight;
+            public InputAction @PointLeft => m_Wrapper.m_HandPoses_PointLeft;
+            public InputAction @PointRight => m_Wrapper.m_HandPoses_PointRight;
+            public InputActionMap Get() { return m_Wrapper.m_HandPoses; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(HandPosesActions set) { return set.Get(); }
+            public void SetCallbacks(IHandPosesActions instance)
+            {
+                if (m_Wrapper.m_HandPosesActionsCallbackInterface != null)
+                {
+                    @GripLeft.started -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripLeft;
+                    @GripLeft.performed -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripLeft;
+                    @GripLeft.canceled -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripLeft;
+                    @GripRight.started -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripRight;
+                    @GripRight.performed -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripRight;
+                    @GripRight.canceled -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnGripRight;
+                    @PointLeft.started -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointLeft;
+                    @PointLeft.performed -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointLeft;
+                    @PointLeft.canceled -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointLeft;
+                    @PointRight.started -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointRight;
+                    @PointRight.performed -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointRight;
+                    @PointRight.canceled -= m_Wrapper.m_HandPosesActionsCallbackInterface.OnPointRight;
+                }
+                m_Wrapper.m_HandPosesActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @GripLeft.started += instance.OnGripLeft;
+                    @GripLeft.performed += instance.OnGripLeft;
+                    @GripLeft.canceled += instance.OnGripLeft;
+                    @GripRight.started += instance.OnGripRight;
+                    @GripRight.performed += instance.OnGripRight;
+                    @GripRight.canceled += instance.OnGripRight;
+                    @PointLeft.started += instance.OnPointLeft;
+                    @PointLeft.performed += instance.OnPointLeft;
+                    @PointLeft.canceled += instance.OnPointLeft;
+                    @PointRight.started += instance.OnPointRight;
+                    @PointRight.performed += instance.OnPointRight;
+                    @PointRight.canceled += instance.OnPointRight;
+                }
+            }
+        }
+        public HandPosesActions @HandPoses => new HandPosesActions(this);
         public interface IMovementActions
         {
             void OnMoveForward(InputAction.CallbackContext context);
@@ -409,6 +556,13 @@ namespace BFVR.InputModule
         {
             void OnGrabLeft(InputAction.CallbackContext context);
             void OnGrabRight(InputAction.CallbackContext context);
+        }
+        public interface IHandPosesActions
+        {
+            void OnGripLeft(InputAction.CallbackContext context);
+            void OnGripRight(InputAction.CallbackContext context);
+            void OnPointLeft(InputAction.CallbackContext context);
+            void OnPointRight(InputAction.CallbackContext context);
         }
     }
 }

@@ -176,6 +176,90 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "HandPoses",
+            "id": "0475c457-2a61-4b73-9671-505782f0219b",
+            "actions": [
+                {
+                    "name": "GripLeft",
+                    "type": "Button",
+                    "id": "55d79845-3487-42d6-a717-f58ae66b7e80",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GripRight",
+                    "type": "Button",
+                    "id": "c3f1e37f-7758-4aed-b1d4-76a937e5fb7f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PointLeft",
+                    "type": "Button",
+                    "id": "58039366-730f-4b63-a134-50735e7a6ce6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PointRight",
+                    "type": "Button",
+                    "id": "50d5c708-ed30-4c7e-9b63-4906e4c5f556",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ce95b0a2-3549-45ff-adf4-07129541e001",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36cb0cca-3faa-495e-aae2-68433693855a",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "593b3a92-d9fd-4bc5-8ca4-c3ba41411999",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6486aeb8-11c4-4c7d-bf0c-570685280f63",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
