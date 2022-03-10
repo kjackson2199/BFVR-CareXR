@@ -14,11 +14,11 @@ public class HandsAnimFix : MonoBehaviour
 
     void OnEnable()
     {
-        BFVRInputManager.
+        //BFVRInputManager.
     }
     void OnDisable()
     {
-        BFVRInputManager.
+        //BFVRInputManager.
     }
 
     void Update()
