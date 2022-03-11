@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class SyringeAnimFix : MonoBehaviour
 {
-    public Animator rightHand;
-    public Animator leftHand;//hands are set up seperately because array setTrigger also doesn't trigger animations properly.
-    //public int state = 0;
-    bool gripRight = false;
-    bool triggerRight = false;
-    bool gripLeft = false;
-    bool triggerLeft = false;
+    public Animator anim;
 
     void OnEnable()
     {
@@ -21,17 +15,8 @@ public class SyringeAnimFix : MonoBehaviour
         //BFVRInputManager.
     }
 
-    void Update()
+    void PlayAnim(string stateName)
     {
-        //need check for if pose changed this frame
-        if (!gripRight && !triggerRight) rightHand.SetTrigger("Idle");
-        else if(gripRight && !triggerRight) rightHand.SetTrigger("Grip");
-        else if(!gripRight && triggerRight) rightHand.SetTrigger("Trigger");
-        else if(gripRight && triggerRight) rightHand.SetTrigger("Both");
-
-        if (!gripLeft && !triggerLeft) leftHand.SetTrigger("Idle");
-        else if(gripLeft && !triggerLeft) leftHand.SetTrigger("Grip");
-        else if(!gripLeft && triggerLeft) leftHand.SetTrigger("Trigger");
-        else if(gripLeft && triggerLeft) leftHand.SetTrigger("Both");
+        anim.SetTrigger(stateName);//change trigger to match animator
     }
 }
