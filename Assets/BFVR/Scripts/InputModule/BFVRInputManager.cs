@@ -10,7 +10,7 @@ namespace BFVR.InputModule
     /// Standard BFVR input manager. Manages input actions from selected action maps. (Does not destroy on load.)
     /// </summary>
     /// 
-    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions , IInteractionActions
+    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions , IInteractionActions , IHandPosesActions
     {
         #region UI/Actions
         // UI/Point
@@ -52,6 +52,30 @@ namespace BFVR.InputModule
         public static event Interaction_OnGrabRightCanceledDelegate interactionOnGrabRightCanceledEvent;
         #endregion
 
+        #region Hand Poses Action Map Interface Implementation
+
+        public delegate void HandPoses_OnGripLeftStartedDelegate();
+        public delegate void HandPoses_OnGripLeftCanceledDelegate();
+        public delegate void HandPoses_OnGripRightStartedDelegate();
+        public delegate void HandPoses_OnGripRightCanceledDelegate();
+        public delegate void HandPoses_OnPointLeftStartedDelegate();
+        public delegate void HandPoses_OnPointLeftCanceledDelegate();
+        public delegate void HandPoses_OnPointRightStartedDelegate();
+        public delegate void HandPoses_OnPointRightCanceledDelegate();
+
+        // This is that new shit that'll get you going
+
+        public static event HandPoses_OnGripLeftStartedDelegate onGripLeftStartedEvent;
+        public static event HandPoses_OnGripLeftCanceledDelegate onGripLeftCanceledEvent;
+        public static event HandPoses_OnGripRightStartedDelegate onGripRightStartedEvent;
+        public static event HandPoses_OnGripRightCanceledDelegate onGripRightCanceledEvent;
+        public static event HandPoses_OnPointLeftStartedDelegate onPointLeftStartedEvent;
+        public static event HandPoses_OnPointLeftCanceledDelegate onPointLeftCanceledEvent;
+        public static event HandPoses_OnPointRightStartedDelegate onPointRightStartedEvent;
+        public static event HandPoses_OnPointRightCanceledDelegate onPointRightCanceledEvent;
+
+        #endregion
+
         // Default Input Actions Asset
         public StandardAppInterface StandardAppActions;
 
@@ -80,6 +104,7 @@ namespace BFVR.InputModule
             StandardAppActions.UI.SetCallbacks(this);
             StandardAppActions.Movement.SetCallbacks(this);
             StandardAppActions.Interaction.SetCallbacks(this);
+            StandardAppActions.HandPoses.SetCallbacks(this);
 
             Cursor = FindObjectOfType<BFVRCursor>();
         }
@@ -89,6 +114,7 @@ namespace BFVR.InputModule
             StandardAppActions.UI.Enable();
             StandardAppActions.Movement.Enable();
             StandardAppActions.Interaction.Enable();
+            StandardAppActions.HandPoses.Enable();
         }
 
         private void OnDisable()
@@ -96,6 +122,7 @@ namespace BFVR.InputModule
             StandardAppActions.UI.Disable();
             StandardAppActions.Movement.Disable();
             StandardAppActions.Interaction.Disable();
+            StandardAppActions.HandPoses.Disable();
         }
 
         #region UI Action Map Interface Implementation
@@ -174,6 +201,62 @@ namespace BFVR.InputModule
                 interactionOnGrabRightCanceledEvent.Invoke();
             }
         }
+
+        #endregion
+
+        #region Hand Poses Action Map Interface Implementation
+        public void OnGripLeft(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                onGripLeftStartedEvent.Invoke();
+            }
+
+            else if (context.canceled)
+            {
+                onGripLeftCanceledEvent.Invoke();
+            }
+        }
+
+        public void OnGripRight(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                onGripRightStartedEvent.Invoke();
+            }
+
+            else if (context.canceled)
+            {
+                onGripRightCanceledEvent.Invoke();
+            }
+        }
+
+        public void OnPointLeft(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                onPointLeftStartedEvent.Invoke();
+            }
+
+            else if (context.canceled)
+            {
+                onPointLeftCanceledEvent.Invoke();
+            }
+        }
+
+        public void OnPointRight(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                onPointRightStartedEvent.Invoke();
+            }
+
+            else if (context.canceled)
+            {
+                onPointRightCanceledEvent.Invoke();
+            }
+        }
+
         #endregion
     }
 }
