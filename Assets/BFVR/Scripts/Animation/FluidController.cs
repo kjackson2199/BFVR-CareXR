@@ -28,7 +28,10 @@ public class FluidController : MonoBehaviour
     {
 
         render = GetComponent<Renderer>();
-        if (matFluid != null) _useMat = true;
+        if (matFluid != null)
+        {
+            _useMat = true;
+        }
         SetInvertFill(InvertAtStart);
         SetPercentFillTo(startPercentFill);
     }
