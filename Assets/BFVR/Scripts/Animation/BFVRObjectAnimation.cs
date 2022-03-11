@@ -8,11 +8,19 @@ namespace BFVR
     {
         public Animator anim;
 
-        void PlayAnimState(string StateName)
+        public void PlayAnimState(string StateName)
         {
             if (anim != null)
             {
                 anim.Play(StateName);
+            }
+        }
+
+        public void SetState(string StateName)
+        {
+            if(anim != null)
+            {
+                anim.Play(StateName, -1, 1);
             }
         }
     }

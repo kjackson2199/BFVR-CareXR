@@ -401,6 +401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5985211260987859979}
+  - component: {fileID: 7739718166389602505}
   m_Layer: 0
   m_Name: Syringe_LG_anim
   m_TagString: Untagged
@@ -423,6 +424,25 @@ Transform:
   m_Father: {fileID: 292536505478438745}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7739718166389602505
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301711819193685528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bb62cc4daf91a94097534e47fb52f8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7943224676662750356
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,13 +535,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 292536505478438745}
-  - component: {fileID: 5206297539357408484}
   - component: {fileID: 1999522729175240159}
   - component: {fileID: 8653883323339950892}
   - component: {fileID: 3442492506735004199}
   - component: {fileID: 7898622268499404380}
   - component: {fileID: 2724072368465412451}
-  - component: {fileID: 4783276359793702333}
+  - component: {fileID: 5943959343062578714}
   m_Layer: 6
   m_Name: Syringe_LG
   m_TagString: Untagged
@@ -545,25 +564,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5206297539357408484
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8311050728087513905}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6bb62cc4daf91a94097534e47fb52f8b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &1999522729175240159
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Targets: []
---- !u!114 &4783276359793702333
+--- !u!114 &5943959343062578714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -652,10 +652,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8311050728087513905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2a6d2b77e3c094aa0d240459e90077, type: 3}
+  m_Script: {fileID: 11500000, guid: 55bda1a7c3d42df44a41b7c9557d7b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  animator: {fileID: 7739718166389602505}
+  AnimationSteps:
+  - Name: Idle
+    StateName: Syringe_LG_Idle
+  - Name: Open
+    StateName: Syringe_LG_Open
+  - Name: Close
+    StateName: Syringe_LG_Close
+  AllowClipLoop: 0
+  StartAtState: 
 --- !u!1001 &4410042897637993754
 PrefabInstance:
   m_ObjectHideFlags: 0
