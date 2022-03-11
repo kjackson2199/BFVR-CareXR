@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4926186167215119687}
   - component: {fileID: 6254850872829276628}
   - component: {fileID: 5053106684910797256}
-  - component: {fileID: 4604193378759500261}
+  - component: {fileID: 1755189764405117128}
   m_Layer: 6
   m_Name: Syringe_SM
   m_TagString: Untagged
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Targets: []
---- !u!114 &4604193378759500261
+--- !u!114 &1755189764405117128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,13 +442,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5834779332401523403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bda1a7c3d42df44a41b7c9557d7b62, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c2a6d2b77e3c094aa0d240459e90077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  AnimationSteps: []
-  AllowClipLoop: 0
-  StartAtState: 
+  anim: {fileID: 8145008546304871254}
 --- !u!1 &8105708234776928250
 GameObject:
   m_ObjectHideFlags: 0
