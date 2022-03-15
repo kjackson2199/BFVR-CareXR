@@ -26,14 +26,14 @@ public class HeightToggle : MonoBehaviour
         {
             sitting = true;
             buttonImage.sprite = sittingSprite;
-            GameObject.Find("BFVRApp").transform.position += new Vector3(0,0.75f,0);//trying to find gameobject on awake sometimes finds the incorrect headset
+            GameObject.Find("BFVRApp").transform.position += new Vector3(0,0.5f,0);//trying to find gameobject on awake sometimes finds the incorrect headset
             BFVRApp.playerSitting = true;
         }
         else
         {
             sitting = false;
             buttonImage.sprite = standingSprite;
-            GameObject.Find("BFVRApp").transform.position -= new Vector3(0,0.75f,0);
+            GameObject.Find("BFVRApp").transform.position -= new Vector3(0,0.5f,0);
             BFVRApp.playerSitting = false;
         }
     }
