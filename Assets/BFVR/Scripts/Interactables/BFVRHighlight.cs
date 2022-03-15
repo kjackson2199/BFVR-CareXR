@@ -11,6 +11,7 @@ namespace BFVR.Interactable
         void Start()
         {
             hightlightRenderer = gameObject.GetComponent<Renderer>();
+            HideHighlight();
         }
 
         public void ShowHightlight()
