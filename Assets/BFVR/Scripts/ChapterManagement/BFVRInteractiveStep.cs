@@ -33,7 +33,6 @@ namespace BFVR.ChapterManagement
 
         private void OnEnable()
         {
-            BFVRInteractableObject.onInteractableTriggeredEvent += BFVRInteractableObject_onInteractableTriggered;
             BeginInteractiveStep();
         }
 
@@ -70,6 +69,7 @@ namespace BFVR.ChapterManagement
         IEnumerator BeginDelay()
         {
             yield return new WaitForSeconds(StepBeginDelay);
+            BFVRInteractableObject.onInteractableTriggeredEvent += BFVRInteractableObject_onInteractableTriggered;
             OnStepBeginDelayedEvent.Invoke();
         }
     }

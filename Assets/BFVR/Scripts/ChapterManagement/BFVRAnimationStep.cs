@@ -30,7 +30,9 @@ namespace BFVR.ChapterManagement
         public List<StepAction> StepActions = new List<StepAction>();
         public StepTriggerType StepTrigger = StepTriggerType.Autostart;
         public float Duration = 1.0f;
+        public float BeginDelay = 2.0f;
 
+        public UnityEvent OnStepBeginDelay;
         public UnityEvent OnStepBegin;
         public UnityEvent OnStepComplete;
 
@@ -47,7 +49,7 @@ namespace BFVR.ChapterManagement
         {
             if(StepTrigger == StepTriggerType.Autostart)
             {
-                PlayStep();
+                StartCoroutine(StepBeginDelay());
             }
         }
 
@@ -59,6 +61,13 @@ namespace BFVR.ChapterManagement
         private void Update()
         {
             UpdateStepAction();
+        }
+
+        IEnumerator StepBeginDelay()
+        {
+            OnStepBeginDelay.Invoke();
+            yield return new WaitForSeconds(BeginDelay);
+            PlayStep();
         }
 
         void StartStepActions()
