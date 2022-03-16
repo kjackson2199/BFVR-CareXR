@@ -16,7 +16,9 @@ public class HeightToggle : MonoBehaviour
         if (BFVRApp.playerSitting)
         {
             buttonImage.sprite = sittingSprite;
+            GameObject.Find("BFVRApp").transform.position += new Vector3(0,0.5f,0);//trying to find gameobject on awake sometimes finds the incorrect headset
             sitting = true;
+
         }
     }
     
