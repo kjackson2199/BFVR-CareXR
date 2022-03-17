@@ -45,10 +45,17 @@ namespace BFVR.Interactable
 
         Collider collider;
 
+        GameObject emptyParent;
+
         public void Start()
         {
             SetNewOriginalTransform();
             collider = GetComponent<Collider>();
+
+            GameObject g = new GameObject();
+            emptyParent = Instantiate(g, gameObject.transform.position, gameObject.transform.rotation);
+
+            transform.parent = emptyParent.transform;
         }
 
         public void SetNewOriginalTransform()
@@ -112,7 +119,7 @@ namespace BFVR.Interactable
         {
             if (_currentHand == null) return;
 
-            gameObject.transform.parent = null;
+            gameObject.transform.parent = emptyParent.transform;
 
             if (SnapToPositionOnRelease)
             {
@@ -136,7 +143,7 @@ namespace BFVR.Interactable
             if (_currentHand != hand || _currentHand == null) return;
 
             _currentHand.RemoveItemFromHand();
-            gameObject.transform.parent = null;
+            gameObject.transform.parent = emptyParent.transform;
 
             if (SnapToPositionOnRelease)
             {
