@@ -30,7 +30,7 @@ namespace BFVR.ChapterManagement
 
         int _stepIndex = -1;
 
-        bool delayActive;
+        bool delayActive = true;
 
         private void Awake()
         {
@@ -129,6 +129,7 @@ namespace BFVR.ChapterManagement
         {
             if (delayActive) return;
             NextStep();
+            StartCoroutine(StepDelayCoroutine());
         }
 
         IEnumerator StepDelayCoroutine()
