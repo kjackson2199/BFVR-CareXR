@@ -9,11 +9,16 @@ public class MediaPanelScreenCoverHost : MonoBehaviour
     public bool panelVisible;
     public bool isPointed = false;
 
+    void Awake()
+    {
+        panelAnim.SetTrigger("down");
+    }
+
     void Start()
     {
         medPanelHost = this;
         panelVisible = false;
-        panelAnim.SetTrigger("down");
+        panelAnim.SetTrigger("down");//sometimes doesn't disappear on awake
     }
 
     void LateUpdate()
