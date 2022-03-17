@@ -12,7 +12,7 @@ namespace BFVR.InputModule
     [RequireComponent(typeof(LineRenderer))]
     public class BFVRLaserPonter : MonoBehaviour
     {
-        Animator mediaPanelAnim;
+        //public Animator mediaPanelAnim;
 
         public enum LaserPointerBehaviour
         {
@@ -41,12 +41,12 @@ namespace BFVR.InputModule
         private void Awake()
         {
             lineRenderer = GetComponent<LineRenderer>();
-            //mediaPanelAnim = GameObject.Find("MediaPanel").GetComponent<Animator>();
         }
 
         private void Start()
         {
             if (!cursor) cursor.gameObject.SetActive(false);
+            //mediaPanelAnim = GameObject.Find("MediaPanel").GetComponent<Animator>();
         }
 
         private void OnEnable()
@@ -64,14 +64,14 @@ namespace BFVR.InputModule
 
         private void BFVRInputManager_uiOnPointCanceledEvent()
         {
-            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("down");
+            //mediaPanelAnim.SetTrigger("down");
 
             _pointing = false;
         }
 
         private void BFVRInputManager_uiOnPointStartEvent()
         {
-            //if(mediaPanelAnim) mediaPanelAnim.SetTrigger("up");
+            //.SetTrigger("up");
 
             _pointing = true;
         }
@@ -100,6 +100,7 @@ namespace BFVR.InputModule
             }
 
             RaycastHit hit = CastBeam();
+            if (hit.collider.gameObject.GetComponent<MediaPanelScreenCover>()) hit.collider.gameObject.GetComponent<MediaPanelScreenCover>().PointAtScreen();//tells the media panel to appear when we're pointing at it
             UpdateLaserPointer(hit);
             UpdateCursor(hit);
         }
