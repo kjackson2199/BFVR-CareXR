@@ -100,9 +100,9 @@ namespace BFVR.InputModule
             }
 
             RaycastHit hit = CastBeam();
-            if (hit.collider.gameObject.GetComponent<MediaPanelScreenCover>()) hit.collider.gameObject.GetComponent<MediaPanelScreenCover>().PointAtScreen();//tells the media panel to appear when we're pointing at it
             UpdateLaserPointer(hit);
             UpdateCursor(hit);
+            if (hit.collider.gameObject.GetComponent<MediaPanelScreenCover>()) hit.collider.gameObject.GetComponent<MediaPanelScreenCover>().PointAtScreen();//tells the media panel to appear when we're pointing at it
         }
 
         void UpdateCursor(RaycastHit hitInfo)
