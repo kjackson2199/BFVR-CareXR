@@ -50,6 +50,8 @@ namespace BFVR.ChapterManagement
 
         public void CompleteStep()
         {
+            if (!gameObject.activeSelf) return;
+
             if(OnStepCompleteEvent != null) OnStepCompleteEvent.Invoke();
             if(onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
 

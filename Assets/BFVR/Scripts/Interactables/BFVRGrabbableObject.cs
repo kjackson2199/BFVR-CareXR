@@ -50,6 +50,7 @@ namespace BFVR.Interactable
         public void Start()
         {
             SetNewOriginalTransform();
+
             collider = GetComponent<Collider>();
 
             GameObject g = new GameObject();
