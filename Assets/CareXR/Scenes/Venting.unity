@@ -3318,7 +3318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.size
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[0]
@@ -3403,29 +3403,33 @@ PrefabInstance:
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[20]
       value: 
-      objectReference: {fileID: 374966267}
+      objectReference: {fileID: 1915592465}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[21]
       value: 
-      objectReference: {fileID: 1915592465}
+      objectReference: {fileID: 374966267}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[22]
       value: 
-      objectReference: {fileID: 1720330821}
+      objectReference: {fileID: 1915592465}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[23]
       value: 
-      objectReference: {fileID: 1915592465}
+      objectReference: {fileID: 1720330821}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[24]
       value: 
-      objectReference: {fileID: 299713057}
+      objectReference: {fileID: 1915592465}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[25]
       value: 
-      objectReference: {fileID: 1915592465}
+      objectReference: {fileID: 299713057}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Steps.Array.data[26]
+      value: 
+      objectReference: {fileID: 1915592465}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Steps.Array.data[27]
       value: 
       objectReference: {fileID: 2000049899}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
@@ -6618,6 +6622,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: TargetTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: StepBeginDelay
       value: 1
       objectReference: {fileID: 0}
@@ -9266,6 +9274,10 @@ PrefabInstance:
     - target: {fileID: 3504697821143525164, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: TargetTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: StepBeginDelay
