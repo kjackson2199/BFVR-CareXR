@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 383499805179485432}
   - component: {fileID: 4208130323353249780}
   - component: {fileID: 5979076446885147810}
+  - component: {fileID: 5225607368614530059}
   m_Layer: 5
   m_Name: SkipVideoButton
   m_TagString: Untagged
@@ -575,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -649,6 +650,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 125, y: 125, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5225607368614530059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198815473105632325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e119aae5c548a745b96b04fe5a8901c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4610308390201703842
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +675,7 @@ GameObject:
   - component: {fileID: 7447163043254103574}
   - component: {fileID: 2485250902935688661}
   - component: {fileID: 8492133465081757079}
+  - component: {fileID: 174490523167417793}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
@@ -711,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -785,6 +799,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 125, y: 125, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &174490523167417793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610308390201703842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e119aae5c548a745b96b04fe5a8901c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5675756585960469216
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +821,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9087906508321134294}
   - component: {fileID: 1325750312259583616}
+  - component: {fileID: 4128502489373778305}
+  - component: {fileID: 8686182290417565085}
+  - component: {fileID: 1154696411384894997}
   m_Layer: 0
   m_Name: MediaPanel
   m_TagString: Untagged
@@ -836,6 +865,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4128502489373778305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675756585960469216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359e074be9f22ab45b53930c85f08572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelAnim: {fileID: 1325750312259583616}
+  panelVisible: 0
+  isPointed: 0
+--- !u!114 &8686182290417565085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675756585960469216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e119aae5c548a745b96b04fe5a8901c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1154696411384894997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675756585960469216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2200, y: 1292.5715, z: 267.9351}
+  m_Center: {x: -0.00000015052501, y: -23.252419, z: 195.42691}
 --- !u!1 &6068934143217421168
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -969,7 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1044,7 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1074,6 +1143,7 @@ GameObject:
   - component: {fileID: 2690574333196065696}
   - component: {fileID: 3712241134696761042}
   - component: {fileID: 6470668339718855760}
+  - component: {fileID: 7546808680371614949}
   m_Layer: 5
   m_Name: RestartVideoButton
   m_TagString: Untagged
@@ -1123,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1197,6 +1267,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 125, y: 125, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7546808680371614949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072221527701183963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e119aae5c548a745b96b04fe5a8901c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7117828326405699414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1426,7 @@ GameObject:
   - component: {fileID: 7747823021992729596}
   - component: {fileID: 1108260914792107877}
   - component: {fileID: 7295253807116116559}
+  - component: {fileID: 474989889041773339}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1393,7 +1476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1467,6 +1550,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 125, y: 125, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &474989889041773339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528549601333944411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e119aae5c548a745b96b04fe5a8901c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7652037399780231033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
