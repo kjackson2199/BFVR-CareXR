@@ -77,6 +77,13 @@ namespace BFVR
 
         public static void LoadSceneByName(string sceneName)
         {
+            GameObject[] o = GameObject.FindGameObjectsWithTag("DESTROY");
+
+            foreach(GameObject g in o)
+            {
+                DestroyImmediate(g);
+            }
+
             if(sceneName == _instance.MainMenuSceneName)
             {
                 LoadMainMenuScene();
