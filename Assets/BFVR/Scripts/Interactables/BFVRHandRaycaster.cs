@@ -11,7 +11,7 @@ namespace BFVR.Interactable
     /// 
     public class BFVRHandRaycaster : MonoBehaviour
     {
-        const int rayCount = 100;
+        const int rayCount = 200;
 
         [Range(.1f, .5f)] public float maxRayDistance = .25f;
         [Range(-4, -1)] public float grabSpreadOffset = -2;
