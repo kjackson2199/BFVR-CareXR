@@ -37,6 +37,27 @@ public class AnimationTextDirections : MonoBehaviour
         }
     }
 
+    public void ShowStep(int stepIndex)
+    {
+        if (stepIndex < 0)
+        {
+            _index = 0;
+        }
+        else if (stepIndex > Directions.Count - 1)
+        {
+            _index = Directions.Count - 1;
+        }
+
+        else
+        {
+            _index = stepIndex;
+        }
+
+        if (Target != null) Target.text = Directions[_index];
+        if (TMPTarget != null) TMPTarget.text = Directions[_index];
+        if (onShowNextEvent != null) onShowNextEvent.Invoke(Directions[_index]);
+    }
+
     public void Reset(bool showNext = false){
         _index = -1;
         if (Target != null) Target.text = "";
