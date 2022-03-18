@@ -68,7 +68,7 @@ namespace BFVR.Interactable
         public void SetEnableGrabbable(bool enable)
         {
             EnableGrabbable = enable;
-            //collider.enabled = enable;
+            collider.enabled = enable;
         }
 
         public bool Grab(BFVRHand parentHand)
