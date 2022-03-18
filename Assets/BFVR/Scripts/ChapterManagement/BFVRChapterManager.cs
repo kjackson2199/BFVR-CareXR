@@ -11,11 +11,15 @@ namespace BFVR.ChapterManagement
         public delegate void OnNextSectionDelegate();
         public delegate void OnPreviousSectionDelegate();
         public delegate void OnEndChapterDelegate();
+        public delegate void OnEndSectionDelegate();
+
 
         public static event OnChapterBeginDelegate onChapterBeginEvent;
         public static event OnNextSectionDelegate onNextSectionEvent;
         public static event OnPreviousSectionDelegate onPreviousSectionEvent;
         public static event OnEndChapterDelegate onEndChapterEvent;
+        public static event OnEndSectionDelegate onEndSectionEvent;
+
 
         public string ChapterTitle = "";
 
@@ -30,6 +34,7 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnNextSection;
         public UnityEvent OnPreviousSection;
         public UnityEvent OnChapterComplete;
+        public UnityEvent OnEndSection;
 
         int _sectionIndex = -1;
 
@@ -98,6 +103,14 @@ namespace BFVR.ChapterManagement
         public void PlayInteractiveSteps()
         {
             if (InteractiveStepManager) InteractiveStepManager.PlaySteps();
+        }
+
+        public void EndSection()
+        {
+            ChapterSections[_sectionIndex].EndSection();
+
+            if (onEndSectionEvent != null) onEndSectionEvent.Invoke();
+            if (OnEndSection != null) OnEndSection.Invoke();
         }
     }
 }
