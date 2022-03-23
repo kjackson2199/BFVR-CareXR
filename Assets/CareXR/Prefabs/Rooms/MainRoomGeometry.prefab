@@ -1789,11 +1789,11 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
+    m_Type: 2
+    m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.005
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -6751,6 +6751,10 @@ PrefabInstance:
       propertyPath: AllowedTriggerTags.Array.data[2]
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 4147313360824534268, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5372395426368625320, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6793,6 +6797,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372395426368625320, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822494506154778905, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
