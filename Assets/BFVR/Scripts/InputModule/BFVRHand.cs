@@ -116,7 +116,6 @@ namespace BFVR.InputModule
         {
             if (!itemInHand) return;
 
-            HideHand();
             BFVRGrabbableObject g = itemInHand.GetComponent<BFVRGrabbableObject>();
             g.Release(this);
             itemInHand = null;
@@ -149,6 +148,7 @@ namespace BFVR.InputModule
         private void BFVRInputManager_interactionOnGrabRightCanceledEvent()
         {
             ReleaseItemInHand();
+            ShowHand();
         }
 
         private void BFVRInputManager_interactionOnGrabLeftStartedEvent()
@@ -159,6 +159,7 @@ namespace BFVR.InputModule
         private void BFVRInputManager_interactionOnGrabLeftCanceledEvent()
         {
             ReleaseItemInHand();
+            ShowHand();
         }
         #endregion
     }
