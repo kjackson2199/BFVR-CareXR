@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace BFVR
@@ -94,9 +95,23 @@ namespace BFVR
             }
             else
             {
-                SceneManager.LoadScene(sceneName);
+                SceneManager.LoadSceneAsync(sceneName);
             }
 
+        }
+
+        static IEnumerator AsyncLoad(string sceneName)
+        {
+            onBeginLoadSceneEvent.Invoke();
+            AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
+            async.allowSceneActivation = true;
+
+            while(!async.isDone)
+            {
+                yield return null;
+            }
+
+            onCompleteLoadSceneEvent.Invoke();
         }
 
         IEnumerator LoadSceneAsync(string sceneName)
