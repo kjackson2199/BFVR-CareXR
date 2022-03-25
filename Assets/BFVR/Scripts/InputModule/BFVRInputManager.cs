@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static BFVR.InputModule.StandardAppInterface;
+using UnityEngine.XR.OpenXR.Input;
 
 namespace BFVR.InputModule
 {
