@@ -1895,7 +1895,7 @@ PrefabInstance:
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 183993031}
+      objectReference: {fileID: 1401972681}
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -1934,7 +1934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAnimationSteps
+      value: DisplaySectionBeginPrompt
       objectReference: {fileID: 0}
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -1954,7 +1954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BFVR.ChapterManagement.BFVRChapterManager, Assembly-CSharp
+      value: BFVR.UIModule.BFVRTVUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8357282074310450971, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionReset.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -8127,7 +8127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1502735760902337586, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1502735760902337586, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -8307,7 +8307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3094363600645368327, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3094363600645368327, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -8476,7 +8476,7 @@ PrefabInstance:
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 183993031}
+      objectReference: {fileID: 1401972681}
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -8491,7 +8491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextSection
+      value: DisplaySectionCompletePrompt
       objectReference: {fileID: 0}
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -8499,7 +8499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BFVR.ChapterManagement.BFVRChapterManager, Assembly-CSharp
+      value: BFVR.UIModule.BFVRTVUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4250402684533387764, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
