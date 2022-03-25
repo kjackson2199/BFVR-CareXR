@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR;
 
 namespace BFVR.InputModule
 {
@@ -20,6 +21,9 @@ namespace BFVR.InputModule
         GameObject itemInHand;
         bool _rightHand;
 
+        InputDevice XRDevice;
+        HapticCapabilities deviceCapabilities;
+
         private void Awake()
         {
             HandCheck();
@@ -34,6 +38,8 @@ namespace BFVR.InputModule
             {
                 defaultHandOpacity = handMaterial.GetFloat(OpacityAttributeName);
             }
+
+            XRHapticsSetup();
         }
 
         private void OnEnable()
@@ -64,6 +70,52 @@ namespace BFVR.InputModule
             }
         }
 
+        void HandCheck()
+        {
+            if (gameObject.CompareTag("Right Hand"))
+            {
+                _rightHand = true;   
+            }
+        }
+
+        #region Grabbing
+        void GrabCheck()
+        {
+            RaycastHit hit;
+            Vector3 avgHitVector = handRaycaster.RaycastClosestHit(out hit);
+
+            if (hit.collider)
+            {
+                HideHand();
+                BFVRGrabbableObject g = hit.collider.gameObject.GetComponent<BFVRGrabbableObject>();
+
+                if (g.Grab(this))
+                {
+                    itemInHand = hit.collider.gameObject;
+                    SendHapticImpulseMed();
+                }
+            }
+        }
+
+        public void RemoveItemFromHand()
+        {
+            itemInHand = null;
+
+            SendHapticImpulseMed();
+        }
+
+        void ReleaseItemInHand()
+        {
+            if (!itemInHand) return;
+
+            BFVRGrabbableObject g = itemInHand.GetComponent<BFVRGrabbableObject>();
+            g.Release(this);
+            itemInHand = null;
+
+            SendHapticImpulseMed();
+        }
+        #endregion
+
         void HideHand()
         {
             if(handMaterial != null)
@@ -80,45 +132,6 @@ namespace BFVR.InputModule
                 StartCoroutine(MaterialOpacityFadeCoroutine(defaultHandOpacity));
                 if (outline != null) outline.enabled = true;
             }
-        }
-
-        void HandCheck()
-        {
-            if (gameObject.CompareTag("Right Hand"))
-            {
-                _rightHand = true;
-            }
-        }
-
-        void GrabCheck()
-        {
-            RaycastHit hit;
-            Vector3 avgHitVector = handRaycaster.RaycastClosestHit(out hit);
-
-            if (hit.collider)
-            {
-                HideHand();
-                BFVRGrabbableObject g = hit.collider.gameObject.GetComponent<BFVRGrabbableObject>();
-
-                if (g.Grab(this))
-                {
-                    itemInHand = hit.collider.gameObject;
-                }
-            }
-        }
-
-        public void RemoveItemFromHand()
-        {
-            itemInHand = null;
-        }
-
-        void ReleaseItemInHand()
-        {
-            if (!itemInHand) return;
-
-            BFVRGrabbableObject g = itemInHand.GetComponent<BFVRGrabbableObject>();
-            g.Release(this);
-            itemInHand = null;
         }
 
         IEnumerator MaterialOpacityFadeCoroutine(float newOpacity, float fadeTime = 1)
@@ -138,6 +151,48 @@ namespace BFVR.InputModule
             delta = 1;
             opacity = Mathf.Lerp(handMaterial.GetFloat(OpacityAttributeName), newOpacity, delta / fadeTime);
         }
+
+        #region Haptics
+        void XRHapticsSetup()
+        {
+            if (_rightHand)
+            {
+                // Find and Set XR Device as right hand
+                XRDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+            }
+            else
+            {
+                // Find and set XR device as left hand
+                XRDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+            }
+
+            XRDevice.TryGetHapticCapabilities(out deviceCapabilities);
+        }
+
+        public void SendHapticsImpulseLow()
+        {
+            SendHapticImpulse(.33f);
+        }
+
+        public void SendHapticImpulseMed()
+        {
+            SendHapticImpulse(.66f);
+        }
+
+        public void SendHapticImpulseHigh()
+        {
+            SendHapticImpulse();
+        }
+
+        public void SendHapticImpulse(float amplitude = 1, float duration = .1f)
+        {
+            if(deviceCapabilities.supportsImpulse)
+            {
+                uint channel = 0;
+                XRDevice.SendHapticImpulse(channel, amplitude, duration);
+            }
+        }
+        #endregion
 
         #region Input Interaction Callbacks
         private void BFVRInputManager_interactionOnGrabRightStartedEvent()

@@ -1,3 +1,4 @@
+using BFVR.InputModule;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -101,6 +102,12 @@ namespace BFVR.Interactable
                 if (AllowedTriggerTags.Contains(collider.ColliderTag))
                 {
                     touchTriggerTripped = true;
+
+                    BFVRHand hand = collider.gameObject.GetComponentInParent<BFVRHand>();
+                    if(hand)
+                    {
+                        hand.SendHapticsImpulseLow();
+                    }
                 }
             }
         }
