@@ -202,6 +202,14 @@ PrefabInstance:
       propertyPath: TriggerActivationRange
       value: 0.025
       objectReference: {fileID: 0}
+    - target: {fileID: 1234037778733532339, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2771009615126361283, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
+    - target: {fileID: 1286520724120262819, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1348011536343213899, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -350,6 +358,10 @@ PrefabInstance:
       propertyPath: OnVideoEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2328418186476012172, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2340362090795557998, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_text
       value: 'PRACTICE: YOUR TURN'
@@ -382,6 +394,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2521939734328852848, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2487522351017059485, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
     - target: {fileID: 2555663995181899088, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -514,6 +530,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3234215219752248697, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2771009615126361283, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
     - target: {fileID: 3363020087651588562, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1090,6 +1110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainRoomGeometry
       objectReference: {fileID: 0}
+    - target: {fileID: 9020897356608615016, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2771009615126361283, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
     - target: {fileID: 9111398579250035811, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_text
       value: 'PRACTICE: WATCH'
@@ -5332,7 +5356,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461696242}
-  m_Mesh: {fileID: 2262094732615836926, guid: e61f0261421714c4a8f996e4e03c2aa9, type: 3}
+  m_Mesh: {fileID: -2487522351017059485, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
 --- !u!1 &473837849
 GameObject:
   m_ObjectHideFlags: 0
@@ -7363,7 +7387,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172085021}
-  m_Mesh: {fileID: 2262094732615836926, guid: e61f0261421714c4a8f996e4e03c2aa9, type: 3}
+  m_Mesh: {fileID: -2487522351017059485, guid: b688cfd35ab874845aaeb1aca8bd0c4f, type: 3}
 --- !u!1 &1187716290
 GameObject:
   m_ObjectHideFlags: 0
