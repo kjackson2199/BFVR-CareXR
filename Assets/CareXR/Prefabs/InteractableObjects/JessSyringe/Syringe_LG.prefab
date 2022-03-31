@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 157666933111505355}
   - component: {fileID: 8711571923522464720}
   - component: {fileID: 7671139797235763011}
+  - component: {fileID: 42031225736955057}
   - component: {fileID: 8834040998601226079}
   - component: {fileID: 3512705494537850889}
   m_Layer: 6
@@ -610,6 +611,19 @@ MonoBehaviour:
   OnInteractableTriggeredUEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &42031225736955057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800692336514243676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae89e2e4c63883428d88fc233d1f7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderTag: WaterSyringe
 --- !u!114 &8834040998601226079
 MonoBehaviour:
   m_ObjectHideFlags: 0
