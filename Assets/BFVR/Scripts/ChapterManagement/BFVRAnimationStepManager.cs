@@ -1,3 +1,4 @@
+using BFVR.Interactable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,7 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnNextStep;
         public UnityEvent OnPreviousStep;
         public UnityEvent OnCompleted;
+        public UnityEvent OnResetEvent;
 
         int _stepIndex = -1;
 
@@ -55,11 +57,24 @@ namespace BFVR.ChapterManagement
         public void Reset()
         {
             _stepIndex = -1;
+
+            OnResetEvent.Invoke();
         }
 
         public void PlaySteps()
         {
             NextStep();
+        }
+
+        public void StopSteps()
+        {
+            foreach(BFVRAnimationStep s in Steps)
+            {
+                s.Reset();
+                s.gameObject.SetActive(false);
+            }
+
+            Reset();
         }
 
         public void NextStep()

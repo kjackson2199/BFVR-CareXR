@@ -30,6 +30,7 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnStepBeginEvent;
         public UnityEvent OnStepBeginDelayedEvent;
         public UnityEvent OnStepCompleteEvent;
+        public UnityEvent OnStepResetEvent;
 
         private void OnEnable()
         {
@@ -56,6 +57,12 @@ namespace BFVR.ChapterManagement
             if(onStepCompleteEvent != null) onStepCompleteEvent.Invoke();
 
             BFVRAudioManager.PlaySFX(stepCompleteSFX);
+        }
+
+        public void Reset()
+        {
+            StopAllCoroutines();
+            if(OnStepResetEvent != null) OnStepResetEvent.Invoke();
         }
 
         private void BFVRInteractableObject_onInteractableTriggered(GameObject owningObject, int triggerId)
