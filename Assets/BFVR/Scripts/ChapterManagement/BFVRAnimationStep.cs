@@ -35,6 +35,7 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnStepBeginDelay;
         public UnityEvent OnStepBegin;
         public UnityEvent OnStepComplete;
+        public UnityEvent OnStepResetEvent;
 
         bool _isPlaying;
         bool _isComplete;
@@ -151,11 +152,17 @@ namespace BFVR.ChapterManagement
             PauseStepActions();
         }
 
-        private void Reset()
+        public void Reset()
         {
+            OnStepResetEvent.Invoke();
+
+            StopAllCoroutines();
+
             _isPlaying = false;
             _isComplete = false;
             _deltaStep = 0.0f;
+
+            StopStep();
         }
 
         public bool IsStepComplete()
