@@ -42,7 +42,7 @@ Animator:
   m_GameObject: {fileID: 1540605718331777704}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c96ec59fc155a8f4c8db5385d9201cb9, type: 3}
-  m_Controller: {fileID: 9100000, guid: 507b410fee8039b44b664873316bd712, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6bb62cc4daf91a94097534e47fb52f8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3997377520073868342}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8404524368440317950}
@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 157666933111505355}
   - component: {fileID: 8711571923522464720}
   - component: {fileID: 7671139797235763011}
+  - component: {fileID: 42031225736955057}
   - component: {fileID: 8834040998601226079}
   - component: {fileID: 3512705494537850889}
   m_Layer: 6
@@ -609,6 +610,19 @@ MonoBehaviour:
   OnInteractableTriggeredUEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &42031225736955057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800692336514243676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae89e2e4c63883428d88fc233d1f7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderTag: WaterSyringe
 --- !u!114 &8834040998601226079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,10 +651,10 @@ MonoBehaviour:
   animator: {fileID: 5597990435526786497}
   AnimationSteps:
   - Name: Idle
-    StateName: Syringe_SM_Idle
+    StateName: Syringe_LG_Idle
   - Name: Open
-    StateName: Syringe_SM_Open
+    StateName: Syringe_LG_Open
   - Name: Close
-    StateName: Syringe_SM_Close
+    StateName: Syringe_LG_Close
   AllowClipLoop: 0
   StartAtState: 
