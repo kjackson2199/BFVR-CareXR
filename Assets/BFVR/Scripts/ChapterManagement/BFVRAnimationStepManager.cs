@@ -28,6 +28,7 @@ namespace BFVR.ChapterManagement
         public UnityEvent OnNextStep;
         public UnityEvent OnPreviousStep;
         public UnityEvent OnCompleted;
+        public UnityEvent OnResetEvent;
 
         int _stepIndex = -1;
 
@@ -56,6 +57,8 @@ namespace BFVR.ChapterManagement
         public void Reset()
         {
             _stepIndex = -1;
+
+            OnResetEvent.Invoke();
         }
 
         public void PlaySteps()
