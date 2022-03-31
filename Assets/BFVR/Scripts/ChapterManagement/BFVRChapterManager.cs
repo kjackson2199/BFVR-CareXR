@@ -58,6 +58,11 @@ namespace BFVR.ChapterManagement
                 EndChapter();
             }
 
+            if (AnimationStepManager) AnimationStepManager.StopSteps();
+            if (InteractiveStepManager) InteractiveStepManager.StopSteps();
+
+            ChapterSections[_sectionIndex].EndSection();
+
             _sectionIndex++;
             ChapterSections[_sectionIndex].BeginSection();
 
@@ -71,6 +76,11 @@ namespace BFVR.ChapterManagement
             {
                 return;
             }
+
+            if (AnimationStepManager) AnimationStepManager.StopSteps();
+            if (InteractiveStepManager) InteractiveStepManager.StopSteps();
+
+            ChapterSections[_sectionIndex].EndSection();
 
             _sectionIndex--;
             ChapterSections[_sectionIndex].BeginSection();

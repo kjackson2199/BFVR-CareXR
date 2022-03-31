@@ -14,6 +14,14 @@ namespace BFVR.Interactable
             HideHighlight();
         }
 
+        public void HideAllHighlights()
+        {
+            foreach (BFVRHighlight h in FindObjectsOfType<BFVRHighlight>())
+            {
+                h.HideHighlight();
+            }
+        }
+
         public void ShowHightlight()
         {
             if (hightlightRenderer) hightlightRenderer.enabled = true;

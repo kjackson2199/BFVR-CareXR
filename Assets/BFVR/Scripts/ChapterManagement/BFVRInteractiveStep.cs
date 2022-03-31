@@ -61,6 +61,7 @@ namespace BFVR.ChapterManagement
 
         public void Reset()
         {
+            StopAllCoroutines();
             if(OnStepResetEvent != null) OnStepResetEvent.Invoke();
         }
 

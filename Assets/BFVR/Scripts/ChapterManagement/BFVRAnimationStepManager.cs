@@ -1,3 +1,4 @@
+using BFVR.Interactable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,6 +61,17 @@ namespace BFVR.ChapterManagement
         public void PlaySteps()
         {
             NextStep();
+        }
+
+        public void StopSteps()
+        {
+            foreach(BFVRAnimationStep s in Steps)
+            {
+                s.Reset();
+                s.gameObject.SetActive(false);
+            }
+
+            Reset();
         }
 
         public void NextStep()
