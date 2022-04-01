@@ -20,6 +20,8 @@ public class Outline : MonoBehaviour
     public int OutlineWitdthFar = 10;
     public int OutlineWidthNear = 1;
 
+    public bool InvertOutline;
+
     Camera mainCamera;
 
     public enum Mode
@@ -166,7 +168,7 @@ public class Outline : MonoBehaviour
             delta = dist / 10;
             float adjOutlineWidth = Mathf.Lerp(OutlineWidthNear, OutlineWidthNear, delta);
 
-            OutlineWidth = adjOutlineWidth;
+            OutlineWidth = (InvertOutline) ? adjOutlineWidth * -1 : adjOutlineWidth;
         }
 
         else if(mainCamera == null)

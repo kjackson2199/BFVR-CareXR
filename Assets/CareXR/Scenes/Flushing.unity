@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2329081875870211120, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2339830767841215266, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1499,6 +1503,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8018653190837036373, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: InvertOutline
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235089580342501515, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: InvertOutline
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8555909395738899696, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: TriggerActivationRange
       value: 0.025
@@ -1606,17 +1618,6 @@ MonoBehaviour:
 --- !u!114 &41912926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5739731823790618772, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
-  m_PrefabInstance: {fileID: 41912921}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002930b38dc571b43a9b8c3a27a9389a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &41912927 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1400383694660095553, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
   m_PrefabInstance: {fileID: 41912921}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
