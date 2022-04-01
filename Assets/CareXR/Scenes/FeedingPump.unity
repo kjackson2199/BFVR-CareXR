@@ -3355,7 +3355,7 @@ PrefabInstance:
       objectReference: {fileID: 41912923}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[0]
@@ -3375,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[4]
-      value: 5. Push the water through.
+      value: 5. Push just enough water through to clear the PEG tube.
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[5]
@@ -3387,19 +3387,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[7]
-      value: 8. Attach pump connection.
+      value: 8. Close the port.
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[8]
-      value: 9. Open the clamp.
+      value: 9. Attach the feeding pump connection.
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[9]
-      value: 10. Open the pump clamp.
+      value: 10. Open the PEG tube clamp.
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[10]
-      value: 11. Begin feeding via pump.
+      value: 11. Open the feeding tube clamp.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: Directions.Array.data[11]
+      value: 12. Begin feeding via pump.
       objectReference: {fileID: 0}
     - target: {fileID: 4750683348809920755, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnSectionBegin.m_PersistentCalls.m_Calls.Array.size
