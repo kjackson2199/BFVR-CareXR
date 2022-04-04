@@ -3613,7 +3613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[10]
-      value: 11. Push the water through.
+      value: 11. Push just enough water through to clear the PEG tube.
       objectReference: {fileID: 0}
     - target: {fileID: 4370211809629926377, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: Directions.Array.data[11]
@@ -5166,6 +5166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OutlineWitdthFar: 10
   OutlineWidthNear: 4
+  InvertOutline: 0
   outlineMode: 0
   outlineColor: {r: 1, g: 0.4117647, b: 0.7058824, a: 1}
   outlineWidth: 10
