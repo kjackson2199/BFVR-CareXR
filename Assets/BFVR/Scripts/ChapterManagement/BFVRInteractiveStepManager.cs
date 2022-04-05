@@ -49,7 +49,7 @@ namespace BFVR.ChapterManagement
         {
             foreach (BFVRInteractiveStep s in Steps)
             {
-                s.gameObject.SetActive(false);
+                if (s != null) s.gameObject.SetActive(false);//null check to prevent script errors in video-only scenes
             }
         }
 
@@ -81,8 +81,11 @@ namespace BFVR.ChapterManagement
         {
             foreach(BFVRInteractiveStep s in Steps)
             {
-                s.Reset();
-                s.gameObject.SetActive(false);
+                if (s != null)//null check to prevent script errors in video-only scenes
+                {
+                    s.Reset();
+                    s.gameObject.SetActive(false);
+                }
             }
 
             Reset();
