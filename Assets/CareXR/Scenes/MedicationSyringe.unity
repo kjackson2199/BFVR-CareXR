@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: TargetTrigger
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: InteractableTarget
@@ -8739,7 +8739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShowHightlight
+      value: HideHighlight
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -10666,12 +10666,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: TargetTrigger
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: InteractableTarget
       value: 
-      objectReference: {fileID: 482301305}
+      objectReference: {fileID: 482301311}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginEvent.m_PersistentCalls.m_Calls.Array.size
       value: 6
@@ -10895,7 +10895,7 @@ PrefabInstance:
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 482301298}
+      objectReference: {fileID: 482301306}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgument
       value: 
