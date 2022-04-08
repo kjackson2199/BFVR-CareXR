@@ -12,22 +12,29 @@ public class TextureArrayAnimator : MonoBehaviour
     int curTex = 0;
     int targetAnim = 1;
     public int targetMat = 0;
+    bool delay = false;
 
     //void Start()
     //{
     //    //Add stuff here for testing
-    //    PlayTexAnim(1);
+    //    PlayTexAnim(1,false);
     //}
 
-    public void PlayTexAnim(int animationNumber)
+    public void PlayTexAnim(int animationNumber, bool useDelay)//Delay is useful for making the pegTube wait for 2.1333 seconds so that liquid appears to travel from Feeding tubeto Peg tube (otherwise both would play at the same time). 
     {
         targetAnim = animationNumber;
         curTex = 0;
+        delay = useDelay;
         StartCoroutine(Switch());
     }
     
     IEnumerator Switch()//This amazing script was made by Blake Martin using the help of Unity forum users and outdated Unity Documentation.
     {
+        if (delay)
+        {
+            yield return new WaitForSeconds(2.1333f);
+            delay = false;
+        }
         yield return new WaitForEndOfFrame();//This is why we're using a coroutine instead of a loop.
         if (targetAnim == 1)
         {
