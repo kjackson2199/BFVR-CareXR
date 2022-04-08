@@ -15,9 +15,8 @@ public class TextureArrayAnimator : MonoBehaviour
     
     IEnumerator Switch()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();//This is why we're not using a loop here.
         GetComponent<Renderer>().material.mainTexture = texList[curTex];
-        curTex = (curTex+1) % texList.Length; // A convenient way to loop an index
         if (curTex < texList.Length) StartCoroutine(Switch());
     }
 }
