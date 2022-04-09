@@ -139,9 +139,23 @@ namespace BFVR.UIModule
         {
             vidPlayer.time-=5;
         }
+
         public void FastForwardVideo()
         {
             vidPlayer.time+=5;
+        }
+
+        public void RestartVideo()
+        {
+            if(!vidStarted || vidPlayer.clip == null)
+            {
+                return;
+            }
+
+            PauseVideo();
+            vidPlayer.time = 0;
+
+            PlayVideo(vidPlayer.clip);
         }
 
         public void ResetVideoPlayer()
