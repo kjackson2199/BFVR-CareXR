@@ -998,10 +998,22 @@ PrefabInstance:
     - target: {fileID: 3712241134696761042, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6891864941590058869}
+      objectReference: {fileID: 8040976140848225345}
     - target: {fileID: 3712241134696761042, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712241134696761042, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712241134696761042, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BFVR.UIModule.BFVRTVUIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712241134696761042, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3745062104487798958, guid: 9d21dee7c6a514c41aa8cfc8221d1486, type: 3}
       propertyPath: m_AnchorMax.y
