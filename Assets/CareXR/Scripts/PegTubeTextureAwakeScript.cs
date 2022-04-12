@@ -9,6 +9,10 @@ public class PegTubeTextureAwakeScript : MonoBehaviour
 
     void Awake()
     {
+        SetStartTexture();
+    }
+    public void SetStartTexture()
+    {
         GetComponent<Renderer>().materials[targetMat].SetTexture("_MainTex", startTexture);
     }
 }
