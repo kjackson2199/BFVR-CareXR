@@ -41,7 +41,7 @@ public class TextureArrayAnimator : MonoBehaviour
         yield return new WaitForEndOfFrame();//This is why we're using a coroutine instead of a loop.
         if (targetAnim == 1)
         {
-            Debug.Log(curTex);
+            //Debug.Log(curTex);
             GetComponent<Renderer>().materials[targetMat].SetTexture("_MainTex", texAnim1[curTex]);
             curTex++;
             if (curTex < texAnim1.Length) StartCoroutine(Switch());
