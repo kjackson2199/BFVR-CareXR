@@ -1,5 +1,130 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &294875356910242456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4569843575029614864}
+  - component: {fileID: 4669703498914328092}
+  - component: {fileID: 3919595699712727312}
+  - component: {fileID: 1192346906668257842}
+  m_Layer: 0
+  m_Name: PEG_Tube_anim_v003:TextureSheetAnim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4569843575029614864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294875356910242456}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1770991190052439219}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &4669703498914328092
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294875356910242456}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c60bb1ce21e70d54b87cd6b2ba0eceaf, type: 2}
+  - {fileID: 2100000, guid: c60bb1ce21e70d54b87cd6b2ba0eceaf, type: 2}
+  - {fileID: 2100000, guid: c60bb1ce21e70d54b87cd6b2ba0eceaf, type: 2}
+  - {fileID: 2100000, guid: cf37076dc7d41da4f83711fbda418bf6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -3990367511965979743, guid: 958e1f77ab823a340808db54d6e1771d, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0.009097403, y: 0.16693972, z: -0.01987965}
+    m_Extent: {x: 0.027570145, y: 0.16531555, z: 0.08734059}
+  m_DirtyAABB: 0
+--- !u!114 &3919595699712727312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294875356910242456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e53ad0c979c7c44bc0fb4d280b6705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texAnim1: []
+  texAnim1Note: '-'
+  texAnim2: []
+  texAnim2Note: '-'
+  texAnim3: []
+  texAnim3Note: '-'
+  texAnim4: []
+  texAnim4Note: '-'
+  texAnim5: []
+  texAnim5Note: '-'
+  targetMat: 3
+--- !u!114 &1192346906668257842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294875356910242456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4dd4ef93c22d54c92348001fb4de81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTexture: {fileID: 0}
+  targetMat: 3
 --- !u!1 &696412916841651145
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6978495402868721255}
+  - {fileID: 4569843575029614864}
   m_Father: {fileID: 5372395426368625320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1198,10 +1324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6978495402868721255}
   - component: {fileID: 4147313360824534268}
-  - component: {fileID: 8264356367315224018}
-  - component: {fileID: 3808274763383462718}
   m_Layer: 0
-  m_Name: PEG_Tube_anim_v003:TextureAnimTube
+  m_Name: PEG_Tube_anim_v001:Tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,7 +1369,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: 0b9e5568f1e18984f84721c739a7c6a9, type: 2}
   - {fileID: 2100000, guid: 53588b2c3f129dc4799d088a814577c0, type: 2}
   - {fileID: 2100000, guid: 1c4d03cb7c31d684994c44cb57511baf, type: 2}
-  - {fileID: 2100000, guid: cf37076dc7d41da4f83711fbda418bf6, type: 2}
+  - {fileID: 2100000, guid: c60bb1ce21e70d54b87cd6b2ba0eceaf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1270,7 +1394,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -282978729698789358, guid: bec0befa753284c15af48167f33a325e, type: 3}
+  m_Mesh: {fileID: 505138612449096613, guid: d7d2b2f0b963b4a4e9bbf9e78186cea1, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
@@ -1278,43 +1402,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.009097403, y: 0.16693972, z: -0.01987965}
     m_Extent: {x: 0.027570145, y: 0.16531555, z: 0.08734059}
   m_DirtyAABB: 0
---- !u!114 &8264356367315224018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124972713055437363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e53ad0c979c7c44bc0fb4d280b6705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texAnim1: []
-  texAnim1Note: '-'
-  texAnim2: []
-  texAnim2Note: '-'
-  texAnim3: []
-  texAnim3Note: '-'
-  texAnim4: []
-  texAnim4Note: '-'
-  texAnim5: []
-  texAnim5Note: '-'
-  targetMat: 3
---- !u!114 &3808274763383462718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124972713055437363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4dd4ef93c22d54c92348001fb4de81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTexture: {fileID: 0}
-  targetMat: 3
 --- !u!1001 &6178113453240452293
 PrefabInstance:
   m_ObjectHideFlags: 0
