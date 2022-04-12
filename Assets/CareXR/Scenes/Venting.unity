@@ -590,6 +590,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4112905678297786317, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: AnimationSteps.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112905678297786317, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: AnimationSteps.Array.data[3].Name
+      value: OpenToHalfClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112905678297786317, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: AnimationSteps.Array.data[4].Name
+      value: HalfCloseToClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112905678297786317, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: AnimationSteps.Array.data[3].StateName
+      value: Syringe_LG_OpenToHalfClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112905678297786317, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: AnimationSteps.Array.data[4].StateName
+      value: Syringe_LG_Close
+      objectReference: {fileID: 0}
     - target: {fileID: 4218233061110290979, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_text
       value: 'PRACTICE: YOUR TURN'
@@ -3055,7 +3075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: StepActions.Array.data[0].AnimationStateName
-      value: Close
+      value: OpenToHalfClose
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.size
@@ -6656,7 +6676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Close
+      value: OpenToHalfClose
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
