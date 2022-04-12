@@ -5,10 +5,15 @@ using UnityEngine;
 public class TextureArrayAnimator : MonoBehaviour
 {
     public Texture[] texAnim1;
+    public string texAnim1Note = "-";//notes are never used, they are just for reference when calling animations
     public Texture[] texAnim2;
+    public string texAnim2Note = "-";
     public Texture[] texAnim3;
+    public string texAnim3Note = "-";
     public Texture[] texAnim4;
+    public string texAnim4Note = "-";
     public Texture[] texAnim5;
+    public string texAnim5Note = "-";
     int curTex = 0;
     int targetAnim = 1;
     public int targetMat = 0;
