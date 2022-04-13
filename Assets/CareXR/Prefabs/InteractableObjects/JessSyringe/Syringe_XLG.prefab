@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135364093287931170}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439584750075425123}
@@ -696,6 +696,8 @@ MonoBehaviour:
     StateName: Syringe_XLG_Open
   - Name: Close
     StateName: Syringe_XLG_Close
+  - Name: Remove Plunger
+    StateName: Syringe_XLG_RemovePlunger
   AllowClipLoop: 0
   StartAtState: 
 --- !u!95 &3903452642364805549
