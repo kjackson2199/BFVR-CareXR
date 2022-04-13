@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -1112,7 +1112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -1149,7 +1149,7 @@ PrefabInstance:
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 482301322}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -1208,7 +1208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetEnableGrabbable
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1260,11 +1260,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      value: TextureArrayAnimator, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1280,6 +1284,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
@@ -3002,6 +3010,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1627623099824048996, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: startTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1187b571d072eb9439ba6a7f17c26043, type: 3}
     - target: {fileID: 1927698880069777471, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3186,6 +3198,2430 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1Note
+      value: Formula to Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2Note
+      value: Water to Medication
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3Note
+      value: Medication Flush to Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.size
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.size
+      value: 121
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.size
+      value: 239
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 85257a816e0068048a3f786eb9c94de3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 88bb285721a452f418cc3fdf64e7e4be, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8811cf18e8aa51c43a92eaa8cf76f4af, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: f0fbe77a3efe17c46846e5db3238c5a6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 579a1b38151e598438ebec6249ca7228, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3789e5f37564c6b448cd3addd466e9e0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: c5cdf4ab8da83254d8aed713a3a513a6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: ad3db1b5e7fa3fb4e9cff72cb5170e9e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7c9b38a8b3b52034da7bac2d95e3d736, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[9]
+      value: 
+      objectReference: {fileID: 2800000, guid: b8e2b7a46e8164b498b125fc239bc433, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 54ad469b07b87844d8fc11127b028b49, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3b0631e0a9dec2240aac30e72552d3ff, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: bbd033e78322cbb4385dd2ffdc3ab0c4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: d34730cf701591a46b40592e90895e36, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: fbba8c21019e5b94c9a8810f0d0466d7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0718448e4f00c19419314bf35e83b7f5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: 07a4ff84dd025b3498d895c573e8bf61, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8d34fb16fb8a5df4b86a2c6d6a8ec55f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: a4d1f00406287524d8215063ca22501b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[9]
+      value: 
+      objectReference: {fileID: 2800000, guid: 468817f8db2684b4895d7a21785211a8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 21d28ec286ff4bd44a779225f4217903, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: a3cbc7dd1531b1947acb3c0006bd023c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: f15177ca2d13fbc4bb708897927ba5ae, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d616504c44b36d49872c714ff62eafd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 362b2107018f08a40bdc727b33432a7b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: e01443b5ad9c08b47b34fef3ac3e46f8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: 28008832ac0b207449af09719da89585, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7b89e58c483cdba4eb0176c214684c35, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: ef539a00fd4223e4cb350890d7aabacf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[9]
+      value: 
+      objectReference: {fileID: 2800000, guid: 65bc47b28fd492d4e8376834dc7acadc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[10]
+      value: 
+      objectReference: {fileID: 2800000, guid: 98781c1c7e2c098438e54cc243c60359, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[11]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5337d07a9cfb7914a94962d80cbeb804, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[12]
+      value: 
+      objectReference: {fileID: 2800000, guid: a50d4c5a964caae4197b87b28a8a6d32, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[13]
+      value: 
+      objectReference: {fileID: 2800000, guid: b37f413ffb1509347bef6ffba9a71d61, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[14]
+      value: 
+      objectReference: {fileID: 2800000, guid: a617a81be8155a14dae42a6aa2b1e9f8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[15]
+      value: 
+      objectReference: {fileID: 2800000, guid: 238a722928656244297adcaffbf8fef7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[16]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7a51c2e27c2e5d348b99c4a11fe681c7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[17]
+      value: 
+      objectReference: {fileID: 2800000, guid: d3e0862e4bfd2f6418361ff3343e469e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[18]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7157dcadcddd8e444b1d0bf65c78e5a6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[19]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1461147dd36b6cb4fa0ab556e509af36, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[20]
+      value: 
+      objectReference: {fileID: 2800000, guid: 61fc342f1a1bbfb49892af3c2b9e4555, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[21]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4ab1d7a446e2c86489e4f3124a653b8e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[22]
+      value: 
+      objectReference: {fileID: 2800000, guid: 40771e48c00a4b341a13b4c2ce055b07, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[23]
+      value: 
+      objectReference: {fileID: 2800000, guid: 12e616e4396f72a48bf8e4e540c433e7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[24]
+      value: 
+      objectReference: {fileID: 2800000, guid: 33fc1b5a7dde8df4390f577a3d248c51, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[25]
+      value: 
+      objectReference: {fileID: 2800000, guid: 51d51733332982542ab1c834f105c111, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[26]
+      value: 
+      objectReference: {fileID: 2800000, guid: bddaf03844c381f4784d0ad927ccc577, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[27]
+      value: 
+      objectReference: {fileID: 2800000, guid: a053ae2c41cebd14ba8a219b0f11bc6b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[28]
+      value: 
+      objectReference: {fileID: 2800000, guid: 50a4aa2d75423514cb478f8829746380, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[29]
+      value: 
+      objectReference: {fileID: 2800000, guid: a3641b3b2d1fa944c9210c5cde6c0160, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[30]
+      value: 
+      objectReference: {fileID: 2800000, guid: ae3aaffb61f1fc64c9087acc43f4ae99, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[31]
+      value: 
+      objectReference: {fileID: 2800000, guid: cd6bf16200022bf459be12347e4a5f6a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[32]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4c737770b848f8f45b1e412b5212f7f6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[33]
+      value: 
+      objectReference: {fileID: 2800000, guid: 30d93a596b465eb489b3d2163f4459f5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[34]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7ab75ef2ce0010949807282cfca636ca, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[35]
+      value: 
+      objectReference: {fileID: 2800000, guid: dba3a290486f40a42ae821d3749e1c3e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[36]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5aab2dc5ee44b9a418dc4518bf842409, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[37]
+      value: 
+      objectReference: {fileID: 2800000, guid: d829ec7662a0fa444ab5b3f6caa47ad8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[38]
+      value: 
+      objectReference: {fileID: 2800000, guid: 07aabcb92ca9b0741a5775fa5eb93b25, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[39]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7f71903a48925ec448977f74c037c4d7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[40]
+      value: 
+      objectReference: {fileID: 2800000, guid: d41df210e84fc6a4082d0a8975e1908e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[41]
+      value: 
+      objectReference: {fileID: 2800000, guid: 18fe3023370dbcb4abd35dff1e248307, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[42]
+      value: 
+      objectReference: {fileID: 2800000, guid: bb4c90ffe4c6db240843e21903069749, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[43]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5068743a83e4cbd4c89bc47530074aa9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[44]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4b658c0c75c7bd545bea9b391f8f5287, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[45]
+      value: 
+      objectReference: {fileID: 2800000, guid: ed5aa31e558120b408661447e6fe6cf9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[46]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b7fa911de5a3854182248ac997f1efe, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[47]
+      value: 
+      objectReference: {fileID: 2800000, guid: c76b7918d4504b84eb7f17f02a25d3a6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[48]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f37ed6b906bbb549aa860c4ef200674, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[49]
+      value: 
+      objectReference: {fileID: 2800000, guid: 213d54dc5f5b0b64e9782f64de6d0440, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[50]
+      value: 
+      objectReference: {fileID: 2800000, guid: ca05b4735a312754f8eed267539afadc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[51]
+      value: 
+      objectReference: {fileID: 2800000, guid: 790e5901ae2e9a544ad7694dd100e4d4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[52]
+      value: 
+      objectReference: {fileID: 2800000, guid: e354a401a21e0354698ceb9bab635ae6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[53]
+      value: 
+      objectReference: {fileID: 2800000, guid: 41b464dc21e2f5c4db3280d92c994bd8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[54]
+      value: 
+      objectReference: {fileID: 2800000, guid: c249c9bc2ac90764299f076b51ace472, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[55]
+      value: 
+      objectReference: {fileID: 2800000, guid: eb5f25418a814454e8db066d71cd8841, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[56]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9408d72d50e39ed479af277fcc78059c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[57]
+      value: 
+      objectReference: {fileID: 2800000, guid: 38d3715b11c89f74a852ec3771282fdc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[58]
+      value: 
+      objectReference: {fileID: 2800000, guid: 680c6fab079ec6a42b84292b6a7110ec, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[59]
+      value: 
+      objectReference: {fileID: 2800000, guid: e6e6ddb358d7f2448abe34af9b51178a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[60]
+      value: 
+      objectReference: {fileID: 2800000, guid: d8fde3115b026794b808aef17e2ad31e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[61]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c44e92a67b7b43488e2b8620a6e655c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[62]
+      value: 
+      objectReference: {fileID: 2800000, guid: 12b7d658d30bae5499777827cd5ad84f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[63]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0d334fe81cfa3e34ca255fc9f13fc8a9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[64]
+      value: 
+      objectReference: {fileID: 2800000, guid: ae835bad39da4794bb368a479cfa3ccf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[65]
+      value: 
+      objectReference: {fileID: 2800000, guid: dabfa60be2f1a664db296ae84b152bde, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[66]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7ec5665b7e24b9045956cf4a5f16f527, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[67]
+      value: 
+      objectReference: {fileID: 2800000, guid: ed7cb3f69a0440245a6f40a6da0c3246, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[68]
+      value: 
+      objectReference: {fileID: 2800000, guid: d99db16e8d634c54894028d69f18c459, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[69]
+      value: 
+      objectReference: {fileID: 2800000, guid: cf604123f4f176448b1355632a466586, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[70]
+      value: 
+      objectReference: {fileID: 2800000, guid: 24aecf2b998c2dc48907727c2d796245, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[71]
+      value: 
+      objectReference: {fileID: 2800000, guid: 09cea25b75f86ed42b7b101a28caa3f3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[72]
+      value: 
+      objectReference: {fileID: 2800000, guid: db869dfc035363642bcdef1a1ee2c9e6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[73]
+      value: 
+      objectReference: {fileID: 2800000, guid: dc913311e75b14c42b097e61989282f0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[74]
+      value: 
+      objectReference: {fileID: 2800000, guid: 736974d23fa3ce14a893ee145996b95c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[75]
+      value: 
+      objectReference: {fileID: 2800000, guid: 678b0bd1af23fa14384b8bcac95aacde, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[76]
+      value: 
+      objectReference: {fileID: 2800000, guid: f796c39be71c09e47ae37ca3bd4b2241, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[77]
+      value: 
+      objectReference: {fileID: 2800000, guid: acbc69f2a7efdab4bad975b69eb61d74, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[78]
+      value: 
+      objectReference: {fileID: 2800000, guid: b23d2f2f052ebd74cada0b4b92e7125a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[79]
+      value: 
+      objectReference: {fileID: 2800000, guid: 807cb7efee8e0dd4bbbeaf96ba5f7c9a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[80]
+      value: 
+      objectReference: {fileID: 2800000, guid: 41903e8cdeba62e4db2594faf4d91e06, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[81]
+      value: 
+      objectReference: {fileID: 2800000, guid: e64f4559ebdfdc849b00a425b6a88f78, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[82]
+      value: 
+      objectReference: {fileID: 2800000, guid: aa675643f37289c42bfdd4d2f9520047, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[83]
+      value: 
+      objectReference: {fileID: 2800000, guid: ae8ee62214095f745b7d8bbf60502d90, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[84]
+      value: 
+      objectReference: {fileID: 2800000, guid: ab45160278c626f46a92926e7ff12fe2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[85]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8fa868595095c99479e8a35cb0e8718e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[86]
+      value: 
+      objectReference: {fileID: 2800000, guid: 12ec0e5428cefab48bcdc7eed5f4fcbf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[87]
+      value: 
+      objectReference: {fileID: 2800000, guid: 995466f485364de459268f3214e1ee01, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[88]
+      value: 
+      objectReference: {fileID: 2800000, guid: f5e212d5b1723ac4997bd4652b546cb0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[89]
+      value: 
+      objectReference: {fileID: 2800000, guid: 447c536e776902e48b93a6ae8ba6f8a5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[90]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0ab2a9e146b8b9b4e9545666ca33136f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[91]
+      value: 
+      objectReference: {fileID: 2800000, guid: cd5eaacfe9e86aa49a227573b55343be, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[92]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5ff49cf55f69c8e479f8e7ce2504f1b6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[93]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c9367c089614c046ba8470fdabe1244, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[94]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5f74e62b90867b24da94cdd41acc98e2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[95]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8bc1e38bea3067d429fe924cb31fa508, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[96]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9f10e84f6eafd0944a8e5c6f06c13606, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[97]
+      value: 
+      objectReference: {fileID: 2800000, guid: 64e7dc5092aa17743ba46123696289dc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[98]
+      value: 
+      objectReference: {fileID: 2800000, guid: 96a7d1d8ef5aec7459f12bfda94b9dea, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[99]
+      value: 
+      objectReference: {fileID: 2800000, guid: c90b0df71612afc49828f5f9ef26948a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[10]
+      value: 
+      objectReference: {fileID: 2800000, guid: dd0f2c189ea277e468a13fcc3f256f1a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[11]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8a27ee17f240e9445b06b05b8ddf6ac1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[12]
+      value: 
+      objectReference: {fileID: 2800000, guid: 92cd287a561cb0e429a1fec838f79bd8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[13]
+      value: 
+      objectReference: {fileID: 2800000, guid: aa6a8ae68973b6541bdd3f7ff3441572, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[14]
+      value: 
+      objectReference: {fileID: 2800000, guid: f2767342e90bd154e8fe432d3597e5fd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[15]
+      value: 
+      objectReference: {fileID: 2800000, guid: a23569b0b4a99ee43b73a06f6d560514, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[16]
+      value: 
+      objectReference: {fileID: 2800000, guid: cf9464e3cbbfbab46b568a6bf51b6845, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[17]
+      value: 
+      objectReference: {fileID: 2800000, guid: 76fb71aec2bbd9d4b830d79246f0ff86, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[18]
+      value: 
+      objectReference: {fileID: 2800000, guid: 215dec6ebb65974479711b01b752af8b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[19]
+      value: 
+      objectReference: {fileID: 2800000, guid: eef7907f721a1e34da8f72cc4d8aed11, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[20]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b3382001ca3fcf43814f6e103d85386, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[21]
+      value: 
+      objectReference: {fileID: 2800000, guid: 77374f0d4b77e82499e691a36498ee1d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[22]
+      value: 
+      objectReference: {fileID: 2800000, guid: 076c628132ac19c4c9b0e9aec60822ba, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[23]
+      value: 
+      objectReference: {fileID: 2800000, guid: c34145261ddc35f4db44361ae578a97e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[24]
+      value: 
+      objectReference: {fileID: 2800000, guid: fd0fb78f547a74a44b77e510eefcb705, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[25]
+      value: 
+      objectReference: {fileID: 2800000, guid: 03adf82f4146e8945a06d165d1cb40ae, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[26]
+      value: 
+      objectReference: {fileID: 2800000, guid: 26c82cb21dcd4414e992f13d5bb3c8f1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[27]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1881679e605f4834399a01a9296b65fd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[28]
+      value: 
+      objectReference: {fileID: 2800000, guid: d32c3787229064145a108f9f10f49812, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[29]
+      value: 
+      objectReference: {fileID: 2800000, guid: ce5f9544268a7214a91aeccbb6035ab0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[30]
+      value: 
+      objectReference: {fileID: 2800000, guid: d18b567e11c84dc47b8afbbcc43bcbc1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[31]
+      value: 
+      objectReference: {fileID: 2800000, guid: 79d5de5f600f1d1459a4882a51f7997c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[32]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4da133397070e7c4bb5ede849bf8918f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[33]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4fa0abcf447172946a254b5bb96eb586, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[34]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2cf4eb42172423545add5e244f2b9e29, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[35]
+      value: 
+      objectReference: {fileID: 2800000, guid: cd891c5e0d8d9f34b91d7248b1c53345, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[36]
+      value: 
+      objectReference: {fileID: 2800000, guid: 331eb70a8accfd243b614b03cb4971f7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[37]
+      value: 
+      objectReference: {fileID: 2800000, guid: 89bd5dbea62e5584fae6b3a5c5e095b8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[38]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c7514893746e764bbcad9ce9ba7f1ca, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[39]
+      value: 
+      objectReference: {fileID: 2800000, guid: ecfb02acad1bb7d4f95a8cc2a9cc1680, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[40]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2ee2ef484adbf4d46ad7e278bdec6bb7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[41]
+      value: 
+      objectReference: {fileID: 2800000, guid: 799149a3f921def44a8cd0f10d4bc6d4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[42]
+      value: 
+      objectReference: {fileID: 2800000, guid: 45fb25cfd6a342b44a6bb8e8d6e24480, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[43]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8bec58b6d2891b247b84b78b8f3e7b45, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[44]
+      value: 
+      objectReference: {fileID: 2800000, guid: 25fb32b18345d134dbdb8282f59c3b91, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[45]
+      value: 
+      objectReference: {fileID: 2800000, guid: bf2a79038cf94b64288b853f74c38394, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[46]
+      value: 
+      objectReference: {fileID: 2800000, guid: c9cbacc3501c3de4bb0349137b6bd8bc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[47]
+      value: 
+      objectReference: {fileID: 2800000, guid: f8a6e3907eb78244c8e7db878a76469b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[48]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9919e6318c56f464ea79e9050de633d1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[49]
+      value: 
+      objectReference: {fileID: 2800000, guid: cd65dc68c1293224582ad6153a439c37, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[50]
+      value: 
+      objectReference: {fileID: 2800000, guid: 88e438eff4d8e474cbb5864d01bdf177, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[51]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7862bda889195d144817c0666f2b97df, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[52]
+      value: 
+      objectReference: {fileID: 2800000, guid: 78dfe0522f99bf04ba9810339f175772, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[53]
+      value: 
+      objectReference: {fileID: 2800000, guid: 569252db3245d204080da68c8191360f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[54]
+      value: 
+      objectReference: {fileID: 2800000, guid: e0b29acfeb85bec43826cde923b3b602, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[55]
+      value: 
+      objectReference: {fileID: 2800000, guid: a8458e24b579f6548a580f1f80e311fc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[56]
+      value: 
+      objectReference: {fileID: 2800000, guid: e1dc78817f0206f42a358f58eccf9566, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[57]
+      value: 
+      objectReference: {fileID: 2800000, guid: 771bbafa0392b8146a3d5b92f5bb1f87, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[58]
+      value: 
+      objectReference: {fileID: 2800000, guid: 445c880229e48d745a18e1fff1d3c7a5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[59]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d85141cfb01fe9449725170cc4a1068, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[60]
+      value: 
+      objectReference: {fileID: 2800000, guid: c933522ba6e53dd4084fc0349fb60393, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[61]
+      value: 
+      objectReference: {fileID: 2800000, guid: d54f3058c2e987e4c8a6e631e645cb36, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[62]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5ca40f490c1ff684a9dc558b00338b61, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[63]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9c1b72bb1710955419b2a31d0764e513, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[64]
+      value: 
+      objectReference: {fileID: 2800000, guid: 140824936ecc172479ecd7df35d2e79f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[65]
+      value: 
+      objectReference: {fileID: 2800000, guid: 72c139ef34fb48649aba18c06189e39c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[66]
+      value: 
+      objectReference: {fileID: 2800000, guid: acfbbfe1ae2aed84db24a54ae13cf213, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[67]
+      value: 
+      objectReference: {fileID: 2800000, guid: 110758e04087a2f45894155036879bdb, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[68]
+      value: 
+      objectReference: {fileID: 2800000, guid: f3b8790a08f30924e816fc8e1ac6fcb3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[69]
+      value: 
+      objectReference: {fileID: 2800000, guid: fedffbc6babf36943b8972b415ad27d6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[70]
+      value: 
+      objectReference: {fileID: 2800000, guid: 086942e6cdb22a44eadb124113a22200, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[71]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0cd5edf99cfe25e4b994185f1ff7e27e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[72]
+      value: 
+      objectReference: {fileID: 2800000, guid: 81aa45652f19fef43861560611f01b52, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[73]
+      value: 
+      objectReference: {fileID: 2800000, guid: e4852138115bd7b4581c4fa62787c670, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[74]
+      value: 
+      objectReference: {fileID: 2800000, guid: 79b9e333d1b1192459906bfe87afdb3d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[75]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1b0ddf1f266819a43980c0d559431a7e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[76]
+      value: 
+      objectReference: {fileID: 2800000, guid: 056ae8300cc4b7849a956e7754ad64ed, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[77]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0bff72c846718364491a147d6a82d9ee, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[78]
+      value: 
+      objectReference: {fileID: 2800000, guid: debf5293d7d8a554a8d5048adf9a8fad, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[79]
+      value: 
+      objectReference: {fileID: 2800000, guid: 77d12f90e3071c347b5a6fb62c1ae922, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[80]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8d86ffd0b839dce43acee9905e9a670d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[81]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3a5ccb9dcb7f4ab43bbf1b7b28282d95, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[82]
+      value: 
+      objectReference: {fileID: 2800000, guid: 88cd4477c4ff3d44ebf04d55d69c25ca, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[83]
+      value: 
+      objectReference: {fileID: 2800000, guid: b8a375ff6f53bdd448cc5f5dad655e2e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[84]
+      value: 
+      objectReference: {fileID: 2800000, guid: d3b763c1dbfe8b64293b5029d3b3aa18, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[85]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9e582f347d9870c4897d5a82625d256d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[86]
+      value: 
+      objectReference: {fileID: 2800000, guid: af996ca7e5b20324a8fc705926d45227, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[87]
+      value: 
+      objectReference: {fileID: 2800000, guid: 52414c71967b757498e7ea6f84c2ba37, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[88]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4535c966ccd3384418c28394a040cf98, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[89]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8313eb972cc4d1844916532f824c5103, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[90]
+      value: 
+      objectReference: {fileID: 2800000, guid: 76f600109733ee143ae187e3235604b3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[91]
+      value: 
+      objectReference: {fileID: 2800000, guid: 75d559c9a45edd54d840f0e0fa36892c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[92]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5bd616d2fe8b3eb4ea3a29be114ca241, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[93]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1bf90759b324e534fa6efba71b3255e1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[94]
+      value: 
+      objectReference: {fileID: 2800000, guid: a24d07d087276cf4fa1d7de422142995, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[95]
+      value: 
+      objectReference: {fileID: 2800000, guid: 27c57e15b39bfe64dae645edd264cd9d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[96]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6620e6536d5b9454db7d3a4b22a638c0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[97]
+      value: 
+      objectReference: {fileID: 2800000, guid: 807be7c68ecaed64eb77103d01c9664b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[98]
+      value: 
+      objectReference: {fileID: 2800000, guid: 335acdb87326aa74f806a683d186b363, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[99]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6d2ea34ece3cd814f95bbe784a4c3ac1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[10]
+      value: 
+      objectReference: {fileID: 2800000, guid: 083968dc2e250cf48bbc442ce4c385ef, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[11]
+      value: 
+      objectReference: {fileID: 2800000, guid: 829e8fe926a39cc4e91cd84f692a269c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[12]
+      value: 
+      objectReference: {fileID: 2800000, guid: d7af22214174edc46ba88f499f04f175, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[13]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3dd56dd080a65814da0914f6f174c1ad, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[14]
+      value: 
+      objectReference: {fileID: 2800000, guid: 04f6ea20127090346be893623219c374, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[15]
+      value: 
+      objectReference: {fileID: 2800000, guid: 57d1c27222d57334387894ec392994f5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[16]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1dc6fbe4508735942be53cd5eb558490, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[17]
+      value: 
+      objectReference: {fileID: 2800000, guid: 00da10512669bcf4ebcf7853a83514f7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[18]
+      value: 
+      objectReference: {fileID: 2800000, guid: bde789bf182ecb141aa3bd970b421d6a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[19]
+      value: 
+      objectReference: {fileID: 2800000, guid: e36c4ff1571c24043b705b4d7ecbf029, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[20]
+      value: 
+      objectReference: {fileID: 2800000, guid: fbff7f6eda165364bb99f9be1c7a02ca, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[21]
+      value: 
+      objectReference: {fileID: 2800000, guid: b437ee9d950e48f438e57c94b1518008, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[22]
+      value: 
+      objectReference: {fileID: 2800000, guid: 32094d62a1c2f5a44a7def5fbf1eb29e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[23]
+      value: 
+      objectReference: {fileID: 2800000, guid: ebabc0e0fecff3944a07be0124533c1a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[24]
+      value: 
+      objectReference: {fileID: 2800000, guid: b75a2e75b47b6854ca440d05a26ed570, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[25]
+      value: 
+      objectReference: {fileID: 2800000, guid: 04a494d54d053414ab568f4b67af41f2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[26]
+      value: 
+      objectReference: {fileID: 2800000, guid: 87b099bb4c279a842809fdfff4e01f9d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[27]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4d8dd1bb30587d34999406abd17a60ee, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[28]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7055f6e1201bf494eb20b765beb54591, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[29]
+      value: 
+      objectReference: {fileID: 2800000, guid: 946106f237ed7da4bb695eaf8a39fc47, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[30]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1cd1f20a8d049914f956b2aaf81b0bca, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[31]
+      value: 
+      objectReference: {fileID: 2800000, guid: 65eaade7df0eb2d43b4dfe5364af373f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[32]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6bfa84bdd05db8f4b819f551c346f148, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[33]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8aa8b6f197544f3448c6ad73537481e7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[34]
+      value: 
+      objectReference: {fileID: 2800000, guid: 34ece79c4699de74284a536628f78e0c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[35]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9655c757074c10b4eaa257049e6d14d5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[36]
+      value: 
+      objectReference: {fileID: 2800000, guid: db4d2abf7cdea3e4d913081a19448775, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[37]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4e7a0378cc634dc478d229720a73ff1d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[38]
+      value: 
+      objectReference: {fileID: 2800000, guid: 83ce91d820de7844087e2e1c64aa8e33, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[39]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0a92a79ba75afba4bb640cc75ddcfd2c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[40]
+      value: 
+      objectReference: {fileID: 2800000, guid: 878d4b3b856284a42be60aa084d2aa50, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[41]
+      value: 
+      objectReference: {fileID: 2800000, guid: a6f7233bf69e6c94caab8dde7094f5a3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[42]
+      value: 
+      objectReference: {fileID: 2800000, guid: 09b54050b9ba39e4bacc5275279989b4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[43]
+      value: 
+      objectReference: {fileID: 2800000, guid: ad81978f66f0a754a8e330e73495934e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[44]
+      value: 
+      objectReference: {fileID: 2800000, guid: 798593dcfb5daeb4c87cef602e14d7d8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[45]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1e487da9e02164a41a62a99f01a0cd50, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[46]
+      value: 
+      objectReference: {fileID: 2800000, guid: fee414d41f546414297040df61ebc5f3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[47]
+      value: 
+      objectReference: {fileID: 2800000, guid: a68de606ba37b7748bb1ee81a71b94f6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[48]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9ad127f29dda6984bbed72f5a7d21ec1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[49]
+      value: 
+      objectReference: {fileID: 2800000, guid: 73535398faeda1c4da0f097ab6d3c099, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[50]
+      value: 
+      objectReference: {fileID: 2800000, guid: a7857228e10f86a43aba06d2b3adad71, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[51]
+      value: 
+      objectReference: {fileID: 2800000, guid: d465afee9b933aa44b04a67a9b39e1eb, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[52]
+      value: 
+      objectReference: {fileID: 2800000, guid: d322f066cd6ed3d488a7bbcaab17ddc3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[53]
+      value: 
+      objectReference: {fileID: 2800000, guid: c1cbcc909ea03b04ea1697ed31e33642, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[54]
+      value: 
+      objectReference: {fileID: 2800000, guid: 774c1069664d44344b7de74094425c6c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[55]
+      value: 
+      objectReference: {fileID: 2800000, guid: b1a617c204b382049b784dcfaf6641e4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[56]
+      value: 
+      objectReference: {fileID: 2800000, guid: 679f8dd29e9859947aaa12584414fb0c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[57]
+      value: 
+      objectReference: {fileID: 2800000, guid: a2a178c61b809474cb370be870ba589c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[58]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4e4baa3e0c94a34449008e1004785042, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[59]
+      value: 
+      objectReference: {fileID: 2800000, guid: 187a0bedbe0ace34da979e12bc027c42, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[60]
+      value: 
+      objectReference: {fileID: 2800000, guid: 58d19debcc829b443ada9060705bab4d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[61]
+      value: 
+      objectReference: {fileID: 2800000, guid: eb3aa5b148e0a95429485a2e4bfadc86, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[62]
+      value: 
+      objectReference: {fileID: 2800000, guid: f665b98e7ade12e468774f6f2e77697a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[63]
+      value: 
+      objectReference: {fileID: 2800000, guid: cc08b4ba59ba642498664eb4f0b3a6a5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[64]
+      value: 
+      objectReference: {fileID: 2800000, guid: b6002636871ffae40951d899eb5b2bd0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[65]
+      value: 
+      objectReference: {fileID: 2800000, guid: a5b757fcdea15d34e8901d1323dd510a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[66]
+      value: 
+      objectReference: {fileID: 2800000, guid: 67905c91b6da2064492f871a4c345e10, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[67]
+      value: 
+      objectReference: {fileID: 2800000, guid: 439c776121327ed438b9a7677243ee7a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[68]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d767d8bbad54cc4a9e9dcb4573efcea, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[69]
+      value: 
+      objectReference: {fileID: 2800000, guid: ec8813eaeae28fd46ab80ecf6f02bc7d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[70]
+      value: 
+      objectReference: {fileID: 2800000, guid: a4f7f7bc317bc3b43a49687e53de749a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[71]
+      value: 
+      objectReference: {fileID: 2800000, guid: 00fc042d26116c14dacce56036670de4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[72]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3a5b9e59ec5b4044e813d6c588dfbe4a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[73]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b74e3f03546a2b4abd80a5dd2450f4f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[74]
+      value: 
+      objectReference: {fileID: 2800000, guid: bbe3d98722df6a444a61d7cefe727b71, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[75]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7d2ba4b84c9501547b4f37f4fc2323eb, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[76]
+      value: 
+      objectReference: {fileID: 2800000, guid: c81610e04a4eb214d83c5de5137c6db2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[77]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c7b088823d88944f9d14e377e7e5aa4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[78]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3911c099d4142bb46a5e21c3dc564907, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[79]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2e4a9f8a4d38bbb4d8dd22aa2b0720ba, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[80]
+      value: 
+      objectReference: {fileID: 2800000, guid: 940a98337b872f947907ef82bdf002db, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[81]
+      value: 
+      objectReference: {fileID: 2800000, guid: beb34fb5a35fd0f4883b4f5753590835, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[82]
+      value: 
+      objectReference: {fileID: 2800000, guid: 67a4fdb732666ce4eb81da6cfb017eef, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[83]
+      value: 
+      objectReference: {fileID: 2800000, guid: 136f49b041eaebb41a6dde82febf4a5a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[84]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0a1c845f19c818b4a92138089c4f2b3c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[85]
+      value: 
+      objectReference: {fileID: 2800000, guid: d67b1ba2ea03db746957b10fe1851fab, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[86]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0635ddc9d439cc74cb54a80d547eaad1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[87]
+      value: 
+      objectReference: {fileID: 2800000, guid: 59da762406aff1f4ab478e129945310c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[88]
+      value: 
+      objectReference: {fileID: 2800000, guid: b710eb7024c08fb49880ddeba5257177, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[89]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2099a116158c0ca4f90f0302d975e58b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[90]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6c88883592c60ce47a24b3a927d6cdfd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[91]
+      value: 
+      objectReference: {fileID: 2800000, guid: 26d400bb98e3c78449508fe0d389cdef, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[92]
+      value: 
+      objectReference: {fileID: 2800000, guid: 55a7993a28111f24884c6e4943ee5ef2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[93]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3ad024169f5f5e54989a76d0cc950188, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[94]
+      value: 
+      objectReference: {fileID: 2800000, guid: 64b28386b9d259e48a1e96f8a2f89600, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[95]
+      value: 
+      objectReference: {fileID: 2800000, guid: a8b25e0b7dffb604c8fb147f7d599584, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[96]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2a5a599be926d3a4a8360e664b0effd1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[97]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4e508a49275b4364db8922bb0fab4e41, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[98]
+      value: 
+      objectReference: {fileID: 2800000, guid: 960a569e04ef1e644bd9ec6e1cfdb9d9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[99]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0a85e062836f0424da2e236a97d14bbc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[100]
+      value: 
+      objectReference: {fileID: 2800000, guid: c70e836151448324aa0cdf59bd6eebfc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[101]
+      value: 
+      objectReference: {fileID: 2800000, guid: fc118a40b127eb04b9c1f801fd121d6f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[102]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8a15720b770e0584cafc3b185f63bb21, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[103]
+      value: 
+      objectReference: {fileID: 2800000, guid: 80b334508643a18489cd8f182d1afea3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[104]
+      value: 
+      objectReference: {fileID: 2800000, guid: b1ba9db04ef315a4ab4438a816faafb5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[105]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7a900f0161189f04ea6e3c9db6e11a13, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[106]
+      value: 
+      objectReference: {fileID: 2800000, guid: 92e66c25aaf98a24b8939dd73342e6f9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[107]
+      value: 
+      objectReference: {fileID: 2800000, guid: 675f0331a54a04c49a0473ef720624c1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[108]
+      value: 
+      objectReference: {fileID: 2800000, guid: 40b21b910d826074889d1f3b5dc8fbb9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[109]
+      value: 
+      objectReference: {fileID: 2800000, guid: 344a5bea241c6b342acafffd97e3a611, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[110]
+      value: 
+      objectReference: {fileID: 2800000, guid: 95df05731b801bc45b8b47f068ea7ca6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[111]
+      value: 
+      objectReference: {fileID: 2800000, guid: 47bb452f9b19377469e41899aea15aa3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[112]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1a5ab98ce77a3b94ba8746b54fbc1fc6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[113]
+      value: 
+      objectReference: {fileID: 2800000, guid: f2786c2647ce3de489724e7973cc46ab, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[114]
+      value: 
+      objectReference: {fileID: 2800000, guid: 01a188b670bb2444095b46dabb514cd7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[115]
+      value: 
+      objectReference: {fileID: 2800000, guid: 23a902dae00bcd24d862d46871b8dda3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[116]
+      value: 
+      objectReference: {fileID: 2800000, guid: 215083a91a61d5245892eb0bb4bc475a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[117]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5bf2474c2f237a945bc97d5022d8ba5d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[118]
+      value: 
+      objectReference: {fileID: 2800000, guid: 64c5dd78e9918b84c8de58c954a93650, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[119]
+      value: 
+      objectReference: {fileID: 2800000, guid: 921e41eccac6fd34798df074368b9bf6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[120]
+      value: 
+      objectReference: {fileID: 2800000, guid: a4ff7e65d6f42724eb28e0608e8adf42, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[121]
+      value: 
+      objectReference: {fileID: 2800000, guid: d03dc6e2be1cf234ea13262f88d77c2a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[122]
+      value: 
+      objectReference: {fileID: 2800000, guid: fb53f66a66d8647449410747315785f9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[123]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0ba1fea4326b91d4f99eb9295e22a23b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[124]
+      value: 
+      objectReference: {fileID: 2800000, guid: fe3160e8c8e828c4d99cb37086d6a6c5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[125]
+      value: 
+      objectReference: {fileID: 2800000, guid: 79762114928b99347b7a177fcae22f6d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[126]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6da5d0a24ee6df04393fbf62e0920cf7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[127]
+      value: 
+      objectReference: {fileID: 2800000, guid: e04ea7795948f4c49b04c2658df5436f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[128]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9e813bbad53599542815c74a27875fac, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[129]
+      value: 
+      objectReference: {fileID: 2800000, guid: fe6c4495f14f36645a8ff8a469dc2fd9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[130]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9457f2d13e2912148bab4e27075741df, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[131]
+      value: 
+      objectReference: {fileID: 2800000, guid: 851fd40d56f8af0489b2998fbd9d4581, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[132]
+      value: 
+      objectReference: {fileID: 2800000, guid: 44ef6d41b63fc49409a11cdfb598f5ef, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[133]
+      value: 
+      objectReference: {fileID: 2800000, guid: e6951ed91dd34fe4c8d3a6137bebfb95, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[134]
+      value: 
+      objectReference: {fileID: 2800000, guid: 02d9d021a4616354e88af0888653d226, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[135]
+      value: 
+      objectReference: {fileID: 2800000, guid: c0af84957342622428f3a2fb7850d7fe, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[136]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1d711b343dc62f5409355d67b3cd6f14, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[137]
+      value: 
+      objectReference: {fileID: 2800000, guid: 85a01978934d0574f8fbc8c4ba80e606, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[138]
+      value: 
+      objectReference: {fileID: 2800000, guid: 28fa85bf52a37e24e9a06f6b55499ea3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[139]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9c223916809b93348a616a4f0b21a019, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[140]
+      value: 
+      objectReference: {fileID: 2800000, guid: 00bd5b67e350bfd4bb8ff5b951adcf09, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[141]
+      value: 
+      objectReference: {fileID: 2800000, guid: 29e9468500878954997ba4e564a46802, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[142]
+      value: 
+      objectReference: {fileID: 2800000, guid: 14d6fe7dd67fe334fb0d385070cbc123, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[143]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7b35708084d7b5c4bbead6b954458a69, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[144]
+      value: 
+      objectReference: {fileID: 2800000, guid: ddbc6d15ed872fb4b9c56a2080e37e7c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[145]
+      value: 
+      objectReference: {fileID: 2800000, guid: 974e87c00fbda9940ac506fda85475da, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[146]
+      value: 
+      objectReference: {fileID: 2800000, guid: 43a213d15c7cecc4e92ab07b83e8761a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[147]
+      value: 
+      objectReference: {fileID: 2800000, guid: 87c0d89eaa1cf39449a6ee6a79a3aa04, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[148]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8357416f626cf4042a4ad41e4ded84b1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[149]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b4d35ef259196441b21297e1638a0ee, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[150]
+      value: 
+      objectReference: {fileID: 2800000, guid: 917c727f50226414e89493e8980fbf2d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[151]
+      value: 
+      objectReference: {fileID: 2800000, guid: b6e1e7819b5008a4c8bc34fcd702091b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[152]
+      value: 
+      objectReference: {fileID: 2800000, guid: b63a9539bfb5ea44587043ee54e0595e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[153]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8ea82f3620f9e3642a7383701cac6a22, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[154]
+      value: 
+      objectReference: {fileID: 2800000, guid: 51ad061d5942e7b4ab824f4e246fc75f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[155]
+      value: 
+      objectReference: {fileID: 2800000, guid: e0d5c1e198c075f4fa84127af0c3272a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[156]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7da37cf37e2e3c3439cee162f04ffc6b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[157]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2a885e4a82dd56c4a81fec37a046bfd5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[158]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1fda3124f5b12314b88a3fc99eadded2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[159]
+      value: 
+      objectReference: {fileID: 2800000, guid: fc2af319ccc1ee54eb0c8d7e75b3b7a5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[160]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c6137aa732faed4f9e6e795281ef7d4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[161]
+      value: 
+      objectReference: {fileID: 2800000, guid: dc26301ae88b3c44caea690128853121, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[162]
+      value: 
+      objectReference: {fileID: 2800000, guid: 81436684af4f85c44bf002f4ce208243, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[163]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0045cf82adad1764b9601d498afe434c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[164]
+      value: 
+      objectReference: {fileID: 2800000, guid: 223a96a57d5cddb469c4c2adaaf76fb6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[165]
+      value: 
+      objectReference: {fileID: 2800000, guid: b61774c864b883d48bdcf4fbd04e605a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[166]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f75dfc021a66d04a8d561326d0fad31, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[167]
+      value: 
+      objectReference: {fileID: 2800000, guid: fdc7ab4aeb71c0a4c810a00dc5bdd232, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[168]
+      value: 
+      objectReference: {fileID: 2800000, guid: b4967262c1c62784092395d5d9592d80, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[169]
+      value: 
+      objectReference: {fileID: 2800000, guid: e96f8ca5998771b4d8846737fcb267f0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[170]
+      value: 
+      objectReference: {fileID: 2800000, guid: 674a2b3b7c2b6df4d82af7341182e5d7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[171]
+      value: 
+      objectReference: {fileID: 2800000, guid: 811447cd8f4b4604c8d61ae221b3f155, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[172]
+      value: 
+      objectReference: {fileID: 2800000, guid: cb12523f865a7dd449d914b8ca229743, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[173]
+      value: 
+      objectReference: {fileID: 2800000, guid: 58787a980161ff4428da20932c9df4d9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[174]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1e653abfc83034b44ae1d4f65e13eb8e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[175]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5a6b6d791340c5e4ca6e431081f2db5f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[176]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f8d7a01da3721c47bae22d68095d78a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[177]
+      value: 
+      objectReference: {fileID: 2800000, guid: e162c4f6be52ef94bab0a1f6aec94337, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[178]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0efe60658132147488b6921928bad9f1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[179]
+      value: 
+      objectReference: {fileID: 2800000, guid: bda9cbbfccbcce94aa6a58a1ccd456d6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[180]
+      value: 
+      objectReference: {fileID: 2800000, guid: d80226059dca1ea428aa40f40fc81951, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[181]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1c5cd99983d96a04294700f254b40ac9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[182]
+      value: 
+      objectReference: {fileID: 2800000, guid: e2fcde1c5b532da4884a78142335f4e2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[183]
+      value: 
+      objectReference: {fileID: 2800000, guid: 797ebfa02ce13f54fbce4c264b4028df, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[184]
+      value: 
+      objectReference: {fileID: 2800000, guid: e4d9d71a77e2d9449ba34a5a5d39d3de, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[185]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7d6a3fdcbb246a0439ef89e4c37f0af6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[186]
+      value: 
+      objectReference: {fileID: 2800000, guid: 172bff23dda052e47b42b83d23eb6117, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[187]
+      value: 
+      objectReference: {fileID: 2800000, guid: 731442b4e25c5314aadd7eae2a78b285, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[188]
+      value: 
+      objectReference: {fileID: 2800000, guid: 322b35a987c17064badb2dc50d3e4972, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[189]
+      value: 
+      objectReference: {fileID: 2800000, guid: 953f5082209fc8b458d5197d2fbd735d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[190]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2d5dd6ad48e84e84ebe4be156500b94b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[191]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5e280f2d086812c45bf8b928980c1c9c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[192]
+      value: 
+      objectReference: {fileID: 2800000, guid: 691b93f0f3022964b98c8d9a102faa42, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[193]
+      value: 
+      objectReference: {fileID: 2800000, guid: af34ce9e3f1c54b4ea958a79745553c3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[194]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5a52aad51ace51549bf57e727cca4032, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[195]
+      value: 
+      objectReference: {fileID: 2800000, guid: cfcf2c949996d4949979f3619b5f2021, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[196]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6308c62c45827f142acdab0490bbddf1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[197]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d76d28598aff844c8d6c0803b0e92ac, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[198]
+      value: 
+      objectReference: {fileID: 2800000, guid: 870275c3fe7e8f9429dba66f7e5888c1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[199]
+      value: 
+      objectReference: {fileID: 2800000, guid: fb20e4664e111ea418c61c3781934906, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[200]
+      value: 
+      objectReference: {fileID: 2800000, guid: dfd4241a21cd3614a9d5b69f0d28641e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[201]
+      value: 
+      objectReference: {fileID: 2800000, guid: ba74787a461bb8047a67b0f6637e64d6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[202]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c0b97883b57f334a8b36dd13df388d7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[203]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1062febe078b4e44b8a724f9a1a60cbe, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[204]
+      value: 
+      objectReference: {fileID: 2800000, guid: 67d506687084daf4aa443767480d0c15, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[205]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f036a767f73d8b44b74dec4edfc3498, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[206]
+      value: 
+      objectReference: {fileID: 2800000, guid: 188163ef835292f4f87602b4072f3b4d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[207]
+      value: 
+      objectReference: {fileID: 2800000, guid: cdf4ed7da889a8741b8283cfea622a6c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[208]
+      value: 
+      objectReference: {fileID: 2800000, guid: 85d65dd7e65b2624aa5a5121413a5e4f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[209]
+      value: 
+      objectReference: {fileID: 2800000, guid: 649f72d2c07a50f40bd97fc627e19bbf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[210]
+      value: 
+      objectReference: {fileID: 2800000, guid: 91a4f09ea021128429a268bb2fb11626, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[211]
+      value: 
+      objectReference: {fileID: 2800000, guid: a6170516c2d62d74681db6f46f85c58e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[212]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6a1aa5bd96d0cb24f97b75cc989c21c6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[213]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8183bd2ad0d78244981d4b5f3eccfc2e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[214]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8b2d8d40cd37d59498764f01ec717daa, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[215]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3f3b338b7a76ef84c9840f8fe7622f86, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[216]
+      value: 
+      objectReference: {fileID: 2800000, guid: d25cdefce36624b4899c168211168d3c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[217]
+      value: 
+      objectReference: {fileID: 2800000, guid: bad8a13d5cbeaa24cb510d536fcdc980, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[218]
+      value: 
+      objectReference: {fileID: 2800000, guid: b7f5e49b3f7b41f478583fddca33b342, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[219]
+      value: 
+      objectReference: {fileID: 2800000, guid: 53ea058a03b89dc4884f793455713fd5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[220]
+      value: 
+      objectReference: {fileID: 2800000, guid: c8a6d43d985545848b4793b48ae1c030, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[221]
+      value: 
+      objectReference: {fileID: 2800000, guid: c9850f04b877b1441807fa0a36d86972, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[222]
+      value: 
+      objectReference: {fileID: 2800000, guid: 321eb355885acf24a855d7ea7b72aeb7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[223]
+      value: 
+      objectReference: {fileID: 2800000, guid: fb4b4afc837e1af428a42b9799371caa, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[224]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8ea3e477f7b84154894092fdb40f6720, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[225]
+      value: 
+      objectReference: {fileID: 2800000, guid: b32076336da04964bbe7b1336a1a615d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[226]
+      value: 
+      objectReference: {fileID: 2800000, guid: d4c595688f877574187b306109581afc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[227]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7b14bb01761f78b4b99590d142b6763e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[228]
+      value: 
+      objectReference: {fileID: 2800000, guid: a2d6ff85396b46647b1c24978fe227f9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[229]
+      value: 
+      objectReference: {fileID: 2800000, guid: c3770bf9694a5914fbb992690b8fe570, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[230]
+      value: 
+      objectReference: {fileID: 2800000, guid: 009aea129342687489f3c39db3e0868d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[231]
+      value: 
+      objectReference: {fileID: 2800000, guid: d2a8ac029d96dea42947c2ffc982b537, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[232]
+      value: 
+      objectReference: {fileID: 2800000, guid: 634f9e1ab3e28314f9b044c9f566f943, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[233]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6621c7a58d0bf7e42921f8afafb6b757, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[234]
+      value: 
+      objectReference: {fileID: 2800000, guid: 91d76c1ed7f66fd45a2a936395b7721f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[235]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7208594123078d64588ad69833119d68, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[236]
+      value: 
+      objectReference: {fileID: 2800000, guid: d72a18ef5d1e3ab4cb368d3a6d5cf69c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[237]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7533e802834225c4b9f568c79140a9cd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[238]
+      value: 
+      objectReference: {fileID: 2800000, guid: 34d0aea1aabf98e43acd586f2822f61f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim1.Array.data[239]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d9763b7b84ef564eae0ec14a9f7ae6b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[100]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c15cea0df7b18c4c9645189ea26e16e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[101]
+      value: 
+      objectReference: {fileID: 2800000, guid: a98b051410e287745a2048d3e6943436, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[102]
+      value: 
+      objectReference: {fileID: 2800000, guid: ee6ba6996ea4d51429947b4852f17163, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[103]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8fda8fa54fcd3364ebb265a1e1a0b60b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[104]
+      value: 
+      objectReference: {fileID: 2800000, guid: 285ebb2ed5f67a94ba0e6ade1810df3b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[105]
+      value: 
+      objectReference: {fileID: 2800000, guid: f6b25dff2da920e4bbcb9b524b5e6e65, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[106]
+      value: 
+      objectReference: {fileID: 2800000, guid: a95e282d1ebf2424da730a506fb80909, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[107]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3b44dffdf2f3ca340bd8d79fc03a7619, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[108]
+      value: 
+      objectReference: {fileID: 2800000, guid: de3fe0069465ad545bbc51cb328c16be, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[109]
+      value: 
+      objectReference: {fileID: 2800000, guid: eb17baa80ad7ece4fb20c2428261f557, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[110]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2b72ad57fa4e2e74280d82f5bf62c097, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[111]
+      value: 
+      objectReference: {fileID: 2800000, guid: cb0e9b0d375e20c4eb93f72d25210b24, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[112]
+      value: 
+      objectReference: {fileID: 2800000, guid: 76f5141c5487a0f4092bb9a117d37877, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[113]
+      value: 
+      objectReference: {fileID: 2800000, guid: a925bb02dcbf7bd48a373757ba013cd9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[114]
+      value: 
+      objectReference: {fileID: 2800000, guid: 90da1152f1a666245b687d54d6a5d8a5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[115]
+      value: 
+      objectReference: {fileID: 2800000, guid: 64d1e720079ea584f827ef05985ddb9b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[116]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8979dbb064574124ea98722b26b9a9c4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[117]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1bcce1c7f9874244b9982fdeb2f3a8d8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[118]
+      value: 
+      objectReference: {fileID: 2800000, guid: da68ab08d551127438d2c139bdeb6a8f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[119]
+      value: 
+      objectReference: {fileID: 2800000, guid: e43df811092ed3842956e6ac919502cb, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim2.Array.data[120]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5434dd1fda99ecd41bcd4bd93d5ec94d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[100]
+      value: 
+      objectReference: {fileID: 2800000, guid: 38fe4f5abe2bed64ba262c6351383d9f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[101]
+      value: 
+      objectReference: {fileID: 2800000, guid: da3992c5e54a9154ca0f7a60cfbed087, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[102]
+      value: 
+      objectReference: {fileID: 2800000, guid: a55b7c6bc02414a478b918bdce4d1ce7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[103]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1040b0ddc5d1d9c4387ed14ec6121587, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[104]
+      value: 
+      objectReference: {fileID: 2800000, guid: 751bc876cb6a9eb48939b03c5777fa88, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[105]
+      value: 
+      objectReference: {fileID: 2800000, guid: 541e9f334a231184fb363f220b112b9b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[106]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5fcc42cec3cca1a49a38180cd5362f17, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[107]
+      value: 
+      objectReference: {fileID: 2800000, guid: 636cd95fc16ef37448771bcf24ac09ac, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[108]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7c4a1944a0a906e4ba6d25db4e506615, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[109]
+      value: 
+      objectReference: {fileID: 2800000, guid: d8a54eee9952eae4eb13adb69c38b755, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[110]
+      value: 
+      objectReference: {fileID: 2800000, guid: d607c46dc187b174d8909087fb3ae41d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[111]
+      value: 
+      objectReference: {fileID: 2800000, guid: 088015e4e67386b43bb07ea1b5b5dd21, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[112]
+      value: 
+      objectReference: {fileID: 2800000, guid: 36990961eb98dfc4383bfa22f0d82162, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[113]
+      value: 
+      objectReference: {fileID: 2800000, guid: e7153e318e9ec8e4caf0dc983767a39c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[114]
+      value: 
+      objectReference: {fileID: 2800000, guid: fb72e81c1ebfe864f9e19da013842f69, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[115]
+      value: 
+      objectReference: {fileID: 2800000, guid: 595c9946b2e5afc48beab18fc887061b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[116]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7dff0760fc52265488c5660e18210a0a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[117]
+      value: 
+      objectReference: {fileID: 2800000, guid: ad7e885153215d54dab1de4843fd8073, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[118]
+      value: 
+      objectReference: {fileID: 2800000, guid: ada4d6412cec069448a11adf3a6e4d8c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[119]
+      value: 
+      objectReference: {fileID: 2800000, guid: a70fc61eb371d2442b6cb072901db90a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[120]
+      value: 
+      objectReference: {fileID: 2800000, guid: b5b55d9ad812d1e44bd5a99546bd0d05, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[121]
+      value: 
+      objectReference: {fileID: 2800000, guid: 81c0216ab0a71084cbe90b2279995069, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[122]
+      value: 
+      objectReference: {fileID: 2800000, guid: b544c860c01278746b11272243b6c620, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[123]
+      value: 
+      objectReference: {fileID: 2800000, guid: 58462ed4f00d0244a8692505e7588f0b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[124]
+      value: 
+      objectReference: {fileID: 2800000, guid: 387e363d446ba374e9c7a38e0fbf38cc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[125]
+      value: 
+      objectReference: {fileID: 2800000, guid: 36949245b06de474cb672ddd5e0168dd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[126]
+      value: 
+      objectReference: {fileID: 2800000, guid: eb643156635744747bc7351e2552215f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[127]
+      value: 
+      objectReference: {fileID: 2800000, guid: 85307740b7ec2504ba14dc1f60f4d6a4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[128]
+      value: 
+      objectReference: {fileID: 2800000, guid: b50bc546c782b224a8c95cd827e59670, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[129]
+      value: 
+      objectReference: {fileID: 2800000, guid: f82c8499099349144a55c30c1b8cdfef, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[130]
+      value: 
+      objectReference: {fileID: 2800000, guid: 703afbcda6a68be48afcf2cc60085f2a, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[131]
+      value: 
+      objectReference: {fileID: 2800000, guid: 87b810aee16a93f409cf6b91739e80dd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[132]
+      value: 
+      objectReference: {fileID: 2800000, guid: 064035361502ba44aa52b37526b768f9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[133]
+      value: 
+      objectReference: {fileID: 2800000, guid: c43644a9391ee9346b8ba3199f08e0ad, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[134]
+      value: 
+      objectReference: {fileID: 2800000, guid: d39403f2e4337e3418c558b4f38adede, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[135]
+      value: 
+      objectReference: {fileID: 2800000, guid: f665280474079534a8f9321562c90220, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[136]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8996268edf3ad6d4f9db2bf60f7e5f0c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[137]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6ed516ef13ab7834381dcc97cca38228, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[138]
+      value: 
+      objectReference: {fileID: 2800000, guid: 24206b9f8570ff74bb12a80ba9da1e82, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[139]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3f0884c1d0cc0cb42be549748f986715, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[140]
+      value: 
+      objectReference: {fileID: 2800000, guid: bfe4f91d7d572094895cb9cd86c45eba, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[141]
+      value: 
+      objectReference: {fileID: 2800000, guid: ef77d76dcc8d67c46a11539db6d54171, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[142]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3db6c7c77d8d05a4488c8247ecb252d2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[143]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2667dae88d346324891937c9808fb9da, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[144]
+      value: 
+      objectReference: {fileID: 2800000, guid: c7e54502d64bc9e408b147488e3c0cbe, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[145]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c7b97fac54f865498071ecb5ea31390, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[146]
+      value: 
+      objectReference: {fileID: 2800000, guid: 706fa76097cd00c44a1ecd699863ea90, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[147]
+      value: 
+      objectReference: {fileID: 2800000, guid: 882d83655e9948d44be6f50af5f9fbf9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[148]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d453ab0909f49e4a89336f7115bd899, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[149]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5b8101e7b6faadd4c9e894b9f6f6a32f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[150]
+      value: 
+      objectReference: {fileID: 2800000, guid: 618ad2f029d331d4594115ba5cb17189, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[151]
+      value: 
+      objectReference: {fileID: 2800000, guid: 28204fa474d8d3e46ac3b0876245f8bd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[152]
+      value: 
+      objectReference: {fileID: 2800000, guid: 280b3c828383bb04586b78212d7af7c8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[153]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2944cd9a4dab82141951f67be591eeb9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[154]
+      value: 
+      objectReference: {fileID: 2800000, guid: e8c7f9d93cc4e9e40a6f4275cf9d0b68, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[155]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7289029ccfe2a79459ab6e92d31a74a6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[156]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9435bae311fe3d84a9fbd71b0b4c6e74, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[157]
+      value: 
+      objectReference: {fileID: 2800000, guid: a64824a645211244799484dd3415f74c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[158]
+      value: 
+      objectReference: {fileID: 2800000, guid: 19f5e70cf2a485149a23d6aad63b1637, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[159]
+      value: 
+      objectReference: {fileID: 2800000, guid: 099170bc897ec3b46b86b5dca372b1fd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[160]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d62df9992eeb87478a0140c1409ab46, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[161]
+      value: 
+      objectReference: {fileID: 2800000, guid: e03c89fe6eb82ad4189c344a26eb5d9c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[162]
+      value: 
+      objectReference: {fileID: 2800000, guid: ad25523491e259443b28ac5490f5e8f3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[163]
+      value: 
+      objectReference: {fileID: 2800000, guid: a658d360e02bb6b4f8a10414bad724bf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[164]
+      value: 
+      objectReference: {fileID: 2800000, guid: 01ffb39a9421cf044b41ee1d1607bebd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[165]
+      value: 
+      objectReference: {fileID: 2800000, guid: d597343d6cc58194b925d054986dc8f7, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[166]
+      value: 
+      objectReference: {fileID: 2800000, guid: 857b43014eca18a4cb97251461d5b83f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[167]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5cff13155bf0eb24d86f6c8e4df379c3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[168]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8a1bd0d79b46f9540a9a96baec4e12bf, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[169]
+      value: 
+      objectReference: {fileID: 2800000, guid: f11c74b03103299449ef350ce10cc7f8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[170]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1e969b3b40441d841be373edafb9d495, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[171]
+      value: 
+      objectReference: {fileID: 2800000, guid: 07e6fc1263ce5d14e89e4f7915bc1885, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[172]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1a1f6b3b939c5c0488275e5a06397c69, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[173]
+      value: 
+      objectReference: {fileID: 2800000, guid: d1ccadff450480b4e88c3a5ee4a1c289, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[174]
+      value: 
+      objectReference: {fileID: 2800000, guid: fbe384c520efd3547adc27124afb44c8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[175]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8ec4dd23efed34c458966872c9397f5b, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[176]
+      value: 
+      objectReference: {fileID: 2800000, guid: b2fb69d56a5746d4584ddc4c7ad8a3e5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[177]
+      value: 
+      objectReference: {fileID: 2800000, guid: adf0a867bb7110349a7b9423d3e989c1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[178]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7329d106e98548f459754d276a0e68ee, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[179]
+      value: 
+      objectReference: {fileID: 2800000, guid: aaa0c6f96a79fb94a823f561f2454834, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[180]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4c1da53d7addd3e43acb3c32049fa713, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[181]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d9a35a7d9d0b68479801043157d8625, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[182]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9fe06b280ed60f642a7bdf1efc6fed5c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[183]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4fc69f8f58be65546bf665e3c0d8c1ae, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[184]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3a3cf124eb132494c894469dd11b89e1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[185]
+      value: 
+      objectReference: {fileID: 2800000, guid: d7c0b66d54f3f3140a8652f3cd502147, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[186]
+      value: 
+      objectReference: {fileID: 2800000, guid: 48b48b0882459314ebc4b05993b1462c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[187]
+      value: 
+      objectReference: {fileID: 2800000, guid: e0f4a34d5d4e82b44b8837f137712336, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[188]
+      value: 
+      objectReference: {fileID: 2800000, guid: 670d15fd6d74b8f4bbd71fece1197fc2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[189]
+      value: 
+      objectReference: {fileID: 2800000, guid: 03e6620d97c24ae41a79df819fe681b2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[190]
+      value: 
+      objectReference: {fileID: 2800000, guid: eb9e97033ef8fce4bb2db7e276ad351f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[191]
+      value: 
+      objectReference: {fileID: 2800000, guid: 47c8f26dbcb586b4a884105870c7ee63, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[192]
+      value: 
+      objectReference: {fileID: 2800000, guid: c9756dc6d82d10140bb307d12050208c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[193]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3b2a515216e7a8c4cb33856cf8b29f40, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[194]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5625ec5a9b8cda64298877fb43b54908, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[195]
+      value: 
+      objectReference: {fileID: 2800000, guid: 28a37305ab03d2a468a77bfde1302cc2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[196]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2184f666f407e394986a7f0f5694de63, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[197]
+      value: 
+      objectReference: {fileID: 2800000, guid: 46abf01555ce224498f0e2264738a3ab, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[198]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0ce8d3515fc447748aa377bdebc4f574, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[199]
+      value: 
+      objectReference: {fileID: 2800000, guid: b75dde4f7f7daff4e8a27e6ebf6bd3f4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[200]
+      value: 
+      objectReference: {fileID: 2800000, guid: bdbf3a550495fa84c87d60d1f849795d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[201]
+      value: 
+      objectReference: {fileID: 2800000, guid: e63cd8235a9738a49b553afca7200e24, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[202]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6e2947ab7f899d24daf8c43a5ffdec09, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[203]
+      value: 
+      objectReference: {fileID: 2800000, guid: 25c059c576802984e93928785172eab2, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[204]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2a6428e4b60529e43b2b77c834465bb6, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[205]
+      value: 
+      objectReference: {fileID: 2800000, guid: 089ad66578fc88545b4e788a9d9d377d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[206]
+      value: 
+      objectReference: {fileID: 2800000, guid: 017dba57553bfa545bdf5830c871e5de, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[207]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9946c772c1d3e8b47b80f82a41d7c598, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[208]
+      value: 
+      objectReference: {fileID: 2800000, guid: 75ad70ee678d89343b12c8803d3382b4, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[209]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5e25139476f9b2b4baad8bfec6d41235, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[210]
+      value: 
+      objectReference: {fileID: 2800000, guid: b3288f7decfc6d64eaf83ea38c965adc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[211]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9a419173250fea041880d096740463dd, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[212]
+      value: 
+      objectReference: {fileID: 2800000, guid: 97f2104506eae514c946d9503ec8ae57, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[213]
+      value: 
+      objectReference: {fileID: 2800000, guid: 681b6908c84dff140a54c7fffb712716, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[214]
+      value: 
+      objectReference: {fileID: 2800000, guid: 80d3169cc6fead9468c12e2fab21ed2f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[215]
+      value: 
+      objectReference: {fileID: 2800000, guid: a621b77503d7b0345aeeee9947019dee, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[216]
+      value: 
+      objectReference: {fileID: 2800000, guid: c8b3ebf89216a0c4fb58b33e774d204f, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[217]
+      value: 
+      objectReference: {fileID: 2800000, guid: 439c900525bb08945bd45728adbf0f15, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[218]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0efeab9ac4f84f54a8af3179fea9c7f0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[219]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4fb7e7b73d4bd7949831ffb7ca72f8ae, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[220]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6608245b963f84448975d91538789dea, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[221]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6e87faf2f17cb3d468b01c07f207b3c9, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[222]
+      value: 
+      objectReference: {fileID: 2800000, guid: 179e0c722dd461f44a856ce6618c9de5, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[223]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3379456d3b0efd9458abe2530cd6d423, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[224]
+      value: 
+      objectReference: {fileID: 2800000, guid: dd19d2da928567e4897d45d694eba9c3, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[225]
+      value: 
+      objectReference: {fileID: 2800000, guid: c919db81ae24e054d8787b221370513c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[226]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5c55015de0bf9ec4a8583bb3392fc33d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[227]
+      value: 
+      objectReference: {fileID: 2800000, guid: b45832f40263d3d4199f673106043f15, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[228]
+      value: 
+      objectReference: {fileID: 2800000, guid: 89197e386b4d6104c8c64d5514471ef8, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[229]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3738aca665b4bce4d8a9061ea3873a45, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[230]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3a91eb33488224149b1c4ac3be1deb4d, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[231]
+      value: 
+      objectReference: {fileID: 2800000, guid: 145f78a20c504cf438b08256b25b0d9c, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[232]
+      value: 
+      objectReference: {fileID: 2800000, guid: 20ed58004e5f7f34ebad9d424c205d73, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[233]
+      value: 
+      objectReference: {fileID: 2800000, guid: 8c29afa3f8b9a9b44a422319a2ec3a0e, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[234]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3b7235c8b2bf3c4469f94f73d6670bdc, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[235]
+      value: 
+      objectReference: {fileID: 2800000, guid: cea4b3f24e1054d49af282af7c835b44, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[236]
+      value: 
+      objectReference: {fileID: 2800000, guid: 27e890c46060c574a833571142c4a7b1, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[237]
+      value: 
+      objectReference: {fileID: 2800000, guid: 45877172d3e4d9848adc0e908220c9e0, type: 3}
+    - target: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: texAnim3.Array.data[238]
+      value: 
+      objectReference: {fileID: 2800000, guid: c0373e1f56b813547a2c671fa0491b80, type: 3}
     - target: {fileID: 3631072214668814686, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4010,6 +6446,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 595966980765133079, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
   m_PrefabInstance: {fileID: 482301281}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &482301321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1627623099824048996, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+  m_PrefabInstance: {fileID: 482301281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4dd4ef93c22d54c92348001fb4de81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &482301322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3494608738533392454, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+  m_PrefabInstance: {fileID: 482301281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e53ad0c979c7c44bc0fb4d280b6705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &523240249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,7 +8306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.size
@@ -5891,6 +8349,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -5922,6 +8384,10 @@ PrefabInstance:
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 482301296}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 482301322}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowHightlight
@@ -5955,6 +8421,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideTags
       objectReference: {fileID: 0}
@@ -5965,6 +8435,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: PlayStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -6011,6 +8485,14 @@ PrefabInstance:
       value: BFVR.BFVROrderedObjectAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: TextureArrayAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BFVR.UIModule.BFVRPopupTagManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -6025,6 +8507,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: HalfCloseToClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6048,6 +8534,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
@@ -6420,7 +8910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.size
@@ -6463,6 +8953,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -6499,6 +8993,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 482301314}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 482301322}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayStep
       objectReference: {fileID: 0}
@@ -6527,6 +9025,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideTags
       objectReference: {fileID: 0}
@@ -6537,6 +9039,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: PlayStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -6591,6 +9097,10 @@ PrefabInstance:
       value: BFVR.BFVROrderedObjectAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: TextureArrayAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Reverse
       objectReference: {fileID: 0}
@@ -6601,6 +9111,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Reverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -6621,6 +9135,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -6652,6 +9170,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
@@ -8458,7 +10980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -8481,6 +11003,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 482301312}
@@ -8500,6 +11026,10 @@ PrefabInstance:
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 482301316}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 482301321}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -8529,6 +11059,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplaySectionCompletePrompt
       objectReference: {fileID: 0}
@@ -8539,6 +11073,10 @@ PrefabInstance:
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetStartTexture
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8561,11 +11099,19 @@ PrefabInstance:
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PegTubeTextureAwakeScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
@@ -8590,6 +11136,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6025113164885161857, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
@@ -8742,7 +11292,7 @@ PrefabInstance:
       objectReference: {fileID: 417956214}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.size
@@ -8755,6 +11305,10 @@ PrefabInstance:
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -8777,6 +11331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 482301310}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 482301321}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 482301312}
@@ -8797,12 +11355,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayDirectionsPrompt
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: PlayStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetStartTexture
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -8837,6 +11403,10 @@ PrefabInstance:
       value: BFVR.BFVROrderedObjectAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PegTubeTextureAwakeScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BFVR.UIModule.BFVRTVUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -8861,11 +11431,19 @@ PrefabInstance:
       value: Reset Open
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
+      propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
@@ -10212,7 +12790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.size
@@ -10255,6 +12833,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -10286,6 +12868,10 @@ PrefabInstance:
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 482301296}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 482301322}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowHightlight
@@ -10319,6 +12905,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideTags
       objectReference: {fileID: 0}
@@ -10329,6 +12919,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: PlayStep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -10375,6 +12969,14 @@ PrefabInstance:
       value: BFVR.BFVROrderedObjectAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: TextureArrayAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBeginDelay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BFVR.UIModule.BFVRPopupTagManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -10389,6 +12991,10 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: OpenToHalfClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -10412,6 +13018,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
+      propertyPath: OnStepComplete.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
@@ -13238,7 +15848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -13294,7 +15904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -13331,7 +15941,7 @@ PrefabInstance:
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 482301322}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -13390,7 +16000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetEnableGrabbable
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -13442,11 +16052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      value: TextureArrayAnimator, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -13462,6 +16076,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
@@ -13669,7 +16287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -13725,7 +16343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -13762,7 +16380,7 @@ PrefabInstance:
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 482301322}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -13821,7 +16439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetEnableGrabbable
+      value: PlayTexAnim
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -13873,11 +16491,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      value: TextureArrayAnimator, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: BFVR.Interactable.BFVRGrabbableObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepBeginDelayedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -13893,6 +16515,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
+      propertyPath: OnStepCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
