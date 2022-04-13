@@ -2820,6 +2820,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91ac85efe0f8c0439c2f4e222f21ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &41912941 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 595966980765133079, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+  m_PrefabInstance: {fileID: 41912921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &41912942 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8406390258423962715, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
@@ -3344,7 +3349,7 @@ PrefabInstance:
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: StepActions.Array.data[0].EndTransform
       value: 
-      objectReference: {fileID: 1331376796}
+      objectReference: {fileID: 41912941}
     - target: {fileID: 5355674977866619161, guid: 9aa19632ff55b7d418afe8c29e8040d1, type: 3}
       propertyPath: StepActions.Array.data[0].StartTransform
       value: 
