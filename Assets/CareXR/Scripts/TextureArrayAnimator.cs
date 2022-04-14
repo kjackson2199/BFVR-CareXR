@@ -40,7 +40,7 @@ public class TextureArrayAnimator : MonoBehaviour
     {
         if (useDelay)
         {
-            yield return new WaitForSeconds(2.1333f);
+            yield return new WaitForSeconds(3);
             useDelay = false;
         }
         yield return new WaitForEndOfFrame();//This is why we're using a coroutine instead of a loop.

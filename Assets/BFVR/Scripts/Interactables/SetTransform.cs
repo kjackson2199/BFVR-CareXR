@@ -28,5 +28,11 @@ namespace BFVR.Interactable
                 gameObject.transform.rotation = Targets[index].rotation;
             }
         }
+
+        public void CopyFromGameObject(Transform transform)
+        {
+            gameObject.transform.position = transform.position;
+            gameObject.transform.rotation = transform.rotation;
+        }
     }
 }
