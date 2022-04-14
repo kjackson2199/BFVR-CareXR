@@ -139,10 +139,10 @@ namespace BFVR.InputModule
             float delta = 0;
             float opacity = 0;
 
-            if(!handRenderer.enabled && newOpacity > 0)
-            {
-                handRenderer.enabled = true;
-            }
+            //if(!handRenderer.enabled && newOpacity > 0)
+            //{
+            //    handRenderer.enabled = true;
+            //}
 
             while (delta < fadeTime)
             {
@@ -153,10 +153,10 @@ namespace BFVR.InputModule
                 delta += Time.deltaTime;
             }
 
-            if (newOpacity <= 0)
-            {
-                handRenderer.enabled = false;
-            }
+            //if (newOpacity <= 0)
+            //{
+            //    handRenderer.enabled = false;
+            //}
             
 
             delta = 1;
