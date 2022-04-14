@@ -139,6 +139,10 @@ namespace BFVR.InputModule
             float delta = 0;
             float opacity = 0;
 
+            if(!handRenderer.enabled && newOpacity > 0)
+            {
+                handRenderer.enabled = true;
+            }
 
             while (delta < fadeTime)
             {
@@ -153,10 +157,7 @@ namespace BFVR.InputModule
             {
                 handRenderer.enabled = false;
             }
-            else
-            {
-                handRenderer.enabled = true;
-            }
+            
 
             delta = 1;
             opacity = Mathf.Lerp(handMaterial.GetFloat(OpacityAttributeName), newOpacity, delta / fadeTime);
