@@ -535,6 +535,10 @@ PrefabInstance:
       propertyPath: startTexture
       value: 
       objectReference: {fileID: 2800000, guid: 1187b571d072eb9439ba6a7f17c26043, type: 3}
+    - target: {fileID: 1682108822675298691, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1779508312976476714, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2393,6 +2397,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5984856341905104214, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: AutoReset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984856341905104214, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5984856341905104214, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
@@ -8347,7 +8355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerMode: 1
-  TriggerId: 4
+  TriggerId: 5
   StartDisabled: 0
   AllowedTriggerTags:
   - 
@@ -9940,7 +9948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: TargetTrigger
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4433666811199545203, guid: 84c85de644909d34681e8d7f98005c8b, type: 3}
       propertyPath: stepCompleteSFX
