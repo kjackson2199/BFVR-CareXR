@@ -11,10 +11,12 @@ namespace BFVR.Interactable
     /// 
     public class BFVRHandRaycaster : MonoBehaviour
     {
-        const int rayCount = 200;
+        const int rayCount = 600;
 
         [Range(.1f, .5f)] public float maxRayDistance = .25f;
         [Range(-4, -1)] public float grabSpreadOffset = -2;
+        [Range(.01f, 1)] public float radius = .1f;
+
         public LayerMask GrabbableLayers;
 
         Vector3[] handRays;
@@ -22,6 +24,11 @@ namespace BFVR.Interactable
         private void Start()
         {
             PrecalculatePalmRays();
+        }
+
+        public void RaycastSphere(out RaycastHit outHit)
+        {
+            Physics.SphereCast(gameObject.transform.position, radius, gameObject.transform.forward, out outHit, maxRayDistance, GrabbableLayers);
         }
 
         private void PrecalculatePalmRays()
@@ -50,7 +57,7 @@ namespace BFVR.Interactable
                     hits.Add(hit);
                 }
 
-                Debug.DrawRay(gameObject.transform.position, gameObject.transform.rotation * ray, Color.red, 2);
+                Debug.DrawRay(gameObject.transform.position, gameObject.transform.rotation * ray, Color.red, 10);
             }
             if (hits.Count > 0)
             {

@@ -83,6 +83,7 @@ namespace BFVR.InputModule
         {
             RaycastHit hit;
             Vector3 avgHitVector = handRaycaster.RaycastClosestHit(out hit);
+            //handRaycaster.RaycastSphere(out hit);
 
             if (hit.collider)
             {
@@ -93,6 +94,7 @@ namespace BFVR.InputModule
                 {
                     itemInHand = hit.collider.gameObject;
                     SendHapticImpulseMed();
+                    Debug.Log("Grab");
                 }
             }
         }
