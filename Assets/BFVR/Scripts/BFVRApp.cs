@@ -31,7 +31,7 @@ namespace BFVR
         [Tooltip("Game Objects to not destroy when loading.")]
         public List<GameObject> gameObjectWhitelist;
 
-        public static bool playerSitting = false;//bool used to sync player standing/sitting state between scenes
+        public static int playerHeightState = 1;//bool used to sync player standing/sitting state between scenes
 
         private void Awake()
         {
