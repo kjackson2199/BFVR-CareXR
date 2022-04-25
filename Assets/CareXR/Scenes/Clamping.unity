@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1375429995206957208, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: startTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 5f039c1b279b0fb4dbf439d7503101d4, type: 3}
     - target: {fileID: 1403181463164491338, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1703,53 +1707,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6971515008132327167, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
   m_PrefabInstance: {fileID: 41912921}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &41912926 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8145724544697298965, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
-  m_PrefabInstance: {fileID: 41912921}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &41912927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5426442955795096963, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
   m_PrefabInstance: {fileID: 41912921}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &41912928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41912926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4dd4ef93c22d54c92348001fb4de81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTexture: {fileID: 0}
-  targetMat: 0
---- !u!114 &41912929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41912926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e53ad0c979c7c44bc0fb4d280b6705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texAnim1: []
-  texAnim1Note: '-'
-  texAnim2: []
-  texAnim2Note: '-'
-  texAnim3: []
-  texAnim3Note: '-'
-  texAnim4: []
-  texAnim4Note: '-'
-  texAnim5: []
-  texAnim5Note: '-'
-  targetMat: 0
 --- !u!1 &126507446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,7 +3566,7 @@ PrefabInstance:
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 41912928}
+      objectReference: {fileID: 0}
     - target: {fileID: 5630290682719779230, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -3968,7 +3930,7 @@ PrefabInstance:
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 41912928}
+      objectReference: {fileID: 0}
     - target: {fileID: 7309742426687829799, guid: 63d3b8eecdcb47e479b2a70378cb8990, type: 3}
       propertyPath: OnStarted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
