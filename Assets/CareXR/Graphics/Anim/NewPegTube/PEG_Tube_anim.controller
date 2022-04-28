@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ClosedFeeding
+    m_ConditionEvent: CloseFeeding
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 579250936625447510}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Closed
+    m_ConditionEvent: Close
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5392414967814996802}
@@ -119,7 +119,7 @@ AnimatorController:
   m_Name: PEG_Tube_anim
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Closed
+  - m_Name: Close
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -131,7 +131,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: ClosedFeeding
+  - m_Name: CloseFeeding
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
