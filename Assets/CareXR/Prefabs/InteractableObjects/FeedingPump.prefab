@@ -616,6 +616,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3887185075125053422, guid: 5ced5561eec4eba4d8ad87db85344c45, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3255328229911909515, guid: 5ced5561eec4eba4d8ad87db85344c45, type: 3}
+    - target: {fileID: -3887185075125053422, guid: 5ced5561eec4eba4d8ad87db85344c45, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
@@ -703,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTexture: {fileID: 0}
-  targetMat: 0
+  targetMat: 1
 --- !u!1001 &7763921882474550039
 PrefabInstance:
   m_ObjectHideFlags: 0
