@@ -82,13 +82,15 @@ namespace BFVR.InputModule
         void GrabCheck()
         {
             RaycastHit hit;
-            Vector3 avgHitVector = handRaycaster.RaycastClosestHit(out hit);
-            //handRaycaster.RaycastSphere(out hit);
+            //Vector3 avgHitVector = handRaycaster.RaycastClosestHit(out hit);
+            handRaycaster.RaycastSphere(out hit);
 
             if (hit.collider)
             {
                 HideHand();
                 BFVRGrabbableObject g = hit.collider.gameObject.GetComponent<BFVRGrabbableObject>();
+
+                Debug.Log("I hit " + g.name);
 
                 if (g.Grab(this))
                 {

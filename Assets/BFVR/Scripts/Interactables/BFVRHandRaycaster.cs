@@ -11,10 +11,11 @@ namespace BFVR.Interactable
     /// 
     public class BFVRHandRaycaster : MonoBehaviour
     {
-        const int rayCount = 600;
+        const int rayCount = 300;
+        const int behindHandRayCount = 300;
 
         [Range(.1f, .5f)] public float maxRayDistance = .25f;
-        [Range(-4, -1)] public float grabSpreadOffset = -2;
+        [HideInInspector][Range(-4, -1)] public float grabSpreadOffset = -2;
         [Range(.01f, 1)] public float radius = .1f;
 
         public LayerMask GrabbableLayers;
@@ -23,7 +24,7 @@ namespace BFVR.Interactable
 
         private void Start()
         {
-            PrecalculatePalmRays();
+            //PrecalculatePalmRays();
         }
 
         public void RaycastSphere(out RaycastHit outHit)
@@ -34,11 +35,21 @@ namespace BFVR.Interactable
         private void PrecalculatePalmRays()
         {
             List<Vector3> rays = new List<Vector3>();
+            List<Vector3> rearRays = new List<Vector3>();
+
+
             for (int i = 0; i < rayCount; i++)
             {
                 float ampI = Mathf.Pow(i, 1.05f + grabSpreadOffset / 10f) / (Mathf.PI * 0.8f);
                 rays.Add(Quaternion.Euler(0, Mathf.Cos(i) * ampI + 90, Mathf.Sin(i) * ampI) * -Vector3.right);
             }
+
+            for (int i = 0; i<behindHandRayCount; i++)
+            {
+                float ampI = Mathf.Pow(i, 1.05f + grabSpreadOffset / 10f) / (Mathf.PI * 0.8f);
+                rays.Add((Quaternion.Euler(0, Mathf.Cos(i) * ampI + 90, Mathf.Sin(i) * ampI) * Vector3.right) - (Vector3.right * -.1f));
+            }
+
             handRays = rays.ToArray();
         }
 
