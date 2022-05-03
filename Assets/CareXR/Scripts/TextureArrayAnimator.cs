@@ -36,7 +36,7 @@ public class TextureArrayAnimator : MonoBehaviour
         StartCoroutine(Switch());
     }
     
-    IEnumerator Switch()//This amazing script was made by Blake Martin using the help of Unity forum users and outdated Unity Documentation.
+    IEnumerator Switch()
     {
         if (useDelay)
         {
