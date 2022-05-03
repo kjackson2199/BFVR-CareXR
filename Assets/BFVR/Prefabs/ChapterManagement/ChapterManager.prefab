@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2e3c45c59cffb439e85f6a1df754e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChapterTitle: 
   ChapterSections: []
   AnimationStepManager: {fileID: 5630290682719779230}
   InteractiveStepManager: {fileID: 7309742426687829799}
@@ -65,6 +66,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnChapterComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndSection:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4370211809629926377
