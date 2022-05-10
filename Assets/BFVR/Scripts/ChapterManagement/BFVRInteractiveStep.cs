@@ -20,6 +20,7 @@ namespace BFVR.ChapterManagement
         [Header("Step Settings")]
         public string InteractiveStepName = "Step 1";
         public BFVRInteractableObject InteractableTarget;
+        public byte InteractableObjectId = 0;
         public InteractableTriggerId TargetTrigger;
         public float StepBeginDelay = 1;
 
@@ -65,14 +66,17 @@ namespace BFVR.ChapterManagement
             if(OnStepResetEvent != null) OnStepResetEvent.Invoke();
         }
 
-        private void BFVRInteractableObject_onInteractableTriggered(GameObject owningObject, int triggerId)
+        private void BFVRInteractableObject_onInteractableTriggered(byte interactiveObjectId, int triggerId)
         {
-            if(owningObject != InteractableTarget && triggerId != (int)TargetTrigger)
-            {
-                return;
-            }
+            //if(interactiveObjectId != InteractableObjectId || triggerId != (int)TargetTrigger)
+            //{
+            //    return;
+            //}
 
-            CompleteStep();
+            if(interactiveObjectId == InteractableObjectId && triggerId == (int)TargetTrigger)
+            {
+                CompleteStep();
+            }
         }
 
         IEnumerator BeginDelay()

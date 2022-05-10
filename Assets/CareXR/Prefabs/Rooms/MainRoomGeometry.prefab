@@ -2912,6 +2912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91ac85efe0f8c0439c2f4e222f21ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractableId: 7
   OnInteractableTriggeredUEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3676,6 +3677,10 @@ PrefabInstance:
       propertyPath: m_BlendShapeWeights.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7030212609716880355, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
+      propertyPath: InteractableId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7822494506154778905, guid: 54ffddf09e861d144a34d176685d1cb9, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -3774,6 +3779,10 @@ PrefabInstance:
     - target: {fileID: 6165323737176702018, guid: bfa1a2e85a090ab45ac49b91e41d20e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671139797235763011, guid: bfa1a2e85a090ab45ac49b91e41d20e6, type: 3}
+      propertyPath: InteractableId
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7800692336514243676, guid: bfa1a2e85a090ab45ac49b91e41d20e6, type: 3}
       propertyPath: m_Name
@@ -3927,6 +3936,10 @@ PrefabInstance:
       propertyPath: Targets.Array.data[1]
       value: 
       objectReference: {fileID: 3053130047643628007}
+    - target: {fileID: 7607320814982492424, guid: c7c11785ab590f84ea5ff547ab2336f0, type: 3}
+      propertyPath: InteractableId
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c11785ab590f84ea5ff547ab2336f0, type: 3}
 --- !u!4 &6872497096246167845 stripped
@@ -3981,6 +3994,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c60bb1ce21e70d54b87cd6b2ba0eceaf, type: 2}
+    - target: {fileID: 7279331728447338978, guid: 5f1fb5ed7704e6f41ab7ac674a47af47, type: 3}
+      propertyPath: InteractableId
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8520888572689817649, guid: 5f1fb5ed7704e6f41ab7ac674a47af47, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4147,6 +4164,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 317967013510429931, guid: 96189c1b91d839c41913ed03d559f399, type: 3}
+    - target: {fileID: 8130134103392282786, guid: a148698aedcd4274ca2caf36a24a8879, type: 3}
+      propertyPath: InteractableId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8566115585663890365, guid: a148698aedcd4274ca2caf36a24a8879, type: 3}
       propertyPath: m_Name
       value: Syringe_SM
@@ -4372,6 +4393,10 @@ PrefabInstance:
     - target: {fileID: 3472014306254253306, guid: 573d4c06ebfb13b47b7d99b70c3b21e8, type: 3}
       propertyPath: m_Name
       value: WaterContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928893812370866874, guid: 573d4c06ebfb13b47b7d99b70c3b21e8, type: 3}
+      propertyPath: InteractableId
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573d4c06ebfb13b47b7d99b70c3b21e8, type: 3}
