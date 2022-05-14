@@ -9,7 +9,7 @@ public class PictureInPicture : MonoBehaviour
     float flashStartTime;
     bool showing = false;
     bool hi = false;
-    string animNameSet = "Hide";
+    string animNameSet = "Show";
 
     void Update()
     {
@@ -25,6 +25,6 @@ public class PictureInPicture : MonoBehaviour
         showing = false;
         stepStartTime = Time.time;
         anim.SetTrigger("Hide");
-        animNameSet = animName;
+        if (animName!= null) animNameSet = animName;
     }
 }
