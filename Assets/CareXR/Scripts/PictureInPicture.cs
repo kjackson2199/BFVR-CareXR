@@ -24,7 +24,7 @@ public class PictureInPicture : MonoBehaviour
     {
         showing = false;
         stepStartTime = Time.time;
-        anim.SetTrigger("Hide");
+        anim.SetTrigger("Idle");
         if (animName!= null) animNameSet = animName;
     }
 }
