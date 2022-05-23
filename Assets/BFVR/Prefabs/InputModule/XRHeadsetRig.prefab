@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxRayDistance: 0.25
   grabSpreadOffset: -2.5
-  radius: 0.01
+  radius: 0.75
   GrabbableLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxRayDistance: 0.25
   grabSpreadOffset: -2.5
-  radius: 0.01
+  radius: 0.75
   GrabbableLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OutlineWitdthFar: 10
   OutlineWidthNear: 6
+  InvertOutline: 0
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
@@ -1202,6 +1203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OutlineWitdthFar: 10
   OutlineWidthNear: 6
+  InvertOutline: 0
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
