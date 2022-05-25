@@ -14,7 +14,7 @@ namespace BFVR.Interactable
         const int rayCount = 300;
         const int behindHandRayCount = 300;
 
-        [Range(.1f, .5f)] public float maxRayDistance = .25f;
+        [Range(.1f, 10f)] public float maxRayDistance = .25f;
         [HideInInspector][Range(-4, -1)] public float grabSpreadOffset = -2;
         [Range(.01f, 1)] public float radius = .1f;
 
@@ -29,7 +29,7 @@ namespace BFVR.Interactable
 
         public void RaycastSphere(out RaycastHit outHit)
         {
-            Physics.SphereCast(gameObject.transform.position, radius, gameObject.transform.forward, out outHit, maxRayDistance, GrabbableLayers);
+            Physics.SphereCast(gameObject.transform.position + (-1 * gameObject.transform.forward * (radius * 3)), radius, gameObject.transform.forward, out outHit, maxRayDistance, GrabbableLayers);
         }
 
         private void PrecalculatePalmRays()
