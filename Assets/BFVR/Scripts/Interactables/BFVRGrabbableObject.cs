@@ -57,6 +57,15 @@ namespace BFVR.Interactable
             emptyParent = Instantiate(g, gameObject.transform.position, gameObject.transform.rotation);
 
             transform.parent = emptyParent.transform;
+
+            if(EnableGrabbable)
+            {
+                collider.enabled = true;
+            }
+            else
+            {
+                collider.enabled = false;
+            }
         }
 
         public void SetNewOriginalTransform()
