@@ -1715,6 +1715,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2898496607565659469, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2918091625570668115, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3451,6 +3455,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0025
       objectReference: {fileID: 0}
+    - target: {fileID: 6152069949475024228, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6157312997930887475, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: AutoReset
       value: 1
@@ -3767,6 +3775,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 41912966}
+    - target: {fileID: 8261146207194920402, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8369097292123675054, guid: 01b2163d54ccfdd47894f8ee4d08ac7f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13762,9 +13774,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BFVRApp
       objectReference: {fileID: 0}
+    - target: {fileID: 6049866454079736871, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
+      propertyPath: radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049866454079736871, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
+      propertyPath: maxRayDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6489405524026947879, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
       propertyPath: outlineTargets.Array.data[0].IsVisible
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723012817834245765, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
+      propertyPath: radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723012817834245765, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
+      propertyPath: maxRayDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8057742138799546000, guid: 068b597923d3842409f153dae4bb8ee7, type: 3}
       propertyPath: m_RootOrder
