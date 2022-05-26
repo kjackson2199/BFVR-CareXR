@@ -19,7 +19,7 @@ namespace BFVR
         private static BFVRApp _instance;
         public static BFVRApp Instance { get { return _instance; } }
 
-        public static GameObject Player;
+        public static PlayerController Player;
 
         [Header("Scene Management")]
         public string MainMenuSceneName;
@@ -61,7 +61,7 @@ namespace BFVR
         {
             if(Player == null)
             {
-                Player = GameObject.FindGameObjectWithTag("Player");
+                Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             }
         }
 

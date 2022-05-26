@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
+using System;
 
 namespace BFVR.InputModule
 {
@@ -11,6 +12,8 @@ namespace BFVR.InputModule
     /// </summary>
     public class BFVRHMD : MonoBehaviour
     {
+        public TrackingOriginModeFlags trackingMode = TrackingOriginModeFlags.Device;
+
         List<XRNodeState> nodeStates = new List<XRNodeState>();
 
         IEnumerator Start()
@@ -19,7 +22,19 @@ namespace BFVR.InputModule
             SubsystemManager.GetInstances<XRInputSubsystem>(subsystems);
             for (int i = 0; i < subsystems.Count; i++)
             {
-                while (!subsystems[i].TrySetTrackingOriginMode(TrackingOriginModeFlags.Floor)) yield return null;
+                Debug.Log(subsystems[i].GetSupportedTrackingOriginModes());
+
+                TrackingOriginModeFlags modes = subsystems[i].GetSupportedTrackingOriginModes();
+
+                foreach (TrackingOriginModeFlags x in Enum.GetValues(typeof(TrackingOriginModeFlags)))
+                {
+                    if (modes.HasFlag(x))
+                    {
+                        Debug.Log($"Tracking Origin Mode {x} supported, enum value {(int)x}");
+                    }
+                }
+
+                while (!subsystems[i].TrySetTrackingOriginMode(trackingMode)) yield return null;
                 while (!subsystems[i].TryRecenter()) yield return null;
             }
         }
@@ -41,6 +56,7 @@ namespace BFVR.InputModule
                 }
             }
 
+            pos.y = 0;
             gameObject.transform.localPosition = pos;
             gameObject.transform.localRotation = rot;
         }
