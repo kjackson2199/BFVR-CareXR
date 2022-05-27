@@ -9,6 +9,7 @@ using OVR;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public Collider playerCollider;
 
     //public OVRManager cameraRig;
@@ -22,6 +23,17 @@ public class PlayerController : MonoBehaviour
     public GameObject recenterCountdown;
     public Image recenterFillCircle;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            DestroyImmediate(this.gameObject);
+        }
+    }
     public void EnableCollider()
     {
         playerCollider.enabled = true;
