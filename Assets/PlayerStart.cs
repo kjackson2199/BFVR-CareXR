@@ -12,6 +12,7 @@ public class PlayerStart : MonoBehaviour
             BFVRApp.Player.DisableCollider();
             BFVRApp.Player.MovePlayer(transform.position, transform.rotation);
             BFVRApp.Player.EnableCollider();
+            BFVRApp.Player.SetPlayerStartLocation(this);
         }
         //if(BFVRApp.Player != null)
         //{

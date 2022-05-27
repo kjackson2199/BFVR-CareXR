@@ -11,7 +11,8 @@
                     "id": "46016f8f-ed91-4e1a-a2e6-f3bfb2cc262e",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MoveRight",
@@ -19,7 +20,8 @@
                     "id": "ced3b6b4-1948-4328-9883-3c1c93eb0eb0",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Turn",
@@ -27,7 +29,8 @@
                     "id": "35d8a405-a1da-4aed-bdab-78c7c60d4346",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "TurnSnap",
@@ -35,7 +38,8 @@
                     "id": "10f36088-cd5e-4fcd-8568-48475a8ec001",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -95,7 +99,8 @@
                     "id": "30632b0e-116b-426a-ab05-a328059705d5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Point",
@@ -103,7 +108,8 @@
                     "id": "0d7d31ab-1d03-430e-b6e6-d20907654d43",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -141,7 +147,8 @@
                     "id": "4fcbd0cf-b420-435a-a26d-e023517a2782",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "GrabRight",
@@ -149,7 +156,8 @@
                     "id": "c800b0ec-8bc4-4d91-b306-18228e2c4c58",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -187,7 +195,8 @@
                     "id": "55d79845-3487-42d6-a717-f58ae66b7e80",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "GripRight",
@@ -195,7 +204,8 @@
                     "id": "c3f1e37f-7758-4aed-b1d4-76a937e5fb7f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointLeft",
@@ -203,7 +213,8 @@
                     "id": "58039366-730f-4b63-a134-50735e7a6ce6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PointRight",
@@ -211,7 +222,8 @@
                     "id": "50d5c708-ed30-4c7e-9b63-4906e4c5f556",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -256,6 +268,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "PointRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Recenter",
+            "id": "2e63b285-c6da-41b1-8422-f4f8ea138667",
+            "actions": [
+                {
+                    "name": "A Button",
+                    "type": "Button",
+                    "id": "d468612c-548d-4b5a-8d2e-e2e02b855ac9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62d63b45-f8a5-46b1-8dab-61357cf90b12",
+                    "path": "<OculusTouchController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

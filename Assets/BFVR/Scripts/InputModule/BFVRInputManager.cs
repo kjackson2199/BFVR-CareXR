@@ -11,7 +11,7 @@ namespace BFVR.InputModule
     /// Standard BFVR input manager. Manages input actions from selected action maps. (Does not destroy on load.)
     /// </summary>
     /// 
-    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions , IInteractionActions , IHandPosesActions
+    public class BFVRInputManager : MonoBehaviour , IUIActions , IMovementActions , IInteractionActions , IHandPosesActions, IRecenterActions
     {
         #region UI/Actions
         // UI/Point
@@ -77,6 +77,15 @@ namespace BFVR.InputModule
 
         #endregion
 
+        #region Recenter Actions
+
+        // Interaction/GrabLeft
+        public delegate void Recenter_OnPressStartedDelegate();
+        public delegate void Recenter_OnPressCanceledDelegate();
+        public static event Recenter_OnPressStartedDelegate RecenterOnPressStartedEvent;
+        public static event Recenter_OnPressCanceledDelegate RecenterOnPressCanceledEvent;
+        #endregion
+
         // Default Input Actions Asset
         public StandardAppInterface StandardAppActions;
 
@@ -106,6 +115,7 @@ namespace BFVR.InputModule
             StandardAppActions.Movement.SetCallbacks(this);
             StandardAppActions.Interaction.SetCallbacks(this);
             StandardAppActions.HandPoses.SetCallbacks(this);
+            StandardAppActions.Recenter.SetCallbacks(this);
 
             Cursor = FindObjectOfType<BFVRCursor>();
         }
@@ -116,6 +126,7 @@ namespace BFVR.InputModule
             StandardAppActions.Movement.Enable();
             StandardAppActions.Interaction.Enable();
             StandardAppActions.HandPoses.Enable();
+            StandardAppActions.Recenter.Enable();
         }
 
         private void OnDisable()
@@ -124,6 +135,7 @@ namespace BFVR.InputModule
             StandardAppActions.Movement.Disable();
             StandardAppActions.Interaction.Disable();
             StandardAppActions.HandPoses.Disable();
+            StandardAppActions.Recenter.Disable();
         }
 
         #region UI Action Map Interface Implementation
@@ -258,6 +270,21 @@ namespace BFVR.InputModule
             }
         }
 
+        #endregion
+
+        #region Recenter Action Map Interface Implementation
+        public void OnAButton(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                RecenterOnPressStartedEvent.Invoke();
+            }
+
+            else if (context.canceled)
+            {
+                RecenterOnPressCanceledEvent.Invoke();
+            }
+        }
         #endregion
     }
 }
