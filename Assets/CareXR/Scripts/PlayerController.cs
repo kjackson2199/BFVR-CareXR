@@ -64,8 +64,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        BFVRInputManager.RecenterOnPressStartedEvent += BFVRInputManager_recenterOnPressStartedEvent;
-        BFVRInputManager.RecenterOnPressCanceledEvent += BFVRInputManager_recenterOnPressCanceledEvent;
+        //BFVRInputManager.RecenterOnPressStartedEvent += BFVRInputManager_recenterOnPressStartedEvent;
+        //BFVRInputManager.RecenterOnPressCanceledEvent += BFVRInputManager_recenterOnPressCanceledEvent;
         OVRManager.display.RecenteredPose += RecenterCamera;
     }
 

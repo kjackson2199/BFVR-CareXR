@@ -145,6 +145,11 @@ namespace BFVR.ChapterManagement
                 OnCompleted.Invoke();
         }
 
+        public BFVRInteractiveStep GetCurrentStep()
+        {
+            return Steps[_stepIndex];
+        }
+
         #region Interactive Step Callback
         private void BFVRInteractiveStep_onStepCompleteEvent()
         {

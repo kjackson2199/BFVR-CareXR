@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using BFVR.ChapterManagement;
 
 namespace BFVR.Interactable
 {
@@ -88,6 +89,17 @@ namespace BFVR.Interactable
                 if (triggerMode == TriggerMode.Location && target != null)
                 {
                     LocationCheck();
+                }
+                else if (target == null)
+                {
+                    try
+                    {
+                        target = BFVRInteractiveStepManager.Instance.GetCurrentStep().InteractableTarget.GetComponent<BFVRGrabbableObject>();
+                    }
+                    catch
+                    {
+                        Debug.LogError("Attempted to fix target null issue,Couldnt assign target");
+                    }
                 }
 
                 CheckTriggerTripped();
